@@ -16,7 +16,7 @@ export default ({ children }) => {
     `
   )
   return (
-    <div className="site-wrapper">
+    <div><div className="site-wrapper">
       <header className="site-header">
         <div className="site-title">
           <Link to="/">{data.site.siteMetadata.title}</Link>
@@ -24,8 +24,10 @@ export default ({ children }) => {
         <Navigation />
       </header>
       {children}
+      </div>
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} Delog &bull; Crafted with <span role="img" aria-label="love">❤️</span> by <a href="https://w3layouts.com">W3Layouts</a></p>
+        <p>&copy; {new Date().getFullYear()} <a href="https://darrendube.com">Darren Dube </a>&bull; Made with <span role="img" aria-label="love">❤️</span> from Zimbabwe</p>
+<p> Theme by <a href="https://w3layouts.com">W3Layouts</a></p>
       </footer>
     </div>
   )

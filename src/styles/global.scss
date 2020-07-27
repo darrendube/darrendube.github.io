@@ -14,9 +14,9 @@ body.light {
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #10072b;
-  --background: #fff;
+  --background: #f0f0f0;
   --site-header: var(--background);
-  --card-bg: #fff;
+  --card-bg: #fffafa;
   --card-bdr: #eee;
   --card-shadow: #d5d5d5;
   --btn-bg: var(--background);
@@ -52,10 +52,11 @@ body.dark {
 }
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: $font-family;
-  border-top: 10px solid var(--primary-color);
+  font-family: Open Sans;
+  
   background-color: var(--background);
   color: var(--text-color);
+
 }
 a {
   color: var(--primary-color);
@@ -181,7 +182,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 18px;
+  
   margin-bottom: 36px;
   color: var(--featured-text);
   display: grid;
@@ -216,10 +217,11 @@ a {
 }
 .card {
   display: grid;
+  grid-column-gap: 5px;
   background-color: var(--card-bg);
   border-radius: 9px;
-  border: 1px solid var(--card-bdr);
-  box-shadow: 0 0 30px var(--card-shadow);
+  grid-template-columns: 2fr 3fr;
+  
   overflow: hidden;
   line-height: 1.5;
   &:hover .post-link {
@@ -227,10 +229,30 @@ a {
   }
   > a img {
     display: block;
+		border-radius: 90px;
+    
+    
   }
-  > header {
-    padding: 24px;
+
+  > div {
+    padding: 10px;
+
   }
+   .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+
+  > img .fill {
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
   > h2:first-child {
     margin: 0 0 0.5rem 0;
   }
@@ -247,14 +269,18 @@ a {
     text-decoration: none;
   }
 }
+
 .post-meta {
   font-size: 0.8rem;
   color: var(--text-secondary-color);
 }
+
 .site-footer {
   text-align: center;
   margin: 90px 0 16px;
+  padding: 20px;
   color: #666;
+  background: #fff;
   a {
     font-weight: 700;
   }
