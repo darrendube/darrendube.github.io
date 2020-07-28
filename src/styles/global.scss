@@ -14,11 +14,11 @@ body.light {
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #10072b;
-  --background: #f0f0f0;
+  --background: #f9f9f9;
   --site-header: var(--background);
-  --card-bg: #fffafa;
+  --card-bg: #ffffff;
   --card-bdr: #eee;
-  --card-shadow: #d5d5d5;
+  --card-shadow: #e0e0e0;
   --btn-bg: var(--background);
   --btn-bdr: #d3d6e7;
   --btn-text-color: #868892;
@@ -67,7 +67,7 @@ a {
 }
 .site-wrapper {
   padding: 32px;
-  max-width: 1140px;
+  max-width: 1000px;
   margin: 0 auto;
   img {
     max-width: 100%;
@@ -211,53 +211,41 @@ a {
 }
 .grids {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 16px;
   margin-top: 32px;
 }
+
 .card {
   display: grid;
   grid-column-gap: 5px;
   background-color: var(--card-bg);
-  border-radius: 9px;
+  border-radius: 14px;
   grid-template-columns: 2fr 3fr;
-  
+  min-height: 150px;
   overflow: hidden;
   line-height: 1.5;
+  box-shadow: 0 0.5px 5px 0 var(--card-shadow);
+  
+
   &:hover .post-link {
     color: var(--primary-color);
   }
-  > a img {
-    display: block;
-		border-radius: 90px;
-    
-    
-  }
-
+  
   > div {
-    padding: 10px;
-
-  }
-   .fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    padding: 6px;
+    
     
   }
 
-  > img .fill {
-    flex-shrink: 0;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-  }
+
+ 
 
   > h2:first-child {
     margin: 0 0 0.5rem 0;
   }
   .post-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.3rem;
   }
   .post-meta {
@@ -268,7 +256,33 @@ a {
     color: var(--text-color);
     text-decoration: none;
   }
+  .post-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
 }
+
+
+
+.card-image {
+
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.fill {
+  
+  overflow: hidden;
+}
+
+
 
 .post-meta {
   font-size: 0.8rem;
@@ -314,6 +328,7 @@ a {
     height: 150px;
   }
 }
+
 .two-grids {
   display: grid;
   grid-gap: 32px;
