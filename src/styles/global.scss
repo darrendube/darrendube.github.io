@@ -1,4 +1,24 @@
-$font-family: -apple-system,BlinkMacSystemFont;
+
+@font-face {
+    font-family: 'mulishitalic';
+    src: url('fonts/mulish-italic-variablefont_wght-webfont.woff2') format('woff2'),
+         url('fonts/mulish-italic-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mulishregular';
+    src: url('fonts/mulish-variablefont_wght-webfont.woff2') format('woff2'),
+         url('fonts/mulish-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html,
 body {
@@ -50,9 +70,10 @@ body.dark {
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
 }
+
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: Open Sans;
+  font-family: mulishregular, Roboto, sans-serif;
   
   background-color: var(--background);
   color: var(--text-color);
@@ -342,7 +363,6 @@ a {
     width: calc(100% - 24px);
     margin-bottom: 1.5rem;
     background-color: var(--input-bg);
-    font-family: $font-family;
   }
   textarea {
     margin-bottom: 2rem;
