@@ -122,11 +122,11 @@ a {
   background: var(--btn-bg);
   border: 1px solid var(--btn-bdr);
   border-radius: 9px;
-  text-decoration: none;
-  color: var(--btn-text-color);
+  
+  color: white;
   font-size: 16px;
   font-weight: 400;
-  margin: 0 20px 0 0;
+  
   transition: background-color .3s linear;
   &.-primary {
     background-color: var(--primary-color);
@@ -142,6 +142,10 @@ a {
     background-color: var(--btn-hover-bg);
     color: var(--btn-hover-text-color);
   }
+}
+
+.button-wrapper .button {
+  float:right;
 }
 .primary-content {
   font-size: 18px;
@@ -211,7 +215,7 @@ a {
 }
 .grids {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 16px;
   margin-top: 32px;
 }
@@ -282,6 +286,23 @@ a {
   overflow: hidden;
 }
 
+.text-box{
+  padding: 18px 27px;
+  
+  
+ 
+  
+  text-decoration: none;
+  color: var(--btn-text-color);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 20px 0 0;
+}
+
+.button-wrapper {
+  display: inline-block;
+  
+}
 
 
 .post-meta {
@@ -345,11 +366,17 @@ and (min-width: 768px) {
   grid-template-columns: 1fr 1fr;
 }
 }
+
+@media only screen 
+and (max-width: 767px) {
+.grids {
+  grid-template-columns: 1fr;
+}
+}
+
 @media only screen 
   and (min-width: 1024px) {
-  .grids {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+ 
   .two-grids {
     display: grid;
     grid-template-columns: 1fr 1fr;
