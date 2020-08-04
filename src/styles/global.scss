@@ -29,7 +29,7 @@ body {
   margin-top: 0
 }
 body.light {
-  --primary-color: #381696;
+  --primary-color: #5978F3;
   --primary-text-color: #fff;
   --featured-bg: #493b8a;
   --featured-text: #fff;
@@ -155,6 +155,21 @@ a {
   outline: none !important;
   border: 1.5px solid var(--primary-color);
 
+}
+
+.logo-text {
+  text-transform: capitalize;
+  vertical-align: center;
+}
+
+.logo-text-2 {
+  text-transform: capitalize;
+  color: grey;
+}
+
+.logo-text-3 {
+  text-transform: capitalize;
+  color: blue;
 }
 
 .button-wrapper {

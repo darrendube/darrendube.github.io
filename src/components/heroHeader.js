@@ -30,7 +30,7 @@ export default () => (
   class="embeddable-buttondown-form"
 >
         <div className="button-wrapper">
-        <input type="text" className="text-box"></input>
+        <input type="text" className="text-box" placeholder="Email"></input>
         <input type="submit" className="button -primary" value=" Subscribe &rarr;"></input>
         </div>
         </form>

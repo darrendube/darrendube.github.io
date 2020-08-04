@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Logo from "./logo"
 
 
 const Navigation = styled.nav`
   height: 10vh;
-  min-height: 50px;
+  min-height: 70px;
   display: flex;
   background-color: #fff;
   position: relative;
@@ -53,24 +54,36 @@ const Navbox = styled.div`
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    left: ${props => (props.open ? "100%" : "0")};
   }
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: #767676;
   width: 30px;
   height: 3px;
+  border-radius: 10px;
   transition: all .3s linear;
   align-self: center;
   position: relative;
-  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
+  transform: ${props => (props.open ? "rotate(-45deg) " : "inherit")};
 
-  ::before,
-  ::after {
-    width: 30px;
+  ::before {
+    width: 25px;
     height: 3px;
-    background-color: #111;
+    border-radius: 10px;
+    background-color: #767676;
+    content: "";
+    position: absolute;
+    transition: all 0.3s linear;
+    
+  }
+
+  ::after {
+    width: 20px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #767676;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -78,13 +91,13 @@ const Hamburger = styled.div`
 
   ::before {
     transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+      props.open ? "rotate(-90deg) translate(-10px, 2px) scale(1.2,1)" : "rotate(0deg)"};
     top: -10px;
   }
 
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
+    transform: ${props => (props.open ? "rotate(90deg) scale(1.5,1)" : "rotate(0deg)")};
     top: 10px;
   }
 `
@@ -143,7 +156,7 @@ const Navbar = () => {
 
   return (
     <Navigation>
-      
+      <Logo />
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
