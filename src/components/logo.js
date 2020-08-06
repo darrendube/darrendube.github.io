@@ -8,10 +8,18 @@ import styled from "styled-components"
 const LogoWrap = styled.div`
   margin: auto 0;
   flex: 0 1 36px;
-
+  padding: auto auto;
   @media (max-width= 768px) and (orientation: landscape) {
     flex: 0 1 25px;
   }
+
+  color: black;
+
+  :hover {
+    text-decoration: none;
+  }
+
+
 `
 
 const Logo = () => {

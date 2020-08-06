@@ -93,7 +93,17 @@ a {
   img {
     max-width: 100%;
   }
+
+
 }
+
+@media only screen 
+and (max-width: 768px) {
+  .site-wrapper {
+    padding: 14px;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -159,7 +169,7 @@ a {
 
 .logo-text {
   text-transform: capitalize;
-  vertical-align: center;
+  line-height: 70px;
 }
 
 .logo-text-2 {
@@ -300,8 +310,10 @@ a {
     margin-bottom: 0.3rem;
   }
   .post-meta {
-    font-weight: 100;
+    color: grey;
     margin-bottom: 0;
+    font-weight: normal;
+    font-size: 0.8rem;
   }
   .post-link {
     color: var(--text-color);
@@ -508,4 +520,25 @@ body.light {
     box-shadow: 0 0 0 2px;
     top: 8px;
     left: 2px
+}
+
+.no-select {
+  -webkit-tpuch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -mox-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.category {
+  width: fit-content;
+  background-color: #f0f0f0;
+  color: grey;
+  text-transform: uppercase;
+  padding: 0 4px;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }

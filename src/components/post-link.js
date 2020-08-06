@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 
 
@@ -11,6 +12,7 @@ const PostLink = ({ post }) => (
       )}
     </Link></div>
     <div className="post-details">
+      <div className="category"> Category </div>
       <h2 className="post-title">
         <Link to={post.frontmatter.path} className="post-link">
           {post.frontmatter.title}

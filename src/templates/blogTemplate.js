@@ -9,11 +9,13 @@ export default function Template({
   const { site, markdownRemark } = data // data.markdownRemark holds your post data
   const { siteMetadata } = site
   const { frontmatter, html } = markdownRemark
+  
   return (
     <Layout>
       <Helmet>
         <title>{frontmatter.title} | {siteMetadata.title}</title>
         <meta name="description" content={frontmatter.metaDescription} />
+
       </Helmet>
       <div className="blog-post-container">
         <article className="post">
@@ -22,14 +24,17 @@ export default function Template({
             <div className="post-thumbnail">
               <h1 className="post-title">{frontmatter.title}</h1>
               <div className="post-meta">{frontmatter.date}</div>
+              <div className="category">{frontmatter.category}</div>
             </div>
           )}
           {!!frontmatter.thumbnail && (
             <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
               <h1 className="post-title">{frontmatter.title}</h1>
               <div className="post-meta">{frontmatter.date}</div>
+              <div className="category">{frontmatter.category}</div>
             </div>
           )}
+
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

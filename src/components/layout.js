@@ -23,8 +23,8 @@ export default ({ children }) => {
       {children}
       </div>
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} <a href="https://darrendube.com">Darren Dube </a>&bull; Made with <span role="img" aria-label="love">❤️</span> from Zimbabwe</p>
-<p> Theme by <a href="https://w3layouts.com">W3Layouts</a></p>
+        <p>&copy; {new Date().getFullYear()} <a href="https://darrendube.com">Darren Dube </a>&bull; Made in Zimbabwe</p>
+
       </footer>
     </div>
   )

@@ -2,11 +2,12 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Logo from "./logo"
+import ThemeChanger from "./themeChanger"
 
 
 const Navigation = styled.nav`
-  height: 10vh;
-  min-height: 70px;
+  height: 70px;
+
   display: flex;
   background-color: #fff;
   position: relative;
@@ -20,7 +21,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 8vh;
+    height: 70px;
     top: 0;
     left: 0;
     right: 0;
@@ -32,7 +33,7 @@ const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
-  padding: 0 10vw;
+  
 
   @media (max-width: 768px) {
     display: flex;
@@ -86,7 +87,7 @@ const Hamburger = styled.div`
     background-color: #767676;
     content: "";
     position: absolute;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
   }
 
   ::before {
@@ -110,25 +111,13 @@ const NavItem = styled(Link)`
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
+  font-weight: bold;
 
-  :after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0%;
-    content: ".";
-    color: transparent;
-    background: goldenrod;
-    height: 1px;
-    transition: all 0.4s ease-in;
-  }
+  
 
   :hover {
-    color: goldenrod;
-    ::after {
-      width: 100%;
-    }
+    color: #5978F3;
+    text-decoration: none;
   }
 
   @media (max-width: 768px) {
@@ -141,6 +130,7 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
   return (
     <>
+    
       <NavItem to="/404">About</NavItem>
       <NavItem to="/404">Projects</NavItem>
       <NavItem to="/contact">Contact</NavItem>
@@ -158,6 +148,7 @@ const Navbar = () => {
     <Navigation>
       <Logo />
       <Toggle
+      	className="no-select"
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
