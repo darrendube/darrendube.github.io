@@ -6,27 +6,7 @@ import ThemeChanger from "./themeChanger"
 
 
 const Navigation = styled.nav`
-  height: 70px;
-
-  display: flex;
-  background-color: #fff;
-  position: relative;
-  justify-content: space-between;
-  text-transform: uppercase;
   
-  margin: 0 auto;
-  padding: 0 5vw;
-  z-index: 2;
-  align-self: center;
-
-  @media (max-width: 768px) {
-    position: sticky;
-    height: 70px;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-  }
 `
 
 const Toggle = styled.div`
@@ -145,8 +125,10 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation>
+    <nav className="nav-bar">
       <Logo />
+     	<div className="togglewrapper">
+     	<ThemeChanger/>
       <Toggle
       	className="no-select"
         navbarOpen={navbarOpen}
@@ -163,7 +145,8 @@ const Navbar = () => {
           <NavbarLinks />
         </Navbox>
       )}
-    </Navigation>
+      </div>
+    </nav>
   )
 }
 

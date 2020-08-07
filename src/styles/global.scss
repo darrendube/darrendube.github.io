@@ -47,6 +47,7 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
+  --header-bg: #fff;
 }
 body.dark {
   --primary-color: #9984d5;
@@ -69,6 +70,7 @@ body.dark {
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
+  --header-bg: var(--primary-color);
 }
 
 /* System Fonts as used by Medium and WordPress */
@@ -437,6 +439,7 @@ and (max-width: 767px) {
 .theme-changer {
   display: none;
 }
+
 body.dark {
   .gg-moon {
     display: none;
@@ -448,9 +451,11 @@ body.light {
   }
 }
 .mode-container {
+  
   width: 24px;
   height: 24px;
-  margin-left: 20px;
+  margin-right: 20px;
+
 }
 // CSS.gg icons for sun and moon
 .gg-sun {
@@ -541,4 +546,36 @@ body.light {
   border-radius: 2px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.togglewrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-bar {
+  height: 70px;
+
+  display: flex;
+  background-color: var(--header-bg);
+  position: relative;
+  justify-content: space-between;
+  text-transform: uppercase;
+  
+  margin: 0 auto;
+  padding: 0 5vw;
+  z-index: 2;
+  align-self: center;
+
+  @media (max-width: 768px) {
+    position: sticky;
+    height: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+  }
 }
