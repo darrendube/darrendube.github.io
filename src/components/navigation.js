@@ -9,6 +9,8 @@ const Navigation = styled.nav`
   
 `
 
+
+
 const Toggle = styled.div`
   display: none;
   height: 100%;
@@ -87,9 +89,9 @@ const NavbarLinks = () => {
   return (
     <>
     
-      <Link className="nav-item" to="/404">About</Link>
-      <Link className="nav-item" to="/404">Projects</Link>
-      <Link className="nav-item" to="/contact">Contact</Link>
+      <Link className="nav-item" to="/">Home</Link>
+      <Link className="nav-item" to="/">Projects</Link>
+      <Link className="nav-item" to="/">Contact</Link>
       
     </>
   )

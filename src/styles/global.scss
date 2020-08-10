@@ -47,11 +47,12 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
-  --header-bg: #fff;
+  --header-bg: #ffffff;
   --category-color: #e1e8f0;
   --category-text-color: #718097;
-  --hero-header-bg: #ffffff;
+  --hero-header-bg: #fefefe;
   --logo-color: #000000;
+  --logo-dot: blue;
 }
 body.dark {
   --logo-color: #ffffff;
@@ -64,7 +65,7 @@ body.dark {
   --text-color: rgba(255,255,255,0.88);
   --text-secondary-color: rgba(255,255,255,0.66);
   --site-header: var(--background);
-  --card-bg: #181326;
+  --card-bg: #25252b;
   --card-bdr: #181326;
   --card-shadow: #020204;
   --btn-bg: var(--background);
@@ -75,10 +76,11 @@ body.dark {
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
-  --header-bg: var(--primary-color);
-  --category-color: #e1e8f0;
-  --category-text-color: #718097;
+  --header-bg: #000000;
+  --category-color: #718097;
+  --category-text-color: #2e3748;
   --hero-header-bg: #000000;
+  --logo-dot: #ffffff;
 }
 
 /* System Fonts as used by Medium and WordPress */
@@ -155,6 +157,7 @@ and (max-width: 768px) {
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 3px 5px 0 var(--card-shadow);
 }
 .headline {
   font-size: 36px;
@@ -194,7 +197,7 @@ and (max-width: 768px) {
 
 .logo-text-3 {
   text-transform: capitalize;
-  color: blue;
+  color: var(--logo-dot);
 }
 
 .button-wrapper {
@@ -202,9 +205,10 @@ and (max-width: 768px) {
   width: 100%;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 5px 15px 0 var(--card-shadow);
+  box-shadow: 0 3px 5px 0 var(--card-shadow);
   overflow: hidden;
   max-width: 500px;
+  display: inline-block;
 }
 
 .text-box {
@@ -364,10 +368,6 @@ and (max-width: 768px) {
 
 
 
-.button-wrapper {
-  display: inline-block;
-  
-}
 
 
 .post-meta {
@@ -554,9 +554,9 @@ body.light {
   width: fit-content;
   background-color: var(--category-color);
   color: var(--category-text-color);
-  text-transform: uppercase;
-  padding: 3px 4px;
-  font-size: 0.8rem;
+  text-transform: capitalise;
+  padding: 3px 6px;
+  font-size: 0.7rem;
   border-radius: 8px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -574,7 +574,7 @@ body.light {
   height: 70px;
 
   display: flex;
-  background-color: var(--site-header);
+  background-color: var(--header-bg);
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
@@ -619,17 +619,23 @@ body.light {
   transition: all 200ms ease-in;
   position: relative;
   font-weight: bold;
-
+}
   
 
-  :hover {
+  .nav-item:hover {
     color: #5978F3;
     text-decoration: none !important;
   }
 
   @media (max-width: 768px) {
+    .nav-item {
     padding: 20px 0;
     font-size: 1.5rem;
-    z-index: 6;
+    z-index: 6;}
   }
+
+.nav-box {
+  
 }
+
+
