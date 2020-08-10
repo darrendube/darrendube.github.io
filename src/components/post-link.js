@@ -13,12 +13,12 @@ const PostLink = ({ post }) => (
     </Link></div>
     <div className="post-details">
       <div className="category"> Category </div>
-      <h2 className="post-title">
+      <h2 className="post-title blue-grey-heading">
         <Link to={post.frontmatter.path} className="post-link">
           {post.frontmatter.title}
         </Link>
       </h2>
-      <div className="post-meta">{post.frontmatter.date}</div>
+      <div className="post-meta"><p className="blue-grey-text bold">{post.frontmatter.date}</p></div>
     </div>
   </article>
 )

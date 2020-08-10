@@ -83,37 +83,13 @@ const Hamburger = styled.div`
   }
 `
 
-const NavItem = styled(Link)`
-  text-decoration: none;
-  color: #111;
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0 1vw;
-  transition: all 200ms ease-in;
-  position: relative;
-  font-weight: bold;
-
-  
-
-  :hover {
-    color: #5978F3;
-    text-decoration: none;
-  }
-
-  @media (max-width: 768px) {
-    padding: 20px 0;
-    font-size: 1.5rem;
-    z-index: 6;
-  }
-`
-
 const NavbarLinks = () => {
   return (
     <>
     
-      <NavItem to="/404">About</NavItem>
-      <NavItem to="/404">Projects</NavItem>
-      <NavItem to="/contact">Contact</NavItem>
+      <Link className="nav-item" to="/404">About</Link>
+      <Link className="nav-item" to="/404">Projects</Link>
+      <Link className="nav-item" to="/contact">Contact</Link>
       
     </>
   )
