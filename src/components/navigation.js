@@ -42,7 +42,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #767676;
+  
   width: 30px;
   height: 3px;
   border-radius: 10px;
@@ -55,7 +55,7 @@ const Hamburger = styled.div`
     width: 25px;
     height: 3px;
     border-radius: 10px;
-    background-color: #767676;
+    
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -66,7 +66,7 @@ const Hamburger = styled.div`
     width: 20px;
     height: 3px;
     border-radius: 10px;
-    background-color: #767676;
+    
     content: "";
     position: absolute;
     transition: all 0.1s linear;
@@ -112,7 +112,7 @@ const Navbar = () => {
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        {navbarOpen ? <Hamburger className="hamburger" open /> : <Hamburger className="hamburger"/>}
       </Toggle>
       {navbarOpen ? (
         <Navbox>

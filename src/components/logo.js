@@ -28,7 +28,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap as={Link} to="/">
-      <h1 class="logo-text no-select"> Darren<span class="logo-text-2">Blog</span><span class="logo-text-3">.</span> </h1>
+      <h1 class="logo-text no-select"> Darren<span class="logo-text-2">Dube</span><span class="logo-text-3">.</span> </h1>
       
     </LogoWrap>
     

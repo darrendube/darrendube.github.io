@@ -31,7 +31,7 @@ export default () => (
 >
         <div className="button-wrapper">
         <input type="text" className="text-box" placeholder="Email"></input>
-        <input type="submit" className="button -primary" value=" Subscribe &rarr;"></input>
+        <input type="submit" className="hero-button -primary" value=" Subscribe &rarr;"></input>
         </div>
         </form>
       </div>

@@ -53,8 +53,13 @@ body.light {
   --hero-header-bg: #fefefe;
   --logo-color: #000000;
   --logo-dot: blue;
+  --hamburger-color: #767676;
+  --post-title-color: #2e3748;
+  --post-content-color: #707070;
 }
 body.dark {
+  --post-content-color: #959595;
+  --hamburger-color: white;
   --logo-color: #ffffff;
   --primary-color: #9984d5;
   --primary-text-color: #fff;
@@ -81,6 +86,7 @@ body.dark {
   --category-text-color: #2e3748;
   --hero-header-bg: #000000;
   --logo-dot: #ffffff;
+  --post-title-color: #fff;
 }
 
 /* System Fonts as used by Medium and WordPress */
@@ -164,7 +170,7 @@ and (max-width: 768px) {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.button {
+.hero-button {
   position: absolute;
   top:0;
   right:0;
@@ -205,7 +211,7 @@ and (max-width: 768px) {
   width: 100%;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 3px 5px 0 var(--card-shadow);
+  box-shadow: 0 1px 5px 0 var(--card-shadow);
   overflow: hidden;
   max-width: 500px;
   display: inline-block;
@@ -237,24 +243,46 @@ and (max-width: 768px) {
   > .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
+    color: var(--post-content-color);
   }
   > .blog-post-content *:last-child,
   > *:last-child {
     margin-bottom: 0;
   }
   .post-title {
-    text-align: center;
-    margin: 0 0 0.5rem;
-    line-height: 1.3;
-    font-size: 2rem;
+    
+    margin: 1rem 1rem 0 0.5rem;
+    line-height: 1.1;
+    font-size: 3rem;
+    color: var(--post-title-color);
   }
   .post-meta {
     margin-bottom: 32px;
-    text-align: center;
-
+    margin: 0 0 1rem 0.5rem;
+    font-weight: bold;
   }
   
 }
+
+.divider {
+  height: 7px;
+  width: 35px;
+  background-color: var(--post-title-color);
+  margin: 1rem 0 1rem 0.6rem;
+}
+
+.hamburger {
+  background-color: var(--hamburger-color);
+}
+
+.hamburger:before {
+  background-color: var(--hamburger-color);
+}
+
+.hamburger:after {
+  background-color: var(--hamburger-color);
+}
+
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
@@ -263,7 +291,7 @@ and (max-width: 768px) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+  border-radius: 10px;
   margin-bottom: 36px;
   color: var(--featured-text);
   display: grid;
@@ -285,11 +313,7 @@ and (max-width: 768px) {
     position: relative;
     z-index: 2;
   }
-  .post-meta {
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 0;
   }
-}
 .grids {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -328,6 +352,7 @@ and (max-width: 768px) {
   .post-title {
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
+    color: var(--post-title-color);
   }
   .post-meta {
     color: grey;
@@ -377,7 +402,7 @@ and (max-width: 768px) {
 
 .site-footer {
   text-align: center;
-  margin: 90px 0 16px;
+  margin: 90px 0 0 0;
   padding: 20px;
   color: #666;
   background: #fff;
@@ -635,7 +660,18 @@ body.light {
   }
 
 .nav-box {
-  
+
 }
 
+.subscribe-section {
+  background-color: white;
+  border-radius: 15px;
+  min-height: 100px;
+  min-width: 100px;
+  margin: 20px 0 20px 0;
+  box-shadow: 0 5px 15px 0 var(--card-shadow);
+}
 
+.subscribe-heading {
+  margin: 10px;
+}
