@@ -12,7 +12,7 @@ const PostLink = ({ post }) => (
       )}
     </Link></div>
     <div className="post-details">
-      <div className="category"> Category </div>
+      <div className="category"> Uncategorised </div>
       <h2 className="post-title blue-grey-heading">
         <Link to={post.frontmatter.path} className="post-link">
           {post.frontmatter.title}

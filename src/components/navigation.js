@@ -34,7 +34,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: #fff;
+    
     transition: all 0.3s ease-in;
     top: 8vh;
     left: ${props => (props.open ? "100%" : "0")};
@@ -115,11 +115,11 @@ const Navbar = () => {
         {navbarOpen ? <Hamburger className="hamburger" open /> : <Hamburger className="hamburger"/>}
       </Toggle>
       {navbarOpen ? (
-        <Navbox>
+        <Navbox className="navbox">
           <NavbarLinks />
         </Navbox>
       ) : (
-        <Navbox open>
+        <Navbox className="navbox" open>
           <NavbarLinks />
         </Navbox>
       )}
