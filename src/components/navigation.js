@@ -13,9 +13,10 @@ const Navigation = styled.nav`
 
 const Toggle = styled.div`
   display: none;
+  position: relative;
   height: 100%;
   cursor: pointer;
-  
+  z-index: 5;
 
   @media (max-width: 768px) {
     display: flex;
@@ -27,6 +28,7 @@ const Navbox = styled.div`
   height: 100%;
   justify-content: flex-end;
   align-items: center;
+  z-index: 3;
 
   @media (max-width: 768px) {
     flex-direction: column;

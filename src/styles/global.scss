@@ -133,6 +133,7 @@ a {
   padding: 32px;
   max-width: 1000px;
   margin: 0 auto;
+  
   img {
     max-width: 100%;
   }
@@ -318,6 +319,8 @@ and (max-width: 768px) {
   }
   
 }
+
+
 
 .divider {
   height: 7px;
@@ -668,7 +671,7 @@ body.light {
 
   display: flex;
   background-color: var(--header-bg);
-  position: relative;
+  
   justify-content: space-between;
   text-transform: uppercase;
   
@@ -678,7 +681,7 @@ body.light {
   align-self: center;
 
   @media (max-width: 768px) {
-    position: sticky;
+    
     height: 70px;
     top: 0;
     left: 0;
@@ -731,8 +734,10 @@ body.light {
     z-index: 6;}
   }
 
-.nav-box {
 
+
+.contact-heading, .contact-text {
+  z-index: 1;
 }
 
 .subscribe-section {

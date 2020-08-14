@@ -16,8 +16,8 @@ const ContactPage = ({
       </Helmet>
       <div className="two-grids -contact">
         <div className="post-thumbnail" style={{backgroundImage: `url('/assets/alexander-andrews-HgUDpaGPTEA-unsplash.jpg')`, marginBottom: 0}}>
-          <h1 className="post-title">Get in Touch</h1>
-          <p>Let me help you kick start your next project &rarr;</p>
+          <h1 className="contact-heading">Get in Touch</h1>
+          <p className="contact-text">Let me help you kick start your next project &rarr;</p>
         </div>
         <div>
           <form className="form-container" netlify>
