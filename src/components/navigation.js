@@ -35,7 +35,7 @@ const Navbox = styled.div`
     justify-content: flex-start;
     padding-top: 10vh;
     
-    transition: all 0.3s ease-in;
+    transition: left 0.3s ease;
     top: 8vh;
     left: ${props => (props.open ? "100%" : "0")};
   }
@@ -90,8 +90,8 @@ const NavbarLinks = () => {
     <>
     
       <Link className="nav-item" to="/">Home</Link>
-      <Link className="nav-item" to="/">Projects</Link>
-      <Link className="nav-item" to="/">Contact</Link>
+      <Link className="nav-item" to="/404">Projects</Link>
+      <Link className="nav-item" to="/contact">Contact</Link>
       
     </>
   )

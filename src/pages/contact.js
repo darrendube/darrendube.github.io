@@ -20,25 +20,25 @@ const ContactPage = ({
           <p>Let me help you kick start your next project &rarr;</p>
         </div>
         <div>
-          <form className="form-container" action="https://sendmail.w3layouts.com/SubmitContactForm" method="post">
+          <form className="form-container" netlify>
             <div>
               <label htmlFor="w3lName">Name</label>
-              <input type="text" name="w3lName" id="w3lName"/>
+              <input type="text" name="Name" id="w3lName"/>
             </div>
             <div>
-              <label htmlFor="w3lSender">Email</label>
-              <input type="email" name="w3lSender" id="w3lSender"/>
+              <label htmlFor="w3lSender">Email<span className="required">*</span></label>
+              <input type="email" name="Email" id="w3lSender" required/>
             </div>
             <div>
               <label htmlFor="w3lSubject">Subject</label>
-              <input type="text" name="w3lSubject" id="w3lSubject"/>
+              <input type="text" name="Subject" id="w3lSubject"/>
             </div>
             <div>
-              <label htmlFor="w3lMessage">Message</label>
-              <textarea name="w3lMessage" id="w3lMessage"></textarea>
+              <label htmlFor="w3lMessage">Message<span className="required">*</span></label>
+              <textarea name="Message" id="w3lMessage" required></textarea>
             </div>
             <div style={{display: "flex", justifyContent: "flex-end"}}>
-              <input type="submit" className="button -primary" style={{marginRight: 0}} />
+              <input type="submit" className="contact-button -primary"/>
             </div>
           </form>
         </div>
@@ -46,6 +46,7 @@ const ContactPage = ({
     </Layout>
   )
 }
+
 export default ContactPage
 export const pageQuery = graphql`
   query ContactPageQuery{

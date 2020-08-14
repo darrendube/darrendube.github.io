@@ -37,8 +37,9 @@ const SubscribeSection = () => (
   class="embeddable-buttondown-form"
 >
         <div className="button-wrapper">
-        <input type="text" className="text-box" placeholder="Email"></input>
-        <input type="submit" className="hero-button -primary" value=" Subscribe &rarr;"></input>
+	        <input type="email" className="text-box" name="email" placeholder="Email" required></input>
+	        <input type="hidden" value="1" name="embed"></input>
+	        <input type="submit" className="hero-button -primary" value=" Subscribe &rarr;"></input>
         </div>
         </form>
      </SectionSubmit>
