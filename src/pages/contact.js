@@ -20,8 +20,8 @@ const ContactPage = ({
           <p className="contact-text">Let me help you kick start your next project &rarr;</p>
         </div>
         <div>
-          <form className="form-container" netlify>
-<input type="hidden" name="form-name" value="contact" />
+          <form name="Contact Form" className="form-container" method="POST" data-netlify="true" >
+<input type="hidden" name="form-name" value="Contact Form" />
             <div>
               <label htmlFor="w3lName">Name</label>
               <input type="text" name="Name" id="w3lName"/>
