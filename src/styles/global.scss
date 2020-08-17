@@ -56,7 +56,7 @@ body.light {
   --logo-dot: blue;
   --hamburger-color: #767676;
   --post-title-color: #2e3748;
-  --post-content-color: #707070;
+  --post-content-color: #555555;
   --navbox-color: #fff;
   --nav-item-color: #111;
   --card-border: 0;
@@ -133,7 +133,7 @@ a {
   padding: 32px;
   max-width: 1000px;
   margin: 0 auto;
-  
+  min-height: 70vh;
   img {
     max-width: 100%;
   }
@@ -316,6 +316,10 @@ and (max-width: 768px) {
     margin-bottom: 32px;
     margin: 0 0 1rem 0.5rem;
     font-weight: bold;
+  }
+
+  > h1, h2, h3, h4 {
+    color: var(--post-title-color);
   }
   
 }

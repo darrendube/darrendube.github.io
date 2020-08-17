@@ -15,9 +15,9 @@ const ContactPage = ({
         <meta name="description" content={"Contact page of " + site.siteMetadata.description} />
       </Helmet>
       <div className="two-grids -contact">
-        <div className="post-thumbnail" style={{backgroundImage: `url('/assets/alexander-andrews-HgUDpaGPTEA-unsplash.jpg')`, marginBottom: 0}}>
+        <div className="post-thumbnail" style={{marginBottom: 0}}>
           <h1 className="contact-heading">Get in Touch</h1>
-          <p className="contact-text">Let me help you kick start your next project &rarr;</p>
+          <p className="contact-text">Feel free to ask any questions or give feedback &rarr;</p>
         </div>
         <div>
           <form name="Contact Form" className="form-container" method="POST" data-netlify="true" >

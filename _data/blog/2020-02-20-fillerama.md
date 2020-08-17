@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: /fillerama
+path: /uncategorised/blockchain-for-beginners
 date: 2020-08-10T14:59:36.571Z
 title: Blockchain for Beginners
 thumbnail: /assets/blockchain.jpg
