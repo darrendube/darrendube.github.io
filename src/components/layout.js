@@ -23,7 +23,7 @@ export default ({ children }) => {
       {children}
       </div>
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} <a href="https://darrendube.com">Darren Dube</a> &bull; Made in Zimbabwe</p>
+        <p>&copy; {new Date().getFullYear()} <a href="https://darrendube.com">Darren Dube</a></p>
 
       </footer>
     </div>

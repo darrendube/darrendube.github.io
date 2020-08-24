@@ -92,7 +92,7 @@ const NavbarLinks = () => {
     <>
     
       <Link className="nav-item" to="/">Home</Link>
-      <Link className="nav-item" to="/404">Projects</Link>
+      
       <Link className="nav-item" to="/contact">Contact</Link>
       
     </>
