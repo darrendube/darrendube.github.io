@@ -1,11 +1,12 @@
 ---
 template: BlogPost
-path: uncategorised/byzantine-generals-problem
+path: /uncategorised/byzantine-generals-problem
 date: 2020-08-11T15:14:42.806Z
 title: The Byzantine General's Problem
 thumbnail: /assets/0_tcl0Y4YNDZjA3JkE.jpg
+metaDescription: Meta description for blog post
 ---
-***Before we can understand how the blockchain works, we need to understand the problem it is trying to solve**.*
+***Before we can understand how the blockchain works, we need to understand the problem it is trying to solve***
 
 Let me take you back to the medieval times, to a fictitious problem: Imagine two Byzantine armies, one on each side of an enemy city.
 
