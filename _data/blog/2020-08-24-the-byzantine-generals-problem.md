@@ -1,10 +1,10 @@
 ---
 template: BlogPost
-path: /uncategorised/byzantine-generals-problem
+path: /blog/uncategorised/byzantine-generals-problem
 date: 2020-08-11T15:14:42.806Z
 title: The Byzantine General's Problem
-thumbnail: /assets/0_tcl0Y4YNDZjA3JkE.jpg
 metaDescription: Meta description for blog post
+thumbnail: /assets/0_tcl0Y4YNDZjA3JkE.jpg
 ---
 ***Before we can understand how the blockchain works, we need to understand the problem it is trying to solve***
 
