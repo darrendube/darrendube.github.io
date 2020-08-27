@@ -1,13 +1,13 @@
 ---
 template: BlogPost
 path: >-
-  /uncategorised/the-asteroid-16-psyche-is-worth-700-quintillion-heres-why-it-wont-make-us-any-richer.
+  /blog/uncategorised/the-asteroid-16-psyche-is-worth-700-quintillion-heres-why-it-wont-make-us-any-richer.
 date: 2020-08-13T15:26:09.959Z
 title: >-
   The Asteroid 16 Psyche is Worth $700 Quintillion. Here’s Why it Won’t Make us
   any Richer.
-thumbnail: /assets/16p.jpg
 metaDescription: Meta description for blog post
+thumbnail: /assets/16p.jpg
 ---
 ***16 Psyche is not only one of the biggest asteroids in the asteroid belt. It is made almost purely of metal, including vast quantities of gold, silver and platinum.***
 
