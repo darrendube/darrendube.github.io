@@ -1,10 +1,10 @@
 ---
 template: BlogPost
-path: /uncategorised/cryptographic-hashing-for-blockchains
+path: /blog/uncategorised/cryptographic-hashing-for-blockchains
 date: 2020-08-12T15:19:52.718Z
 title: Cryptographic Hashing for Blockchains
-thumbnail: /assets/0_BkjXH7Rq3s45wvpb.png
 metaDescription: Meta description for blog post
+thumbnail: /assets/0_BkjXH7Rq3s45wvpb.png
 ---
 The key to Blockchain Immutability is the hash function. If it wasn’t for this one feature, the blockchain may not even have been invented. It’s what makes transactions recorded on a blockchain permanent in that they can’t be:
 
