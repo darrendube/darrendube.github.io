@@ -363,7 +363,7 @@ and (max-width: 768px) {
   overflow: hidden;
   &:before {
     content: "";
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0);
     position: absolute;
     top: 0;
     left: 0;
