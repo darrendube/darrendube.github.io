@@ -38,4 +38,4 @@ In addition to a *nonce* (which I will explain in a later article), *hash*, and 
 
 You might be thinking — so what’s stopping the hacker from changing the *previous hash* of all successive blocks?
 
-Hashing is only one part of the blockchain’s solution to the [Byzantine Generals Problem](https://darrendube.com/blog/index.php/2020/06/29/the-byzantine-generals-problem/). Stay tuned for the next articles on consensus algorithms and decentralisation.
+Hashing is only one part of the blockchain’s solution to the [Byzantine Generals Problem](https://darrendube.com/blog/uncategorised/byzantine-generals-problem). Stay tuned for the next articles on consensus algorithms and decentralisation.
