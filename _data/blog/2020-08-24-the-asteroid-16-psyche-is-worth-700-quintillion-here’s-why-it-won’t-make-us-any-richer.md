@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: >-
-  /blog/uncategorised/the-asteroid-16-psyche-is-worth-700-quintillion-heres-why-it-wont-make-us-any-richer.
+  /blog/uncategorised/the-asteroid-16-psyche-is-worth-700-quintillion-heres-why-it-wont-make-us-any-richer
 date: 2020-08-13T15:26:09.959Z
 title: >-
   The Asteroid 16 Psyche is Worth $700 Quintillion. Here’s Why it Won’t Make us
