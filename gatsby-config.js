@@ -52,10 +52,12 @@ module.exports = {
                     node {
                       excerpt
                       html
-                      fields { slug }
+                      
                       frontmatter {
                         title
                         date
+                        path
+
                       }
                     }
                   }
