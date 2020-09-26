@@ -25,3 +25,5 @@ Here are five tips for newcomers:
 3. #### Invest money that you are prepared to lose.
 
    Cryptocurrency is known mostly for its wild price swings - one day you could become a millionaire overnight, and the other you could lose almost all your money. While the prospect of doubling your money in weeks is enticing, you should know that you probably have a greater chance of losing money than earning it, especially if you are inexperienced in trading. Long story short, only invest money you are comfortable losing.
+
+Stay tuned for more articles and tips about cryptocurrency on my blog.
