@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: cryptocurrency/5-tips-for-newcomers-to-cryptocurrency
+path: /cryptocurrency/5-tips-for-newcomers-to-cryptocurrency
 date: 2020-09-26T18:12:25.967Z
 title: 5 Tips for Newcomers to Cryptocurrency
 thumbnail: /assets/andre-francois-mckenzie-JrjhtBJ-pGU-unsplash.jpg
