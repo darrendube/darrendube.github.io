@@ -31,9 +31,9 @@ Self-explanatory: most people don’t have a personal website.
 
 So what should you put on your website? You could start a blog about yourself or anything you have expertise in. If you are in the creativity field, it could be where you keep your portfolio of work you have done. If you want, your personal website could also double as an extension of CV. You could describe your work experience in more detail, with images and infographics. For some inspiration, see some personal websites below:
 
-Sean Halpin – [seanhalpin.io](<>)
-Rafael Derolez – [derolez.dev](<>)
-Joshua McCartney – [joshuamccartney.com](<>)
-Roxine Kee – [roxinekee.com](<>)
+Sean Halpin – [seanhalpin.io](<>)  
+Rafael Derolez – [derolez.dev](<>)  
+Joshua McCartney – [joshuamccartney.com](<>)  
+Roxine Kee – [roxinekee.com](<>) 
 
-So, how do you go about making your website? I will explain this in future posts so subscirbe now!
+So, how do you go about making your website? I will explain this in future posts so subscribe now!
