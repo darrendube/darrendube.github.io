@@ -25,7 +25,6 @@ export default function Template({
           <div className="divider"></div>
 
           <div className="post-meta">{frontmatter.date}</div>
-          <div className="category-2"> Uncategorised </div>
           
 
           {!!frontmatter.thumbnail && (
