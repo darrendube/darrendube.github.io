@@ -77,6 +77,7 @@ module.exports = {
                 siteUrl
                 
                 site_url: siteUrl
+                image_url: iconUrl
               }
             }
           }
