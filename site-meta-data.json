@@ -2,7 +2,7 @@
   "title": "Darren Dube",
   "siteUrl": "https://darrendube.com/",
   "description": "",
-  "iconUrl": "src/images/icon.png",
+  "iconUrl": "https://raw.githubusercontent.com/darrendube/website/master/src/images/icon.png",
   "home": {
     "title": "Hi! I'm Darren",
     "description": "Welcome to my blog, where I post about coding, tech, and science.  Subscribe below to get the newsletter :).  \n\nThe first 100 people to subscribe will gain free access to my book!"
