@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 @font-face {
     font-family: 'montserratbold';
     src: url('fonts/montserrat-bold-webfont.woff2') format('woff2'),
@@ -106,7 +109,7 @@ body.light {
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #10072b;
-  --background: #f8f8f8;
+  --background: #ffffff;
   --site-header: var(--background);
   --card-bg: #ffffff;
   --card-bdr: #eee;
@@ -127,7 +130,7 @@ body.light {
   --logo-dot: blue;
   --hamburger-color: #767676;
   --post-title-color: #2e3748;
-  --post-content-color: #555555;
+  --post-content-color: #33475b;
   --navbox-color: #fff;
   --nav-item-color: #111;
   --card-border: 0;
@@ -140,6 +143,7 @@ body.light {
   --logo-text-2-color: grey;
   --input-border: var(--card-shadow);
   --required-color: #ff0000;
+  --text-color: #242729;
 }
 body.dark {
   --required-color: #fff;
@@ -187,18 +191,15 @@ body.dark {
 
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: montserratmedium, Roboto, sans-serif;
+  font-family: 'Poppins', Roboto, sans-serif;
   
   background-color: var(--background);
   color: var(--text-color);
 
 }
 a {
-  color: var(--primary-color);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+  color: #2d00fb;
+  text-underline-position: under;
 }
 .site-wrapper {
   padding: 32px 0 0 0;
@@ -292,6 +293,7 @@ and (max-width: 768px) {
 .post-header {
   background: grey;
   margin-top: -32px;
+  margin-bottom: 32px;
 }
 
 .contact-button {
@@ -430,22 +432,11 @@ and (max-width: 768px) {
 }
 
 .post-thumbnail {
-  text-align: center;
-  min-height: 380px;
-  //background-image: url('/assets/circles-light.png');
-  background-color: var(--featured-bg);
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  border-radius: 0;
-  margin: 0 50px 50px 50px;
-  padding-top:auto;
-  color: var(--featured-text);
-  display: grid;
-  align-content: center;
-  position: relative;
-  padding: 18px;
-  overflow: hidden;
+  background-repeat: no-repeat;
+  
+  height: 0;
+  padding-top: 56.25%;
   &:before {
     content: "";
     background: rgba(0,0,0,0);
@@ -460,12 +451,48 @@ and (max-width: 768px) {
     position: relative;
     z-index: 2;
   }
-  }
+}
+
 .grids {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 16px;
   margin-top: 32px;
+}
+
+.post-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 16px;
+  margin-top: -32px;
+  
+}
+
+@media only screen 
+and (min-width: 1024px) {
+.post-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.post-thumbnail {
+  border-radius: 20px;
+  margin: 30px;
+}
+}
+
+@media only screen 
+and (max-width: 1023px) {
+.post-grid {
+  grid-template-columns: 1fr;
+}
+}
+
+
+
+@media ( min-width: 1024px ) {  
+  .grid-item2 {
+    order: -1;
+  }
 }
 
 .card {
@@ -520,7 +547,9 @@ and (max-width: 768px) {
 
 }
 
-
+.post-info {
+  margin: 32px;
+}
 
 .card-image {
 

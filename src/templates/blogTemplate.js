@@ -21,22 +21,23 @@ export default function Template({
       <div className="blog-post-container">
         <article className="post">
           
-          <div className="post-header">
+          <div className="post-header post-grid">
 
           {!!frontmatter.thumbnail && (
-            <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
+            <div className="post-thumbnail grid-item1" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
             </div>
           )}
-          
-          
-          <h1 className="post-title blue-grey-heading">{frontmatter.title}</h1>
+
+          <div className="post-info grid-item2">
+          <div className="category"> Uncategorised </div>
+          <h2 className="post-title blue-grey-heading">{frontmatter.title}</h2>
 
           <div className="divider"></div>
 
           <div className="post-meta">{frontmatter.date}</div>
 
           </div>
-
+          </div>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
