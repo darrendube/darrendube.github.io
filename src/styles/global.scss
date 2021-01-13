@@ -1,8 +1,7 @@
-
 @font-face {
-    font-family: 'mulishitalic';
-    src: url('fonts/mulish-italic-variablefont_wght-webfont.woff2') format('woff2'),
-         url('fonts/mulish-italic-variablefont_wght-webfont.woff') format('woff');
+    font-family: 'montserratbold';
+    src: url('fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -12,9 +11,81 @@
 
 
 @font-face {
-    font-family: 'mulishregular';
-    src: url('fonts/mulish-variablefont_wght-webfont.woff2') format('woff2'),
-         url('fonts/mulish-variablefont_wght-webfont.woff') format('woff');
+    font-family: 'montserratbold_italic';
+    src: url('fonts/montserrat-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratitalic';
+    src: url('fonts/montserrat-italic-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('fonts/montserrat-medium-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratmedium_italic';
+    src: url('fonts/montserrat-mediumitalic-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'montserratsemibold_italic';
+    src: url('fonts/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-semibolditalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -116,7 +187,7 @@ body.dark {
 
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: mulishregular, Roboto, sans-serif;
+  font-family: montserratmedium, Roboto, sans-serif;
   
   background-color: var(--background);
   color: var(--text-color);
