@@ -16,7 +16,8 @@ export default () => (
     `}
     render={data => (
       <div className="hero-header">
-        <div className="headline">{data.site.siteMetadata.home.title}</div>
+        <div className="items-wrapper">
+        <div className="headline">LEARN ECONOMICS WITH <span className="teal">EASE</span></div>
         <div 
           className="primary-content" 
           dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.home.description}}
@@ -35,6 +36,7 @@ export default () => (
           <input type="submit" className="hero-button -primary" value=" Subscribe &rarr;"></input>
         </div>
         </form>
+      </div>
       </div>
     )}
   />

@@ -20,17 +20,22 @@ export default function Template({
       </Helmet>
       <div className="blog-post-container">
         <article className="post">
-          <h1 className="post-title blue-grey-heading">{frontmatter.title}</h1>
-
-          <div className="divider"></div>
-
-          <div className="post-meta">{frontmatter.date}</div>
           
+          <div className="post-header">
 
           {!!frontmatter.thumbnail && (
             <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
             </div>
           )}
+          
+          
+          <h1 className="post-title blue-grey-heading">{frontmatter.title}</h1>
+
+          <div className="divider"></div>
+
+          <div className="post-meta">{frontmatter.date}</div>
+
+          </div>
 
           <div
             className="blog-post-content"

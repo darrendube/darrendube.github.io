@@ -51,7 +51,7 @@ body.light {
   --header-bg: #ffffff;
   --category-color: #e1e8f0;
   --category-text-color: #718097;
-  --hero-header-bg: #fefefe;
+  --hero-header-bg: #333a56;
   --logo-color: #000000;
   --logo-dot: blue;
   --hamburger-color: #767676;
@@ -101,7 +101,7 @@ body.dark {
   --header-bg: #000000;
   --category-color: #718097;
   --category-text-color: #2e3748;
-  --hero-header-bg: #000000;
+  --hero-header-bg: #f0f0f0;
   --logo-dot: #ffffff;
   --post-title-color: #fff;
   --navbox-color: #000;
@@ -130,8 +130,8 @@ a {
   }
 }
 .site-wrapper {
-  padding: 32px;
-  max-width: 1000px;
+  padding: 32px 0 0 0;
+  max-width: 6000px;
   margin: 0 auto;
   min-height: 70vh;
   img {
@@ -143,9 +143,15 @@ a {
 
 @media only screen 
 and (max-width: 768px) {
-  .site-wrapper {
+  .items-wrapper {
     padding: 14px;
   }
+}
+
+.items-wrapper {
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -184,10 +190,10 @@ and (max-width: 768px) {
 }
 .hero-header {
   padding: 0 0 64px;
-  max-width: 980px;
+  color: white;
   background: var(--hero-header-bg);
-  padding: 20px;
-  border-radius: 20px;
+ 
+  margin-top: -32px;
   margin-bottom: 20px;
   
 }
@@ -210,6 +216,11 @@ and (max-width: 768px) {
   text-transform: uppercase;
   font-weight: bold;
   transition: color 0.5s, background 0.5s;
+}
+
+.post-header {
+  background: grey;
+  margin-top: -32px;
 }
 
 .contact-button {
@@ -284,7 +295,9 @@ and (max-width: 768px) {
   color: var(--button-wrapper-text-color);
 }
 
-
+.teal {
+  color: #afd9d8;
+}
 
 .primary-content {
   font-size: 18px;
@@ -307,7 +320,7 @@ and (max-width: 768px) {
   }
   .post-title {
     
-    margin: 1rem 1rem 0 0.5rem;
+    
     line-height: 1.1;
     font-size: 3rem;
     color: var(--post-title-color);
@@ -353,8 +366,9 @@ and (max-width: 768px) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-  margin-bottom: 36px;
+  border-radius: 0;
+  margin: 0 50px 50px 50px;
+  padding-top:auto;
   color: var(--featured-text);
   display: grid;
   align-content: center;
