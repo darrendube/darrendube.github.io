@@ -6,6 +6,7 @@ import ThemeChanger from "./themeChanger"
 
 
 
+
 const LogoWrap = styled.div`
 
   margin: auto 0;
@@ -15,12 +16,10 @@ const LogoWrap = styled.div`
     flex: 0 1 25px;
   }
 
-  color: black;
+
+  
 
 
-  :hover {
-    text-decoration: none;
-  }
 
 
 `
@@ -28,7 +27,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap as={Link} to="/">
-      <h1 class="logo-text no-select"> Darren<span class="logo-text-2">Dube</span><span class="logo-text-3">.</span> </h1>
+      <img src="/logo/logo.png" className="logoimg"/>
       
     </LogoWrap>
     

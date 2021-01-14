@@ -82,7 +82,9 @@
 
 }
 
-
+.logoimg {
+  height: 30px;
+}
 
 
 @font-face {
@@ -382,11 +384,7 @@ and (max-width: 768px) {
   background:var(--background);
   color: var(--text-color);
   line-height: 1.5;
-  > .blog-post-content {
-    max-width: 768px;
-    margin: 0 auto;
-    color: var(--post-content-color);
-  }
+
   > .blog-post-content *:last-child,
   > *:last-child {
     margin-bottom: 0;
@@ -409,6 +407,19 @@ and (max-width: 768px) {
   }
   
 }
+
+
+
+.blog-post-content {
+    max-width: 768px;
+    margin: 0 auto;
+    color: var(--post-content-color);
+    > p, h1, h2, h3, h4, h5, h6 {
+     margin: 0 40px 0 40px;
+    }
+
+
+  }
 
 
 
@@ -500,7 +511,7 @@ and (max-width: 1023px) {
   grid-column-gap: 5px;
   background-color: var(--card-bg);
   border-radius: 14px;
-  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr minmax(20px, 1fr);
   min-height: 150px;
   overflow: hidden;
   line-height: 1.5;
@@ -551,20 +562,27 @@ and (max-width: 1023px) {
   margin: 32px;
 }
 
-.card-image {
+.fill img {
 
   border-radius: 8px !important;
-  display: block;
-  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  vertical-align: middle;
+
 }
 
 
 .fill {
+  position: relative;
   
-  overflow: hidden;
+}
+
+.fill::after {
+  display:block;
+  content: '';
+  padding-bottom: 56.25%
 }
 
 
@@ -626,14 +644,14 @@ and (max-width: 1023px) {
 }
 /* Portrait and Landscape */
 @media only screen 
-and (min-width: 768px) {
+and (min-width: 550px) {
 .grids {
   grid-template-columns: 1fr 1fr;
 }
 }
 
 @media only screen 
-and (max-width: 767px) {
+and (max-width: 549px) {
 .grids {
   grid-template-columns: 1fr;
 }
@@ -641,7 +659,9 @@ and (max-width: 767px) {
 
 @media only screen 
   and (min-width: 1024px) {
- 
+  .grids {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .two-grids {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -785,7 +805,7 @@ body.light {
 }
 
 .nav-bar {
-  height: 70px;
+  height: 50px;
 
   display: flex;
   background-color: var(--header-bg);
@@ -800,7 +820,7 @@ body.light {
 
   @media (max-width: 768px) {
     
-    height: 70px;
+    height: 50px;
     top: 0;
     left: 0;
     right: 0;

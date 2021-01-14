@@ -10,7 +10,7 @@ thumbnail: /assets/0_tcl0Y4YNDZjA3JkE.jpg
 
 Let me take you back to the medieval times, to a fictitious problem: Imagine two Byzantine armies, one on each side of an enemy city.
 
-![Image for post](https://miro.medium.com/max/1993/1*J9v6mTEMCURnjzW0PWUJ9g.png)
+![Image for post](https://miro.medium.com/max/1993/1*J9v6mTEMCURnjzW0PWUJ9g.png#)
 
 They need to attack at the exact same time. If one army attacks on its own, it will lose, but if both armies attack at the same time, they will win.
 
