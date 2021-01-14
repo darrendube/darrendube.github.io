@@ -4,6 +4,7 @@ path: /cryptocurrency/5-tips-for-newcomers-to-cryptocurrency
 date: 2020-09-26T18:12:25.967Z
 title: 5 Tips for Newcomers to Cryptocurrency
 thumbnail: /assets/andre-francois-mckenzie-JrjhtBJ-pGU-unsplash.jpg
+category: test4
 ---
 It's no secret that many people have become millionaires trading in bitcoin. This has generated interest in cryptocurrencies, and more and more newcomers are trading in it, whether to get rich or otherwise. Most newbies in cryptocurrency are doing so to earn money. Sadly, this leaves them susceptible to scams and Ponzi schemes that promise quick returns. If they don't lose their money to scams, they do so to their inexperience in trading. This post is an attempt to save newcomers to cryptocurrency from all this trouble. Here are five tips for newcomers.
 

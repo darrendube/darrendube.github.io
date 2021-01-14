@@ -595,15 +595,25 @@ and (max-width: 1023px) {
 }
 
 .site-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   margin: 90px 0 0 0;
   padding: 20px;
   color: #666;
-  background: var(--footer-bg);
+  background: #03002f;
   a {
     font-weight: 700;
   }
 }
+
+@media only screen 
+and (max-width: 768px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
 .form-container {
   background-color: var(--card-bg);
   padding: 32px;

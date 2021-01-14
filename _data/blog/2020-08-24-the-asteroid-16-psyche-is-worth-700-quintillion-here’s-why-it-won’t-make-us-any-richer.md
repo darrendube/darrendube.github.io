@@ -8,6 +8,7 @@ title: >-
   any Richer.
 metaDescription: Meta description for blog post
 thumbnail: /assets/16p.jpg
+category: test2
 ---
 ***16 Psyche is not only one of the biggest asteroids in the asteroid belt. It is made almost purely of metal, including vast quantities of gold, silver and platinum.***
 

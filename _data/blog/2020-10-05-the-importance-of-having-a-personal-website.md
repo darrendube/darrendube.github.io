@@ -4,6 +4,7 @@ path: /web-development/personal-website
 date: 2020-10-05T12:29:52.196Z
 title: The Importance of Having a Personal Website
 thumbnail: /assets/le-buzz-KiEiI2b9GkU-unsplash.jpg
+category: test5
 ---
 Not long ago, the internet was a luxury, reserved for the select few. Today, anyone can establish an online presence with under US$10. And nowadays, with tools like WordPress and Wix, you don’t even have to know how to code. But do you really need your own website?
 

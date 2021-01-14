@@ -45,12 +45,13 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 50)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path
             title
             thumbnail
+            category
           }
         }
       }

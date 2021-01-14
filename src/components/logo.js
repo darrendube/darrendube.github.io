@@ -7,6 +7,7 @@ import ThemeChanger from "./themeChanger"
 
 
 
+
 const LogoWrap = styled.div`
 
   margin: auto 0;
