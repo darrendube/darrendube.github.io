@@ -127,7 +127,7 @@ body.light {
   --header-bg: #ffffff;
   --category-color: #e1e8f0;
   --category-text-color: #718097;
-  --hero-header-bg: #333a56;
+  --hero-header-bg: #ffffff;
   --logo-color: #000000;
   --logo-dot: blue;
   --hamburger-color: #767676;
@@ -226,6 +226,11 @@ and (max-width: 768px) {
   padding: 32px;
   max-width: 1000px;
   margin: 0 auto;
+
+}
+
+.posts-section {
+  background: #8ee1ff;
 }
 
 .navigation {
@@ -264,11 +269,11 @@ and (max-width: 768px) {
 }
 .hero-header {
   padding: 0 0 64px;
-  color: white;
+  color: #000000;
   background: var(--hero-header-bg);
  
   margin-top: -32px;
-  margin-bottom: 20px;
+  margin-bottom: -32px;
   
 }
 .headline {
@@ -276,26 +281,13 @@ and (max-width: 768px) {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.hero-button {
-  position: absolute;
-  top:0;
-  right:0;
-  border-radius: 50px;
-  height: 100%;
-  border: none;
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  
-  color: var(--primary-color);
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: color 0.5s, background 0.5s;
-}
+
 
 .post-header {
-  background: grey;
+  background: linear-gradient(0deg, rgba(43,84,188,1) 0%, rgba(22,163,222,1) 100%);
   margin-top: -32px;
   margin-bottom: 32px;
+  color: white ;
 }
 
 .contact-button {
@@ -315,14 +307,7 @@ and (max-width: 768px) {
   color: white;
 }
 
-.hero-button:active {
-  outline: none !important;
-}
 
-.hero-button:hover {
-  background: var(--primary-color);
-  color: white;
-}
 
 .text-box:focus {
   outline: none !important;
@@ -345,29 +330,31 @@ and (max-width: 768px) {
   color: var(--logo-dot);
 }
 
-.button-wrapper {
-  position: relative;
-  width: 100%;
-  background: var(--button-wrapper-bg);
-  border-radius: 50px;
-  
-  overflow: hidden;
-  max-width: 500px;
-  display: inline-block;
-  border: var(--button-wrapper-border);
-  box-shadow: var(--button-wrapper-shadow);
-}
+
 
 .text-box {
-  float: left;
-  box-sizing: border-box;
-  padding-right: 80px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 50px;
-  background: transparent;
   border: none;
-  color: var(--button-wrapper-text-color);
+  background: #dddddd;
+  
+  
+}
+
+.hero-button {
+  border: none;
+  background: red;
+  padding: .75rem 1rem;
+  color: white;
+  margin: .5rem;
+  font-weight: bold;
+  
+}
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  
+  
+  
 }
 
 .teal {
@@ -393,9 +380,12 @@ and (max-width: 768px) {
     
     
     line-height: 1.1;
-    font-size: 3rem;
-    color: var(--post-title-color);
+    font-size: 2rem;
+    color: #ffffff;
   }
+
+
+
   .post-meta {
     margin-bottom: 32px;
     margin: 0 0 1rem 0.5rem;
@@ -407,7 +397,6 @@ and (max-width: 768px) {
   }
   
 }
-
 
 
 .blog-post-content {
@@ -481,7 +470,7 @@ and (max-width: 768px) {
 }
 
 @media only screen 
-and (min-width: 1024px) {
+and (min-width: 768px) {
 .post-grid {
   grid-template-columns: 1fr 1fr;
 }
@@ -492,7 +481,7 @@ and (min-width: 1024px) {
 }
 
 @media only screen 
-and (max-width: 1023px) {
+and (max-width: 767px) {
 .post-grid {
   grid-template-columns: 1fr;
 }
@@ -500,7 +489,7 @@ and (max-width: 1023px) {
 
 
 
-@media ( min-width: 1024px ) {  
+@media ( min-width: 768px ) {  
   .grid-item2 {
     order: -1;
   }
@@ -598,7 +587,7 @@ and (max-width: 1023px) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  margin: 90px 0 0 0;
+  margin: 0 0 0 0;
   padding: 20px;
   color: #666;
   background: #03002f;
@@ -783,14 +772,15 @@ body.light {
 
 .category {
   width: fit-content;
-  background-color: var(--category-color);
-  color: var(--category-text-color);
+  background-color: transparent;
+  color: orange;
   text-transform: capitalise;
   padding: 3px 6px;
   font-size: 0.7rem;
   border-radius: 8px;
   font-weight: bold;
   margin-bottom: 10px;
+  border: 2px solid;
 }
 
 .category-2 {
@@ -889,9 +879,9 @@ body.light {
 }
 
 .subscribe-section {
-  background-color: var(--subscribe-section-bg);
-  border-radius: 15px;
-  max-width: 500px;
+  background-color: #faf8f5;
+  
+  
   margin: 80px auto 20px auto;
   padding: 10px;
  

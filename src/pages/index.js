@@ -23,11 +23,14 @@ const IndexPage = ({
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
       <HeroHeader/>
-      <div className="items-wrapper">
+      <div className="items-wrapper posts-section">
+
+      
       <h2>Blog Posts &darr;</h2>
       <div className="grids">
         {Posts}
       </div></div>
+
     </Layout>
   )
 }

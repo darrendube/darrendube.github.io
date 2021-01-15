@@ -34,13 +34,13 @@ const SubscribeSection = () => (
   method="post"
   target="popupwindow"
   onsubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
-  class="embeddable-buttondown-form"
+  class="embeddable-buttondown-form subscribe-form"
 >
-        <div className="button-wrapper">
+        
 	        <input type="email" className="text-box" name="email" placeholder="Email" required></input>
 	        <input type="hidden" value="1" name="embed"></input>
-	        <input type="submit" className="hero-button -primary" value=" Subscribe &rarr;"></input>
-        </div>
+	        <input type="submit" className="hero-button" value=" SUBSCRIBE &rarr;"></input>
+        
         </form>
      </SectionSubmit>
   </div>

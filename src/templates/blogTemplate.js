@@ -32,7 +32,7 @@ export default function Template({
           <div className="category"> {frontmatter.category} </div>
           <h2 className="post-title blue-grey-heading">{frontmatter.title}</h2>
 
-          <div className="divider"></div>
+          
 
           <div className="post-meta">{frontmatter.date}</div>
 

@@ -65,6 +65,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-fontawesome-css`,
    {
       resolve: `gatsby-plugin-feed`,
       options: {

@@ -4,6 +4,8 @@ import Navbar from "../components/navigation"
 import 'prismjs/themes/prism-okaidia.css';
 import Logo from "./logo"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram, faTwitter, faFacebook, } from "@fortawesome/free-solid-svg-icons"
 
 const SectionSubmit = styled.div`
   margin: 20px 29px 0 20px;
@@ -35,22 +37,25 @@ export default ({ children }) => {
         <div className="footer-section1">
           <Logo/>
 
-          <SectionSubmit>
+          
+     <SectionSubmit>
    <form
   action="https://buttondown.email/api/emails/embed-subscribe/darrendube"
   method="post"
   target="popupwindow"
   onsubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
-  class="embeddable-buttondown-form"
+  class="embeddable-buttondown-form subscribe-form"
 >
-        <div className="button-wrapper">
+        
           <input type="email" className="text-box" name="email" placeholder="Email" required></input>
           <input type="hidden" value="1" name="embed"></input>
-          <input type="submit" className="hero-button -primary" value=" Subscribe &rarr;"></input>
-        </div>
+          <input type="submit" className="hero-button" value=" SUBSCRIBE &rarr;"></input>
+        
         </form>
      </SectionSubmit>
-     <h3> Follow me on: </h3>
+<FontAwesomeIcon icon={faInstagram} />
+
+
         </div>
         
         <div className="footer-section2">
@@ -58,7 +63,7 @@ export default ({ children }) => {
           <h4>About</h4>
           <h4>Contact</h4>
         </div>
-        
+
         <div className="footer-section3">
           <h4>Podcast</h4>
           <h4>Youtube</h4>
