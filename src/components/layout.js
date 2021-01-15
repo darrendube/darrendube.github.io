@@ -6,11 +6,9 @@ import Logo from "./logo"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faTwitter, faFacebook, } from "@fortawesome/free-solid-svg-icons"
+import SubscribeForm from "./subscribe-form"
 
-const SectionSubmit = styled.div`
-  margin: 20px 29px 0 20px;
-  
-`
+
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -38,21 +36,7 @@ export default ({ children }) => {
           <Logo/>
 
           
-     <SectionSubmit>
-   <form
-  action="https://buttondown.email/api/emails/embed-subscribe/darrendube"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
-  class="embeddable-buttondown-form subscribe-form"
->
-        
-          <input type="email" className="text-box" name="email" placeholder="Email" required></input>
-          <input type="hidden" value="1" name="embed"></input>
-          <input type="submit" className="hero-button" value=" SUBSCRIBE &rarr;"></input>
-        
-        </form>
-     </SectionSubmit>
+     <SubscribeForm />
 <FontAwesomeIcon icon={faInstagram} />
 
 
