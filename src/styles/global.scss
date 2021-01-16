@@ -1,100 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-
 @font-face {
-    font-family: 'montserratbold';
-    src: url('fonts/montserrat-bold-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-bold-webfont.woff') format('woff');
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Italic.woff2') format('woff2'),
+        url('fonts/Poppins-Italic.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
+    font-style: italic;
+    font-display: swap;
 }
 
-
-
-
 @font-face {
-    font-family: 'montserratbold_italic';
-    src: url('fonts/montserrat-bolditalic-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-bolditalic-webfont.woff') format('woff');
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+        url('fonts/Poppins-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
-
-
-
 
 @font-face {
-    font-family: 'montserratitalic';
-    src: url('fonts/montserrat-italic-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-italic-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Bold.woff2') format('woff2'),
+        url('fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
-
+    font-display: swap;
 }
-
-
-
 
 @font-face {
-    font-family: 'montserratmedium';
-    src: url('fonts/montserrat-medium-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-medium-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.woff2') format('woff2'),
+        url('fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'montserratmedium_italic';
-    src: url('fonts/montserrat-mediumitalic-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-mediumitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'montserratregular';
-    src: url('fonts/montserrat-regular-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'montserratsemibold';
-    src: url('fonts/montserrat-semibold-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-.logoimg {
-  height: 30px;
-  vertical-align: middle;
-}
-
-
-@font-face {
-    font-family: 'montserratsemibold_italic';
-    src: url('fonts/montserrat-semibolditalic-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-semibolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+    font-display: swap;
 }
 
 html,
@@ -232,6 +169,11 @@ and (max-width: 768px) {
 
 .posts-section {
   background: #8ee1ff;
+
+}
+
+.footer-logo {
+  margin-bottom: 50px;
 }
 
 .navigation {
@@ -273,7 +215,7 @@ and (max-width: 768px) {
   color: #000000;
   background: var(--hero-header-bg);
  
- 
+
   
 }
 .headline {
@@ -282,6 +224,10 @@ and (max-width: 768px) {
   margin-bottom: 0.5rem;
 }
 
+.subscribe-section {
+  background: #f2f6ff;
+  margin-top: 40px;
+ }
 
 .post-header {
   background: linear-gradient(0deg, rgba(43,84,188,1) 0%, rgba(22,163,222,1) 100%);
@@ -326,7 +272,9 @@ and (max-width: 768px) {
   color: var(--logo-dot);
 }
 
-
+.logoimg {
+  height: 30px;
+}
 
 
 
@@ -335,16 +283,19 @@ and (max-width: 768px) {
   background: #ff4133;
   padding: .75rem 1rem;
   color: white;
-  border-radius: 0 7px 7px 0;
-  
+  border-radius: 7px;
+  width: 140px;
   font-weight: bold;
   
 }
 
 .text-box {
   border: 2px solid #e3e5e7;
-  border-radius: 7px 0 0 7px;
-  padding: 0 0 0 10px;
+  border-radius: 7px;
+  padding: .7rem 0 .7rem 10px;
+  margin: 0 10px 0 0;
+  max-width: 500px;
+
 }
 
 .text-box:focus {
@@ -353,12 +304,25 @@ and (max-width: 768px) {
 
 .subscribe-form {
   display: grid;
-  grid-template-columns: minmax(70%, 0) 140px;
+  grid-template-columns: 3fr auto;
   max-width: 500px;
   
   
 }
 
+@media only screen 
+and (max-width: 480px) {
+.subscribe-form {
+  grid-template-columns: 1fr;
+}
+.hero-button {
+  width: 100%;
+}
+
+.text-box {
+  margin: 0 0 15px 0;
+}
+}
 
 .teal {
   color: #afd9d8;
@@ -592,15 +556,26 @@ and (max-width: 767px) {
 
 .site-footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   text-align: center;
   margin: 0 0 0 0;
-  padding: 20px;
+  padding: 50px;
   color: #666;
   background: #03002f;
   a {
     font-weight: 700;
   }
+}
+
+.copyright-notice {
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  background: #000000
+}
+
+.margin-auto {
+  margin: auto;
 }
 
 @media only screen 

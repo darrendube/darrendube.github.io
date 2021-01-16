@@ -33,7 +33,7 @@ export default ({ children }) => {
       <footer className="site-footer">
 
         <div className="footer-section1">
-          <Logo/>
+          <Logo className="footer-logo"/>
 
           
      <SubscribeForm />
@@ -43,9 +43,9 @@ export default ({ children }) => {
         </div>
         
         <div className="footer-section2">
-          <h4>Home</h4>
-          <h4>About</h4>
-          <h4>Contact</h4>
+          <h5><Link to="/">Home</Link></h5>
+          <h5><Link to="404">About</Link></h5>
+          <h5><Link to="contant">Contact</Link></h5>
         </div>
 
         <div className="footer-section3">
@@ -54,8 +54,12 @@ export default ({ children }) => {
           <h4>Privacy Policy</h4>
         </div>
 
+        
 
       </footer>
+      <div className="copyright-notice">
+          <p className="margin-auto"> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved.</p>
+        </div>
     </div>
   )
 }
