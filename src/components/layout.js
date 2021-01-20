@@ -7,6 +7,8 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faTwitter, faFacebook, } from "@fortawesome/free-solid-svg-icons"
 import SubscribeForm from "./subscribe-form"
+import SubscribeFormFooter from "./subscribe-form-footer"
+import FooterLogo from "./footer-logo"
 
 
 
@@ -33,25 +35,37 @@ export default ({ children }) => {
       <footer className="site-footer">
 
         <div className="footer-section1">
-          <Logo className="footer-logo"/>
+          <FooterLogo/>
 
           
-     <SubscribeForm />
+     <SubscribeFormFooter/>
 <FontAwesomeIcon icon={faInstagram} />
 
 
         </div>
-        
-        <div className="footer-section2">
-          <h5><Link to="/">Home</Link></h5>
-          <h5><Link to="404">About</Link></h5>
-          <h5><Link to="contant">Contact</Link></h5>
+         <div className="footer-section2">
+         <div>
+          <p><Link to="/">CRYPTOCURRENCY</Link></p>
+          <p><Link to="/">STOCK MARKET</Link></p>
+          </div>
+          <div>
+          <p><Link to="/">CURRENCIES</Link></p>
+          <p><Link to="/">PERSONAL FINANCE</Link></p>
+          </div>
         </div>
 
         <div className="footer-section3">
-          <h4>Podcast</h4>
-          <h4>Youtube</h4>
-          <h4>Privacy Policy</h4>
+          <p><Link to="/">Home</Link></p>
+          <p><Link to="404">About</Link></p>
+          <p><Link to="contant">Contact</Link></p>
+        </div>
+
+       
+
+        <div className="footer-section4">
+          <p><Link to="/">Podcast</Link></p>
+          <p><Link to="/">Youtube</Link></p>
+          <p><Link to="/">Privacy Policy</Link></p>
         </div>
 
         

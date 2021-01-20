@@ -6,6 +6,7 @@ title: The Byzantine General's Problem
 metaDescription: Meta description for blog post
 thumbnail: /assets/0_tcl0Y4YNDZjA3JkE.jpg
 category: test3
+type: article
 ---
 ***Before we can understand how the blockchain works, we need to understand the problem it is trying to solve***
 

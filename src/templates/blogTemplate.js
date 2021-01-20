@@ -29,7 +29,10 @@ export default function Template({
           )}
 
           <div className="post-info grid-item2">
+<div className="type-category">
+          <div className="post-type"> {frontmatter.type} </div>
           <div className="category"> {frontmatter.category} </div>
+</div>
           <h2 className="post-title blue-grey-heading">{frontmatter.title}</h2>
 
           
@@ -64,6 +67,7 @@ export const pageQuery = graphql`
         title
         thumbnail
         category
+        type
         
       }
     }
