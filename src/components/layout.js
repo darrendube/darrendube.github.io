@@ -45,8 +45,8 @@ export default ({ children }) => {
         </div>
          <div className="footer-section2">
          <div>
-          <p><Link to="/">CRYPTOCURRENCY</Link></p>
-          <p><Link to="/">STOCK MARKET</Link></p>
+          <p><Link to="/">CRYPTOS</Link></p>
+          <p><Link to="/">STOCKS</Link></p>
           </div>
           <div>
           <p><Link to="/">CURRENCIES</Link></p>

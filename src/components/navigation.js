@@ -46,17 +46,17 @@ const Navbox = styled.div`
 const Hamburger = styled.div`
   
   width: 30px;
-  height: 3px;
-  border-radius: 10px;
+  height: 2px;
+ 
   transition: all .3s linear;
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg) " : "inherit")};
 
   ::before {
-    width: 25px;
-    height: 3px;
-    border-radius: 10px;
+    width: 30px;
+    height: 2px;
+    
     
     content: "";
     position: absolute;
@@ -65,24 +65,24 @@ const Hamburger = styled.div`
   }
 
   ::after {
-    width: 20px;
-    height: 3px;
+    width: 30px;
+    height: 2px;
     border-radius: 10px;
     
     content: "";
     position: absolute;
-    transition: all 0.1s linear;
+    transition: all 0.3s linear;
   }
 
   ::before {
     transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 2px) scale(1.2,1)" : "rotate(0deg)"};
+      props.open ? "rotate(-90deg) translate(-10px, 1px)" : "rotate(0deg)"};
     top: -10px;
   }
 
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg) scale(1.5,1)" : "rotate(0deg)")};
+    transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
     top: 10px;
   }
 `
