@@ -15,7 +15,13 @@ const PostLink = ({ post }) => (
     <div className="post-details">
     <div className="type-category"> 
       <div className="post-type"> {post.frontmatter.type} </div>
-      <div className="category"> {post.frontmatter.category} </div>
+
+
+
+    {!!post.frontmatter.category && (
+    <div className="category"> {post.frontmatter.category} </div>
+    )}
+
 </div>
       <h2 className="post-title blue-grey-heading">
         <Link to={post.frontmatter.path} className="post-link">

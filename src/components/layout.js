@@ -72,7 +72,7 @@ export default ({ children }) => {
 
       </footer>
       <div className="copyright-notice">
-          <p className="margin-auto"> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved.</p>
+          <p className="margin-auto"> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved | <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a></p>
         </div>
     </div>
   )
