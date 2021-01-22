@@ -106,6 +106,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
+      <div className="nav-bar-contents">
       <Logo />
      	<div className="togglewrapper">
      	<ThemeChanger/>
@@ -125,7 +126,7 @@ const Navbar = () => {
           <NavbarLinks />
         </Navbox>
       )}
-      </div>
+      </div></div>
     </nav>
   )
 }
