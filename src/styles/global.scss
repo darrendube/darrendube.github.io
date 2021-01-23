@@ -289,6 +289,11 @@ and (max-width: 768px) {
   
 }
 
+.hero-button:hover {
+  box-shadow: 0 0px 25px 0 var(--primary-color);
+  width: 150px;
+}
+
 .hero-button-footer {
   border: none;
   background: #ee0000;
@@ -886,7 +891,8 @@ nav {
   height: 70px;
 
   
-  background-color: rgba(255,255,255,0.5) !important;
+  background: rgba(255,255,255,0.7);
+ 
   backdrop-filter: blur(15px) saturate(125%);
   
   text-transform: uppercase;
