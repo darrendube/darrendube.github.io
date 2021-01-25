@@ -55,6 +55,7 @@ export default ({ children }) => {
         </div>
 
         <div className="footer-section3">
+          <p className="footer-heading">PAGES</p>
           <p><Link to="/">Home</Link></p>
           <p><Link to="404">About</Link></p>
           <p><Link to="contant">Contact</Link></p>
@@ -63,6 +64,7 @@ export default ({ children }) => {
        
 
         <div className="footer-section4">
+          <p className="footer-heading">BONUS</p>
           <p><Link to="/">Podcast</Link></p>
           <p><Link to="/">Youtube</Link></p>
           <p><Link to="/">Privacy Policy</Link></p>

@@ -138,9 +138,15 @@ body {
 
 }
 a {
-  color: #2d00fb;
+  color: var(--primary-color);
+
   text-underline-position: under;
 }
+
+a:hover {
+  color: blue;
+}
+
 .site-wrapper {
   padding: 0 0 0 0;
   max-width: 6000px;
@@ -151,6 +157,18 @@ a {
   }
 
 
+}
+
+.footer-heading {
+  font-weight: bold;
+  color: #fff;
+}
+
+blockquote {
+  
+  
+  margin: 20px 0 20px 30px;
+  padding-left: 8px;
 }
 
 @media only screen 
@@ -230,9 +248,10 @@ and (max-width: 768px) {
  }
 
 .post-header {
-  background: linear-gradient(0deg, rgba(43,84,188,1) 0%, rgba(22,163,222,1) 100%);
+  /*background: linear-gradient(0deg, rgba(43,84,188,1) 0%, rgba(22,163,222,1) 100%);*/
+  background: #f5f9fb;
     margin-bottom: 32px;
-  color: white ;
+  color: black ;
 }
 
 .contact-button {
@@ -245,6 +264,12 @@ and (max-width: 768px) {
   font-weight: bold;
   transition: color 0.5s, background 0.5s;
   padding: 10px;
+}
+
+.post-intro {
+  
+  font-style: italic;
+  font-weight: 500;
 }
 
 .contact-button:hover {
@@ -286,12 +311,13 @@ and (max-width: 768px) {
   border-radius: 30px;
   width: 140px;
   font-weight: bold;
+  transition: all .2s ease-in-out;
   
 }
 
 .hero-button:hover {
   box-shadow: 0 0px 25px 0 var(--primary-color);
-  width: 150px;
+  transform: scale(1.1);
 }
 
 .hero-button-footer {
@@ -320,6 +346,7 @@ and (max-width: 768px) {
   border: none;
   padding: .7rem 0 .7rem 10px;
   margin: 0 0 0 0;
+
  
   
 }
@@ -387,8 +414,8 @@ and (max-width: 480px) {
     
     
     line-height: 1.1;
-    font-size: 2rem;
-    color: #ffffff;
+    font-size: 3rem;
+    
   }
 
 
@@ -607,11 +634,11 @@ and (max-width: 767px) {
   background: #000;
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: #bbbbbb;
   }
 
   a:hover {
-    color: #bbbbbb;
+    color: #ffffff;
   }
 }
 
@@ -658,6 +685,8 @@ and (max-width: 768px) {
   }
 }
 
+
+
 .form-container {
   background-color: var(--card-bg);
   padding: 32px;
@@ -672,29 +701,34 @@ and (max-width: 768px) {
   input[type=email],
   textarea {
     appearance: none;
-    border: 1px solid var(--input-border);
+    border: none;
     color: var(--text-secondary-color);
-    border-radius: 6px;
+    border-radius: 30px;
     line-height: 32px;
     padding: 6px 12px;
     width: calc(100% - 24px);
     margin-bottom: 1.5rem;
-    background-color: var(--input-bg);
+    background: #f5f9fb;;
   }
   textarea {
     margin-bottom: 2rem;
     height: 150px;
   }
+
+  input[type=text],
+  input[type=email],
+  textarea:focus {
+    outline: none;
+    border: 2px solid #abb2b9;
+  }
 }
+
+
 
 .two-grids {
   display: grid;
   grid-gap: 32px;
-  &.-contact {
-    .post-thumbnail {
-      min-height: 240px !important;
-    }
-  }
+  
 }
 /* Portrait and Landscape */
 @media only screen 
@@ -709,6 +743,10 @@ and (max-width: 549px) {
 .grids {
   grid-template-columns: 1fr;
 }
+}
+
+.contact-page-text {
+  margin: auto auto;
 }
 
 @media only screen 

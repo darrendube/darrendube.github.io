@@ -24,8 +24,10 @@ const Toggle = styled.div`
 `
 
 const Navbox = styled.div`
+  all: unset;
+  
   display: flex;
-  height: 100%;
+  height: 100vh;
   justify-content: flex-end;
   align-items: center;
   z-index: 3;
@@ -36,9 +38,10 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    
+    background: white;
+  
     transition: left 0.3s ease;
-    top: 8vh;
+    top: 0;
     left: ${props => (props.open ? "100%" : "0")};
   }
 `

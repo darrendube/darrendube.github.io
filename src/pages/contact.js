@@ -14,8 +14,8 @@ const ContactPage = ({
         <title>Contact — {site.siteMetadata.title}</title>
         <meta name="description" content={"Contact page of " + site.siteMetadata.description} />
       </Helmet>
-      <div className="two-grids -contact">
-        <div className="post-thumbnail" style={{marginBottom: 0}}>
+      <div className="two-grids">
+        <div className="contact-page-text">
           <h1 className="contact-heading">Get in Touch</h1>
           <p className="contact-text">Feel free to ask any questions or give feedback &rarr;</p>
         </div>
@@ -39,7 +39,7 @@ const ContactPage = ({
               <textarea name="Message" id="w3lMessage" required></textarea>
             </div>
             <div style={{display: "flex", justifyContent: "flex-end"}}>
-              <input type="submit" className="contact-button -primary"/>
+              <input type="submit" className="hero-button"/>
             </div>
           </form>
         </div>
