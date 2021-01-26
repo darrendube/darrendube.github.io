@@ -53,7 +53,7 @@ body.light {
   --secondary-color: #10072b;
   --background: #ffffff;
   --site-header: var(--background);
-  --card-bg: #ffffff;
+  --card-bg: ##f5f9fb;
   --card-bdr: #eee;
   --card-shadow: #e0e0e0;
   --btn-bg: var(--background);
@@ -86,8 +86,11 @@ body.light {
   --input-border: var(--card-shadow);
   --required-color: #ff0000;
   --text-color: #242729;
+  --posts-section-background: #f5f9fb;
+  --navbar-bg: rgba(255,255,255,0.7);
 }
 body.dark {
+  --posts-section-background: #120c1b;
   --required-color: #fff;
   --input-border: #eee;
   --logo-text-2-color: var(--primary-color);
@@ -100,7 +103,7 @@ body.dark {
   --featured-bg: #66578d;
   --featured-text: #fff;
   --secondary-color: #66578d;
-  --background: #000000;
+  --background: #100818;
   --text-color: rgba(255,255,255,0.88);
   --text-secondary-color: rgba(255,255,255,0.66);
   --site-header: var(--background);
@@ -118,7 +121,7 @@ body.dark {
   --header-bg: #000000;
   --category-color: #718097;
   --category-text-color: #2e3748;
-  --hero-header-bg: #f0f0f0;
+  --hero-header-bg: #100818;
   --logo-dot: #ffffff;
   --post-title-color: #fff;
   --navbox-color: #000;
@@ -129,11 +132,12 @@ body.dark {
   --button-wrapper-border: 4px solid transparent;
   --button-wrapper-shadow: 0 0 0 1px white;
   --text-box-color: white;
+  --navbar-bg: rgba(16,8,24,0.7);
 }
 
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: 'Varela Round', Roboto, sans-serif;
+  font-family: 'Poppins', Roboto, sans-serif;
   
   background-color: var(--background);
   color: var(--text-color);
@@ -149,6 +153,19 @@ a:hover {
   color: blue;
 }
 
+.footer-icon {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0 20px 0 0;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.footer-icons-row {
+  margin-top: 30px;
+}
+
 .site-wrapper {
   padding: 0 0 0 0;
   max-width: 6000px;
@@ -158,6 +175,10 @@ a:hover {
     max-width: 100%;
   }
 
+    @media only screen 
+and (min-width: 768px) {
+  margin: 100px auto 0 auto;
+}
 
 }
 
@@ -178,6 +199,7 @@ and (max-width: 768px) {
   .items-wrapper {
     padding: 14px;
   }
+
 }
 
 .items-wrapper {
@@ -188,7 +210,7 @@ and (max-width: 768px) {
 }
 
 .posts-section {
-  background: #f5f9fb;
+  background: var(--posts-section-background);
 
 }
 
@@ -232,7 +254,7 @@ and (max-width: 768px) {
 }
 .hero-header {
   padding: 0 0 64px;
-  color: #000000;
+
   background: var(--hero-header-bg);
  
 
@@ -332,7 +354,7 @@ and (max-width: 768px) {
   max-width: 500px;
   background: #f5f9fb;
 &:focus {
-    border: 2px solid #abb2b9;
+    box-shadow: 0 0 0 2px #abb2b9;
   }
  
 }
@@ -540,7 +562,7 @@ and (max-width: 767px) {
 .card {
   display: grid;
   grid-column-gap: 5px;
-  background-color: #f5f9fb;
+  background-color: var(--card-bg);
   border-radius: 14px;
   grid-template-rows: auto 1fr;
   min-height: 150px;
@@ -929,7 +951,7 @@ body.light {
 
 .post-type {
   width: fit-content;
-  background-color: red;
+  background-color: #677983;
   color: white;
   text-transform: uppercase;
   padding: 3px 6px;
@@ -975,10 +997,10 @@ nav {
 }
 
 .nav-bar {
-  height: 70px;
+  height: 100px;
 
   
-  background: rgba(255,255,255,0.7);
+  background: var(--navbar-bg);
  
   backdrop-filter: blur(15px) saturate(125%);
   
@@ -990,7 +1012,7 @@ nav {
   align-self: center;
 
   @media (max-width: 768px) {
-    
+    height: 70px;
     top: 0;
     left: 0;
     right: 0;
@@ -1067,6 +1089,145 @@ nav {
 @media (max-width: 768px) {
   .navbox{
     background-color: var(--navbox-color);
+  }
+}
+
+
+
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+  input[type='checkbox'] {
+    &:not(.switch) {
+      border-radius: 7px;
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+  input[type='radio'] {
+    border-radius: 50%;
+    &:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, .7));
+    }
+    &:checked {
+      --s: .5;
+    }
   }
 }
   

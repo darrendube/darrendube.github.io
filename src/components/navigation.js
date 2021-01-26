@@ -112,7 +112,7 @@ const Navbar = () => {
       <div className="nav-bar-contents">
       <Logo />
      	<div className="togglewrapper">
-     	<ThemeChanger/>
+     	
       <Toggle
       	className="no-select"
         navbarOpen={navbarOpen}

@@ -4,11 +4,12 @@ import Navbar from "../components/navigation"
 import 'prismjs/themes/prism-okaidia.css';
 import Logo from "./logo"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faTwitter, faFacebook, } from "@fortawesome/free-solid-svg-icons"
+
 import SubscribeForm from "./subscribe-form"
 import SubscribeFormFooter from "./subscribe-form-footer"
 import FooterLogo from "./footer-logo"
+import { FaInstagram , FaTwitter , FaYoutube} from "react-icons/fa"
+import ThemeChanger from "./themeChanger"
 
 
 
@@ -38,10 +39,12 @@ export default ({ children }) => {
           <FooterLogo/>
 
           
-     <SubscribeFormFooter/>
-<FontAwesomeIcon icon={faInstagram} />
-
-
+     <ThemeChanger/>
+     <div className="footer-icons-row">
+<FaInstagram className="footer-icon"/>
+<FaTwitter className="footer-icon"/>
+<FaYoutube className="footer-icon"/>
+</div>
         </div>
          <div className="footer-section2">
          <div>
