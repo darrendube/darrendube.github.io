@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/Poppins-Italic.woff2') format('woff2'),
@@ -131,7 +133,7 @@ body.dark {
 
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: 'Poppins', Roboto, sans-serif;
+  font-family: 'Varela Round', Roboto, sans-serif;
   
   background-color: var(--background);
   color: var(--text-color);
@@ -281,21 +283,6 @@ and (max-width: 768px) {
 
 
 
-.logo-text {
-  text-transform: capitalize;
-  line-height: 70px;
-  color: var(--logo-color);
-}
-
-.logo-text-2 {
-  text-transform: capitalize;
-  color: var(--logo-text-2-color);
-}
-
-.logo-text-3 {
-  text-transform: capitalize;
-  color: var(--logo-dot);
-}
 
 .logoimg {
   height: 40px;
@@ -322,12 +309,18 @@ and (max-width: 768px) {
 
 .hero-button-footer {
   border: none;
-  background: #ee0000;
+  background: var(--primary-color);
   padding: .75rem 1rem;
   color: white;
-  
+  border-radius: 30px;
   width: 140px;
-  font-weight: 800;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0px 25px 0 var(--primary-color);
+  transform: scale(1.1);
+  }
   
 }
 
@@ -338,22 +331,28 @@ and (max-width: 768px) {
   margin: 0 10px 0 0;
   max-width: 500px;
   background: #f5f9fb;
-
+&:focus {
+    border: 2px solid #abb2b9;
+  }
+ 
 }
 
 .text-box-footer {
   
   border: none;
-  padding: .7rem 0 .7rem 10px;
-  margin: 0 0 0 0;
+  border-radius: 30px;
+  padding: .7rem 0 .7rem 20px;
+  margin: 0 10px 0 0;
+  max-width: 500px;
+  background: #f5f9fb;
 
+  &:focus {
+    border: 2px solid #abb2b9;
+  }
  
   
 }
 
-.text-box:focus {
-  border: 2px solid #abb2b9;
-}
 
 .text-box:focus, .text-box-footer:focus {
   outline: none;
@@ -521,6 +520,14 @@ and (max-width: 767px) {
 .post-grid {
   grid-template-columns: 1fr;
 }
+
+.hero-grid {
+  grid-template-columns: 1fr !important;
+}
+
+.hero-image {
+  display: none;
+}
 }
 
 
@@ -539,15 +546,16 @@ and (max-width: 767px) {
   min-height: 150px;
   overflow: hidden;
   line-height: 1.5;
- 
+  position: relative;
   padding: 10px;
+  transition: top .2s ease-in-out;
 
   &:hover .post-link {
     color: var(--primary-color);
   }
   
   > div {
-    padding: 8px;
+    padding:15px 0 0 0;
     
     
   }
@@ -585,8 +593,45 @@ and (max-width: 767px) {
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px 0 grey;
+  
+  background-color: #fff;
 }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo-text {
+  color: black;
+  font-size: 2em;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo-text2 {
+  color: black;
+  font-weight: 800 !important;
+}
+
+.primary-gradient {
+  color: var(--primary-color);
+
+  @supports (background-clip: text) and (-webkit-text-fill-color: transparent) {
+  background-image: linear-gradient(to bottom, orange, var(--primary-color));
+  background-clip: text;
+  color: transparent;
+  }
+}
+
+.hero-image {
+  margin: 0 auto;
+  width: 60%;
+
+}
+
 
 .post-info {
   margin: 32px;
@@ -601,6 +646,10 @@ and (max-width: 767px) {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+}
+
+.hero-text {
+  margin: auto 0;
 }
 
 
@@ -990,7 +1039,7 @@ nav {
   
 
   .nav-item:hover {
-    color: #5978F3;
+    color: var(--primary-color);
     text-decoration: none !important;
   }
 
