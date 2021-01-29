@@ -37,11 +37,12 @@ export default function Template({
 
           
 
-          <div className="post-meta">{frontmatter.date}</div>
+          
           {!!frontmatter.intro && (
             <div className="post-intro"> {frontmatter.intro}
             </div>
           )}
+          <div className="post-meta">{frontmatter.date}</div>
 
           </div>
           </div>

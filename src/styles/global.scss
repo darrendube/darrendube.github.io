@@ -443,7 +443,7 @@ and (max-width: 480px) {
 
   .post-meta {
     margin-bottom: 32px;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     font-weight: bold;
   }
 
@@ -457,9 +457,14 @@ and (max-width: 480px) {
 .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
-    color: var(--post-content-color);
+    color: black;
     > p, h1, h2, h3, h4, h5, h6 {
-     margin: 0 40px 0 40px;
+     margin: 1rem 40px 0 40px;
+     line-height: 1.6;
+    }
+
+    >h3 {
+      margin-top: 2rem;
     }
 
 
@@ -936,7 +941,8 @@ body.light {
 
 .category {
   width: fit-content;
-  background-color: orange;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   color: white;
   text-transform: capitalize;
   padding: 3px 6px;
@@ -951,8 +957,10 @@ body.light {
 
 .post-type {
   width: fit-content;
-  background-color: #677983;
-  color: white;
+  background-color: transparent;
+  border: 2px solid #677983;
+
+  color: #677983;
   text-transform: uppercase;
   padding: 3px 6px;
   font-size: 0.7rem;
@@ -1082,9 +1090,7 @@ nav {
 
 
 
-.navbox {
-  
-}
+
 
 @media (max-width: 768px) {
   .navbox{
