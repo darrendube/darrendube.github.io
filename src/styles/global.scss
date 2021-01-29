@@ -143,6 +143,13 @@ body {
   color: var(--text-color);
 
 }
+
+
+
+body p {
+  overflow-wrap: break-word;
+}
+
 a {
   color: var(--primary-color);
 
@@ -269,13 +276,15 @@ and (max-width: 768px) {
 .subscribe-section {
   background: #f2f6ff;
   margin-top: 40px;
+
  }
 
 .post-header {
-  /*background: linear-gradient(0deg, rgba(43,84,188,1) 0%, rgba(22,163,222,1) 100%);*/
-  background: #f5f9fb;
+  background: linear-gradient(to bottom, #f5f9fb 0%, #dce0e1 100%);
+  /*background: #f5f9fb;*/
     margin-bottom: 32px;
   color: black ;
+  max-width: 100%;
 }
 
 .contact-button {
@@ -359,24 +368,22 @@ and (max-width: 768px) {
  
 }
 
-.text-box-footer {
-  
+.text-box-sectionform {
   border: none;
   border-radius: 30px;
   padding: .7rem 0 .7rem 20px;
   margin: 0 10px 0 0;
   max-width: 500px;
-  background: #f5f9fb;
-
-  &:focus {
-    border: 2px solid #abb2b9;
+  background: #fff;
+&:focus {
+    box-shadow: 0 0 0 2px #abb2b9;
   }
- 
-  
 }
 
 
-.text-box:focus, .text-box-footer:focus {
+
+
+.text-box:focus, .text-box-footer:focus, .text-box-sectionform:focus {
   outline: none;
 }
 
@@ -407,7 +414,7 @@ and (max-width: 480px) {
   width: 100%;
 }
 
-.text-box {
+.text-box, .text-box-sectionform {
   margin: 0 0 15px 0;
 }
 }
@@ -421,6 +428,7 @@ and (max-width: 480px) {
   margin-bottom: 32px;
   line-height: 1.5;
   }
+
 .post {
   padding: 0;
   background:var(--background);
@@ -435,7 +443,13 @@ and (max-width: 480px) {
     
     
     line-height: 1.1;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    @media only screen and (max-width:400px) {
+      font-size: 2rem;
+    }
     
   }
 
@@ -450,6 +464,8 @@ and (max-width: 480px) {
   > h1, h2, h3, h4 {
     color: var(--post-title-color);
   }
+
+ 
   
 }
 
@@ -461,6 +477,7 @@ and (max-width: 480px) {
     > p, h1, h2, h3, h4, h5, h6 {
      margin: 1rem 40px 0 40px;
      line-height: 1.6;
+     
     }
 
     >h3 {
@@ -1114,7 +1131,7 @@ nav {
     --disabled-inner: #E1E6F9;
     -webkit-appearance: none;
     -moz-appearance: none;
-    height: 21px;
+    height: 25px;
     outline: none;
     display: inline-block;
     vertical-align: top;
@@ -1181,7 +1198,7 @@ nav {
   }
   input[type='checkbox'] {
     &:not(.switch) {
-      border-radius: 7px;
+      border-radius: 100px;
       &:after {
         width: 5px;
         height: 9px;
@@ -1198,13 +1215,13 @@ nav {
     }
     &.switch {
       width: 38px;
-      border-radius: 11px;
+      border-radius: 100px;
       &:after {
         left: 2px;
         top: 2px;
         border-radius: 50%;
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         background: var(--ab, var(--border));
         transform: translateX(var(--x, 0));
       }
