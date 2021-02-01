@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
+import { FaCalendar , FaClock} from "react-icons/fa"
+
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -42,7 +44,8 @@ export default function Template({
             <div className="post-intro"> {frontmatter.intro}
             </div>
           )}
-          <div className="post-meta">{frontmatter.date}</div>
+          <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}</div>
+          <div className="post-meta"><FaClock />&nbsp;&nbsp;2 minute read</div>
 
           </div>
           </div>

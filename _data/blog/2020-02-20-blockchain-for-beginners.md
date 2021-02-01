@@ -5,12 +5,13 @@ date: 2020-08-10T14:59:36.571Z
 title: Blockchain for Beginners
 metaDescription: Meta description for blog post
 thumbnail: /assets/blockchain.jpg
-category: test0
+category: blockchain
 type: article
+intro: Blockchain is a complicated topic with a whole branch of Computer science dedicated to it. It’s what’s behind the rise of a new type of currency — cryptocurrencies like Bitcoin, Ethereum, Litecoin and Ripple, and yet, at its core, a blockchain is just a store of records
 ---
-***The Blockchain is a complicated topic with a whole branch of Computer science dedicated to it. It’s what’s behind the rise of a new type of currency — cryptocurrencies like Bitcoin, Ethereum, Litecoin and Ripple, and yet, at its core, a blockchain is just a store of records.***
 
-That’s really it! You can think of blockchain as a spreadsheet with three columns — a from column, a to column, and an amount column. The difference is that this record of transactions, which we will now refer to as a ledger, is not kept in a single place. Its kept on thousands of computers around the world. If a hacker were to try to mess up the ledger on one computer, the other computers (each with their copy of the ledger) would not be affected. This is the first property of a blockchain:
+
+A blockchain, at it's core, is just a store of records. That’s really it! You can think of blockchain as a spreadsheet with three columns — a from column, a to column, and an amount column. The difference is that this record of transactions, which we will now refer to as a ledger, is not kept in a single place. Its kept on thousands of computers around the world. If a hacker were to try to mess up the ledger on one computer, the other computers (each with their copy of the ledger) would not be affected. This is the first property of a blockchain:
 
 ## 1. Decentralisation
 

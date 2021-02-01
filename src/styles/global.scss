@@ -511,7 +511,7 @@ and (max-width: 480px) {
 .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
-  
+    word-break: normal;
     > p, h1, h2, h3, h4, h5, h6 {
      margin: 1rem 40px 0 40px;
      line-height: 1.6;
@@ -520,6 +520,10 @@ and (max-width: 480px) {
 
     >h3 {
       margin-top: 2rem;
+    }
+
+    ul, ol {
+      margin: 1rem auto 0 auto;
     }
 
 

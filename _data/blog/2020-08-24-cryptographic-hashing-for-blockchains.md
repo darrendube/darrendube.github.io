@@ -5,7 +5,7 @@ date: 2020-08-12T15:19:52.718Z
 title: Cryptographic Hashing for Blockchains
 metaDescription: Meta description for blog post
 thumbnail: /assets/0_BkjXH7Rq3s45wvpb.png
-category: crypto
+category: blockchain
 type: article
 ---
 The key to Blockchain Immutability is the hash function. If it wasn’t for this one feature, the blockchain may not even have been invented. It’s what makes transactions recorded on a blockchain permanent in that they can’t be:
@@ -20,7 +20,7 @@ In simple terms, the hash of a block is basically its ID or its fingerprint, and
 3. Generally, two different pieces of data should not produce the same hash.
 4. You can turn data into a hash, but you can’t derive data from a hash.
 
-So, if you input the text*‘this is a hash function’*into the SHA256 hash function, it will give out the hash **`b5962d8173c14e60259211bcf25d1263c36e0ad7da32ba9d07b224eac1834813`**. If you input the character ‘a’ into the same hash function, it will output the hash **`ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb`**. From this, we can see that data of any length will give a hash of the same length (256 bits with the SHA256 algorithm).
+So, if you input the text ‘this is a hash function’ into the SHA256 hash function, it will give out the hash **b5962d8173c14e60259211bcf25d1263c36e0ad7da32ba9d07b224eac1834813**. If you input the character ‘a’ into the same hash function, it will output the hash **ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb**. From this, we can see that data of any length will give a hash of the same length (256 bits with the SHA256 algorithm).
 
 ![Cryptographic hashing](https://miro.medium.com/max/998/1*vjeGSA5wdptrdsBK2eB9eA.png)
 
