@@ -12,10 +12,11 @@ const LogoWrap = styled.div`
 
   margin: auto 0;
   flex: 0 1 36px;
-  padding: auto auto;
+ 
   @media (max-width= 768px) and (orientation: landscape) {
     flex: 0 1 25px;
   }
+
 
 
   
@@ -28,8 +29,8 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap className="logo-link" as={Link} to="/">
-      <img src="/logo/logo.png" className="logoimg"/>
-      {/*<p className="logo-text"> DARREN<span className="logo-text-2">DUBE</span></p>*/}
+      {/*<img src="/logo/logo.png" className="logoimg"/>*/}
+      <p className="logo-text"> DARREN&nbsp;DUBE</p>
       
     </LogoWrap>
     
