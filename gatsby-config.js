@@ -17,6 +17,29 @@ module.exports = {
     },
 
     {
+      resolve:`gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/public/**/*.html": [
+            "cache-control: public",
+            "cache-control:  max-age=0", 
+            "cache-control: must-revalidate"
+          ],
+          "/sw.js": [
+            "cache-control: public",
+            "cache-control:  max-age=0", 
+            "cache-control: must-revalidate"
+          ],
+          "/public/page-data/*": [
+            "cache-control: public",
+            "cache-control:  max-age=0", 
+            "cache-control: must-revalidate"
+          ]
+        }
+      }
+    },
+
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [{
