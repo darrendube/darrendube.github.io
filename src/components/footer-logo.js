@@ -8,8 +8,7 @@ import styled from "styled-components"
 
 const FooterLogo = () => {
   return (
-    
-     <Link to="/"> <img src="/logo/logo.png" className="logoimg"/></Link>
+    <p className="logo-text"> DARREN&nbsp;DUBE</p>
       
    
   )

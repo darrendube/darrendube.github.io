@@ -34,12 +34,12 @@ export default ({ children }) => {
       {children}
       </div>
       <footer className="site-footer">
-
+      <div className="footer-items-wrapper items-wrapper">
         <div className="footer-section1">
           <FooterLogo/>
 
           
-     <ThemeChanger/>
+     
      <div className="footer-icons-row">
 <FaInstagram className="footer-icon"/>
 <FaTwitter className="footer-icon"/>
@@ -74,7 +74,7 @@ export default ({ children }) => {
         </div>
 
         
-
+</div>
       </footer>
       <div className="copyright-notice">
           <p className="margin-auto"> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved | <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a></p>

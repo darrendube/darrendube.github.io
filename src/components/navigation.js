@@ -109,10 +109,11 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
-      <div className="nav-bar-contents">
+      <div className="nav-bar-contents items-wrapper">
       <Logo />
+      
      	<div className="togglewrapper">
-     	
+     	<div className="theme-toggler"><ThemeChanger /></div>
       <Toggle
       	className="no-select"
         navbarOpen={navbarOpen}

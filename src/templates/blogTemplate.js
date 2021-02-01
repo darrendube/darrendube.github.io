@@ -21,8 +21,8 @@ export default function Template({
       <div className="blog-post-container">
         <article className="post">
           
-          <div className="post-header post-grid">
-
+          <div className="post-header ">
+          <div className="header-wrapper post-grid">
           {!!frontmatter.thumbnail && (
             <div className="post-thumbnail grid-item1" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
             </div>
@@ -44,6 +44,7 @@ export default function Template({
           )}
           <div className="post-meta">{frontmatter.date}</div>
 
+          </div>
           </div>
           </div>
           <div

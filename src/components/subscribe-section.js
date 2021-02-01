@@ -32,6 +32,7 @@ const SubscribeSection = () => (
 	        <input type="submit" className="hero-button" value=" SUBSCRIBE &rarr;"></input>
         
         </form>
+        
      
   </div></div>
 )
