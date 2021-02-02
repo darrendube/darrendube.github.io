@@ -48,11 +48,11 @@ export default ({ children }) => {
         </div>
          <div className="footer-section2">
          <div>
-          <p><Link to="/">CRYPTOS</Link></p>
-          <p><Link to="/">STOCKS</Link></p>
+          <p><Link to="/">BLOCKCHAIN</Link></p>
+          <p><Link to="/">WEB DEVELOPMENT</Link></p>
           </div>
           <div>
-          <p><Link to="/">CURRENCIES</Link></p>
+          <p><Link to="/">MACHINE LEARNING</Link></p>
           <p><Link to="/">PERSONAL FINANCE</Link></p>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default ({ children }) => {
           <p className="footer-heading">PAGES</p>
           <p><Link to="/">Home</Link></p>
           <p><Link to="404">About</Link></p>
-          <p><Link to="contant">Contact</Link></p>
+          <p><Link to="contact">Contact</Link></p>
         </div>
 
        
@@ -77,7 +77,7 @@ export default ({ children }) => {
 </div>
       </footer>
       <div className="copyright-notice">
-          <p className="margin-auto"> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved | <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a></p>
+          <p className=""> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved | <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a></p>
         </div>
     </div>
   )

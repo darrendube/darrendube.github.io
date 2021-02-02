@@ -97,10 +97,10 @@ body.light {
   --posts-section-background: #f5f9fb;
   --navbar-bg: rgba(255,255,255,0.7);
   --logo-color: #000000;
-  --post-header-background: linear-gradient(to bottom, #f5f9fb 0%, #dce0e1 100%);
+  --post-header-background: linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%);
 }
 body.dark {
-  --posts-section-background: #120c1b;
+  --posts-section-background: #06121f;
   --required-color: #fff;
   --input-border: #eee;
   --logo-text-2-color: var(--primary-color);
@@ -113,14 +113,14 @@ body.dark {
   --featured-bg: #66578d;
   --featured-text: #fff;
   --secondary-color: #66578d;
-  --background: #171a23;
+  --background: #0e182a;
   --text-color: rgba(255,255,255,0.88);
   --text-secondary-color: rgba(255,255,255,0.66);
   --site-header: var(--background);
   --card-bg: transparent;
   --card-bdr: #181326;
   --card-shadow: #020204;
-  --card-bg-hover: #393c43;
+  --card-bg-hover: rgba(255,255,255,0.05);
   --btn-bg: var(--background);
   --btn-bdr: #d3d6e7;
   --btn-text-color: #868892;
@@ -132,20 +132,20 @@ body.dark {
   --header-bg: #000000;
   --category-color: #718097;
   --category-text-color: #2e3748;
-  --hero-header-bg: #100818;
+  --hero-header-bg: #0e182a;
   --logo-dot: #ffffff;
   --post-title-color: #fff;
   --navbox-color: #000;
   --card-border: 1px solid #333;
   --footer-bg: #212121;
-  --subscribe-section-bg: #121212;
+  --subscribe-section-bg: #06121f;
   --button-wrapper-bg: transparent;
   --button-wrapper-border: 4px solid transparent;
   --button-wrapper-shadow: 0 0 0 1px white;
   --text-box-color: white;
-  --navbar-bg: rgba(16,8,24,0.7);
+  --navbar-bg: rgba(14,24,42,0.7);
   --logo-color: #ffffff;
-  --post-header-background: linear-gradient(to bottom, #171a23 0%, #393c43 100%);
+  --post-header-background: linear-gradient(to bottom, #14223d 0%, #1c2e53 100%);
 }
 
 /* System Fonts as used by Medium and WordPress */
@@ -292,9 +292,10 @@ and (max-width: 768px) {
   
 }
 .headline {
-  font-size: 36px;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 .subscribe-section {
@@ -508,6 +509,29 @@ and (max-width: 480px) {
   }
 }
 
+.logo-text-footer {
+  font-family: "Primus Bold";
+  color: #fff !important;
+  margin: auto 0;
+  font-size: 25px;
+  transition: all 0.1s ease-in-out;
+  vertical-align: middle;
+  &:hover {
+    color: var(--primary-color) !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 20px;
+    
+  }
+}
+
+.subscribe-section-wrapper {
+  max-width: 768px;
+    margin: 0 auto;
+    padding: 43px;
+}
+
 .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
@@ -700,14 +724,9 @@ and (max-width: 767px) {
 }
 
 
-.primary-gradient {
-  color: var(--primary-color);
+.blue-dot {
+  color: rgb(49, 188, 243);
 
-  @supports (background-clip: text) and (-webkit-text-fill-color: transparent) {
-  background-image: linear-gradient(to bottom, orange, var(--primary-color));
-  background-clip: text;
-  color: transparent;
-  }
 }
 
 .hero-image {
@@ -760,7 +779,7 @@ and (max-width: 767px) {
 .footer-items-wrapper {
   display: grid;
   grid-template-columns: 5fr 2fr 1fr 1fr;
-  color: #666;
+  color: #fff;
 }
 
 .site-footer {
@@ -784,7 +803,9 @@ and (max-width: 767px) {
   text-align: center;
   padding: 10px;
   color: #ffffff;
-  background: #000000
+  background: #000000;
+  
+ 
 }
 
 .margin-auto {
@@ -792,6 +813,7 @@ and (max-width: 767px) {
 }
 
 .footer-section2 {
+  color: white;
   display: grid;
   grid-template-columns: 1fr;
   a {

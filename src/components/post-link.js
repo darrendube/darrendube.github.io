@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import { FaCalendar , FaClock} from "react-icons/fa"
 
 
 
@@ -28,7 +29,9 @@ const PostLink = ({ post }) => (
           {post.frontmatter.title}
         </Link>
       </h2>
-      <div className="post-meta"><p className="blue-grey-text bold">{post.frontmatter.date}</p><p>{post.excerpt}</p></div>
+      <div className="post-meta"><p className="blue-grey-text bold"><FaCalendar/>&nbsp;&nbsp;{post.frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock/>&nbsp;&nbsp;2 minute read</p>
+      
+      <p>{post.excerpt}</p></div>
     </div>
   </article>
 )

@@ -44,9 +44,8 @@ export default function Template({
             <div className="post-intro"> {frontmatter.intro}
             </div>
           )}
-          <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}</div>
-          <div className="post-meta"><FaClock />&nbsp;&nbsp;2 minute read</div>
-
+          <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock />&nbsp;&nbsp;2 minute read</div>
+       
           </div>
           </div>
           </div>

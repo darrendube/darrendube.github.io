@@ -8,7 +8,7 @@ import styled from "styled-components"
 
 const FooterLogo = () => {
   return (
-    <p className="logo-text"> DARREN&nbsp;DUBE</p>
+    <p className="logo-text-footer"> DARREN&nbsp;DUBE</p>
       
    
   )

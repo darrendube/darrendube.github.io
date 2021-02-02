@@ -9,7 +9,7 @@ import SubscribeForm from "./subscribe-form"
 
 const SubscribeSection = () => (
   <div className="subscribe-section">
-  <div className="items-wrapper">
+  <div className="subscribe-section-wrapper">
   <div>
     <h2 className="subscribe-heading">Get the newsletter and get notified about new content</h2>
   </div>
