@@ -42,7 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
+        plugins: [`gatsby-remark-reading-time`,
+        {
           resolve: `gatsby-remark-prismjs`,
           options: {
             classPrefix: "language-",
@@ -145,11 +146,6 @@ module.exports = {
         ],
       }
     } ,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images/`,
-        name: 'images',
-      }}
+    
   ],
 }

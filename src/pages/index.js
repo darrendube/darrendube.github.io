@@ -58,6 +58,11 @@ export const pageQuery = graphql`
             category
             type
           }
+          fields {
+            readingTime {
+              minutes
+            }
+          }
         }
       }
     }

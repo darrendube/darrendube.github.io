@@ -11,7 +11,7 @@ export default function Template({
 }) {
   const { site, markdownRemark } = data // data.markdownRemark holds your post data
   const { siteMetadata } = site
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, fields } = markdownRemark
   
   return (
     <Layout>
@@ -44,7 +44,7 @@ export default function Template({
             <div className="post-intro"> {frontmatter.intro}
             </div>
           )}
-          <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock />&nbsp;&nbsp;2 minute read</div>
+          <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock />&nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read</div>
        
           </div>
           </div>
@@ -78,6 +78,11 @@ export const pageQuery = graphql`
         type
         intro
         
+      }
+      fields {
+        readingTime {
+          minutes
+        }
       }
     }
   }

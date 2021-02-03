@@ -29,7 +29,7 @@ const PostLink = ({ post }) => (
           {post.frontmatter.title}
         </Link>
       </h2>
-      <div className="post-meta"><p className="blue-grey-text bold"><FaCalendar/>&nbsp;&nbsp;{post.frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock/>&nbsp;&nbsp;2 minute read</p>
+      <div className="post-meta"><p className="blue-grey-text bold"><FaCalendar/>&nbsp;&nbsp;{post.frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock/>&nbsp;&nbsp;{Math.round(post.fields.readingTime.minutes)} minute read</p>
       
       <p>{post.excerpt}</p></div>
     </div>
