@@ -1,4 +1,5 @@
 const path = require(`path`)
+const _ = require("lodash")
 
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -19,10 +20,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const categoryTemplate = path.resolve(`src/templates/categoryTemplate.js`)
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
+      postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -31,12 +33,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             id
             frontmatter {
               path
+              
             }
           }
         }
       }
+      categoryGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___category) {
+          fieldValue
+        }
+      }
     }
   `)
+
 
   // Handle errors
   if (result.errors) {
@@ -44,11 +53,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.postsRemark.edges
+
+  posts.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {},
     })
   })
+
+  const categories = result.data.categoryGroup.group
+
+  categories.forEach(category => {
+    createPage({
+      path: `blog/${category.fieldValue}/`,
+      component: categoryTemplate,
+      context: {
+        tag: category.fieldValue,
+      }
+    })
+  })
+
+
 }
