@@ -29,13 +29,13 @@ const Tags = ({ pageContext, data }) => {
         <meta name="description" content="" />
 
       </Helmet>
-      <div className="post-header "><div className="header-wrapper"><h2 className="post-title blue-grey-heading">Blockchain Category</h2></div></div>
+      <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">Blockchain</h2></div></div>
     <div className="posts-section">
 
       <div className="items-wrapper">
 
       
-      <h2>Category &darr;</h2>
+     
       <div className="grids">
         {Posts}
       </div></div></div></Layout>
@@ -64,6 +64,7 @@ Tags.propTypes = {
   }),
 }
 export default Tags
+
 export const pageQuery = graphql`
   query($tag: String) {
     allMarkdownRemark(

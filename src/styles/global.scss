@@ -233,12 +233,14 @@ and (max-width: 768px) {
 
 }
 
-.header-wrapper {
+.header-wrapper, cat-header-wrapper {
   
   max-width: 1920px;
   margin: 0 auto;
 
 }
+
+
 
 .posts-section {
   background: var(--posts-section-background);
@@ -291,6 +293,23 @@ and (max-width: 768px) {
 
   
 }
+
+.category-title {
+  color: var(--post-title-color);
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  @media only screen and (max-width:400px) {
+    font-size: 2rem;
+  }
+}
+
+.category-breadcrumb {
+  color: var(--post-title-color);
+  margin: unset;
+}
+
 .headline {
   font-size: 3rem;
   font-weight: bold;
@@ -311,6 +330,16 @@ and (max-width: 768px) {
   color: black ;
   max-width: 100%;
 }
+
+.category-header {
+  background: var(--post-header-background);
+  /*background: #f5f9fb;*/
+
+  color: black ;
+  max-width: 100%;
+}
+
+
 
 .contact-button {
   margin-right: 0;

@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar , FaClock} from "react-icons/fa"
+import ShareButtons from "../components/share"
 
 
 export default function Template({
@@ -45,10 +46,11 @@ export default function Template({
             </div>
           )}
           <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock />&nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read</div>
-       
+          <div className="post-meta"><ShareButtons /></div>
           </div>
           </div>
           </div>
+           
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

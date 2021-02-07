@@ -41,19 +41,19 @@ export default ({ children }) => {
           
      
      <div className="footer-icons-row">
-<FaInstagram className="footer-icon"/>
-<FaTwitter className="footer-icon"/>
-<FaYoutube className="footer-icon"/>
+<a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram className="footer-icon"/></a>
+<a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="footer-icon"/></a>
+<a href="https://facebook.com/darrenzdube" target="_blank"><FaYoutube className="footer-icon"/></a>
 </div>
         </div>
          <div className="footer-section2">
          <div>
-          <p><Link to="/">BLOCKCHAIN</Link></p>
+          <p><Link to="/blog/blockchain">BLOCKCHAIN</Link></p>
           <p><Link to="/">WEB DEVELOPMENT</Link></p>
           </div>
           <div>
           <p><Link to="/">MACHINE LEARNING</Link></p>
-          <p><Link to="/">PERSONAL FINANCE</Link></p>
+          
           </div>
         </div>
 
