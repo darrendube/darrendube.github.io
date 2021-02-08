@@ -30,7 +30,7 @@ const Logo = () => {
   return (
     <LogoWrap className="logo-link" as={Link} to="/">
       {/*<img src="/logo/logo.png" className="logoimg"/>*/}
-      <p className="logo-text"> DARREN&nbsp;DUBE</p>
+      <p className="logo-text"> DARREN&nbsp;<span className="dube">DUBE</span></p>
       
     </LogoWrap>
     

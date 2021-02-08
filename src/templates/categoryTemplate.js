@@ -18,9 +18,10 @@ const Posts = edges
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />) */
 
 const Tags = ({ pageContext, data }) => {
-
+  
   const { edges, totalCount } = data.allMarkdownRemark
   const Posts = edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+  const Category = pageContext.tag
 
   return (
     <Layout>
@@ -29,7 +30,7 @@ const Tags = ({ pageContext, data }) => {
         <meta name="description" content="" />
 
       </Helmet>
-      <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">Blockchain</h2></div></div>
+      <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">{Category}</h2></div></div>
     <div className="posts-section">
 
       <div className="items-wrapper">
@@ -75,13 +76,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          frontmatter {
-            title
-            
-          }
+         
           id
           excerpt(pruneLength: 150)
           frontmatter {
+            title
             date(formatString: "MMMM DD, YYYY")
             path
             title

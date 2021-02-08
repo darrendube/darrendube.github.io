@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar , FaClock} from "react-icons/fa"
 import ShareButtons from "../components/share"
+import { IconContext } from "react-icons"
 
 
 export default function Template({
@@ -45,8 +46,14 @@ export default function Template({
             <div className="post-intro"> {frontmatter.intro}
             </div>
           )}
-          <div className="post-meta"><FaCalendar />&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;<FaClock />&nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read</div>
-          <div className="post-meta"><ShareButtons /></div>
+          <div className="post-meta">
+            
+            <FaCalendar />
+            &nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;
+            <FaClock />
+            &nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read
+            </div>
+          <div className="post-meta"><ShareButtons post={data.markdownRemark.frontmatter}/></div>
           </div>
           </div>
           </div>

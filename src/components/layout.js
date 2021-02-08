@@ -49,7 +49,7 @@ export default ({ children }) => {
          <div className="footer-section2">
          <div>
           <p><Link to="/blog/blockchain">BLOCKCHAIN</Link></p>
-          <p><Link to="/">WEB DEVELOPMENT</Link></p>
+          <p><Link to="/blog/web-development">WEB DEVELOPMENT</Link></p>
           </div>
           <div>
           <p><Link to="/">MACHINE LEARNING</Link></p>
