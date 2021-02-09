@@ -3,18 +3,18 @@ import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareBut
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope} from "react-icons/fa"
 
 
-export default function ShareButtons(post) {
+export default function ShareButtons(path) {
     return (
 <div>
 
-        <TwitterShareButton url={"https://darrendube.com/"+post.path}>
+        <TwitterShareButton url={JSON.stringify(path)}>
             <div className="share-icon-container">
                 <FaTwitter />
             </div>
         </TwitterShareButton>
 
 
-        <FacebookShareButton url={"https://darrendube.com/"+post.path} quote={"Darren Dube"} hashtag={"#darrendube"} >
+        <FacebookShareButton url={JSON.stringify(path)} quote={"Darren Dube"} hashtag={"#darrendube"} >
             <div className="share-icon-container">
                 <FaFacebook />
          </div>
@@ -22,17 +22,18 @@ export default function ShareButtons(post) {
 
         
 
-        <LinkedinShareButton url={"https://darrendube.com/"+post.path}>
+        <LinkedinShareButton url={JSON.stringify(path)}>
             <div className="share-icon-container">
                 <FaLinkedinIn />
             </div>
         </LinkedinShareButton>
 
-        <EmailShareButton url={"https://darrendube.com/"+post.path}>
+        <EmailShareButton url={JSON.stringify(path)}>
             <div className="share-icon-container">
                 <FaRegEnvelope />
             </div>
         </EmailShareButton>
+        
 </div>
     )
 }

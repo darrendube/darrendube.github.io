@@ -1,11 +1,12 @@
 import React from "react"
 import Helmet from 'react-helmet';
-import { graphql } from "gatsby"
+import { graphql , Link} from "gatsby"
 import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar , FaClock} from "react-icons/fa"
 import ShareButtons from "../components/share"
 import { IconContext } from "react-icons"
+
 
 
 export default function Template({
@@ -15,6 +16,8 @@ export default function Template({
   const { siteMetadata } = site
   const { frontmatter, html, fields } = markdownRemark
   
+ 
+
   return (
     <Layout>
       <Helmet>
@@ -35,7 +38,7 @@ export default function Template({
           <div className="post-info grid-item2">
 <div className="type-category">
           <div className="post-type"> {frontmatter.type} </div>
-          <div className="category"> {frontmatter.category} </div>
+          <Link to={"/blog/"+frontmatter.category}><div className="category"> {frontmatter.category} </div></Link>
 </div>
           <h2 className="post-title blue-grey-heading">{frontmatter.title}</h2>
 
@@ -53,7 +56,7 @@ export default function Template({
             <FaClock />
             &nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read
             </div>
-          <div className="post-meta"><ShareButtons post={data.markdownRemark.frontmatter}/></div>
+          <div className="post-meta"><ShareButtons path={"https://darrendube.com"+frontmatter.path}/></div>
           </div>
           </div>
           </div>
@@ -62,6 +65,7 @@ export default function Template({
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <div>darrendube.com/{frontmatter.path}</div>
           <SubscribeSection/>
         </article>
       </div>
