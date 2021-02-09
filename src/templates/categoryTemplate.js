@@ -26,7 +26,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Category | Darren Dube</title>
+        <title>{Category} Category | Darren Dube</title>
         <meta name="description" content="" />
 
       </Helmet>

@@ -70,7 +70,7 @@ export default ({ children }) => {
           <p className="footer-heading">BONUS</p>
           <p><Link to="/">Podcast</Link></p>
           <p><Link to="/">Youtube</Link></p>
-          <p><Link to="/">Privacy Policy</Link></p>
+          <p><Link to="/privacy-policy">Privacy Policy</Link></p>
         </div>
 
         
