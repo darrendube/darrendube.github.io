@@ -65,9 +65,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const categories = result.data.categoryGroup.group
 
+
+
   categories.forEach(category => {
+
+    
+
     createPage({
-      path: `blog/${category.fieldValue}/`,
+      path: `blog/${category.fieldValue.replace(" ","-")}/`,
       component: categoryTemplate,
       context: {
         tag: category.fieldValue,

@@ -83,7 +83,7 @@ body {
 }
 body.light {
   --primary-color: #da3654;
-  --primary-text-color: #fff;
+  --primary-text-color: #000;
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #10072b;
@@ -127,9 +127,12 @@ body.light {
   --navbar-bg: rgba(255,255,255,0.7);
   --logo-color: #000000;
   --post-header-background: linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%);
-  --dube-color: #4a4a4a
+  --dube-color: #4a4a4a;
+  --toggle-thumb-color: #164bc5;
+  
 }
 body.dark {
+  
   --dube-color: #6c8299;
   --posts-section-background: #06121f;
   --required-color: #fff;
@@ -177,6 +180,7 @@ body.dark {
   --navbar-bg: rgba(14,24,42,0.7);
   --logo-color: #ffffff;
   --post-header-background: linear-gradient(to bottom, #14223d 0%, #1c2e53 100%);
+  --toggle-thumb-color: var(--primary-color);
 }
 
 /* System Fonts as used by Medium and WordPress */
@@ -208,6 +212,16 @@ a:hover {
   font-size: 1.3rem;
   color: white;
   margin: 0 20px 0 0;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.contact-page-icon {
+  font-size: 1.3rem;
+  color: var(--primary-text-color);
+  margin: auto 20px auto 0;
+  vertical-align: middle;
   &:hover {
     color: var(--primary-color);
   }
@@ -249,18 +263,15 @@ img {
   max-width: 100%;
 }
 
-@media only screen 
-and (max-width: 768px) {
-  .items-wrapper {
-    padding: 14px;
-  }
 
-}
 
 .items-wrapper {
-  padding: 43px;
+  padding: 20px;
   max-width: 1700px;
   margin: 0 auto;
+  @media only screen and (min-width: 768px) {
+    padding: 43px;
+  }
 
 }
 
@@ -625,6 +636,51 @@ and (max-width: 480px) {
       margin: 1rem auto 0 auto;
     }
 
+    img {
+      border-radius: 5px;
+    }
+
+    blockquote {
+      
+        font-weight: 100;
+        font-size: 1.2rem;
+        max-width: 60%;
+        line-height: 1.4;
+        position: relative;
+        
+        padding: .5rem;
+        margin: 1rem auto 0 auto;
+     
+      
+      
+      :before,
+      :after {
+        position: absolute;
+        color: #f1efe6;
+        font-size: 6rem;
+        width: 3rem;
+        height: 3rem;
+      }
+      
+      :before {
+        content: '“';
+        left: -3rem;
+        top: -2rem;
+      }
+      
+      :after {
+        content: '”';
+        right: -3rem;
+        bottom: 1rem;
+      }
+
+      cite {
+        
+          line-height: 3;
+          text-align: center;
+        
+      }
+    }
 
   }
 
@@ -883,6 +939,7 @@ and (max-width: 767px) {
   height: 20px;
   width: 20px;
   margin: 0 10px 0 0;
+  
 
   > * {
     vertical-align: middle;
@@ -950,21 +1007,22 @@ and (max-width: 768px) {
     color: var(--text-secondary-color);
     border-radius: 30px;
     line-height: 32px;
-    padding: 6px 12px;
+    padding: 6px 20px;
     width: calc(100% - 24px);
     margin-bottom: 1.5rem;
     background: #f5f9fb;;
+  
   }
   textarea {
     margin-bottom: 2rem;
     height: 150px;
   }
 
-  input[type=text],
-  input[type=email],
+  input[type=text]:focus,
+  input[type=email]:focus,
   textarea:focus {
     outline: none;
-    border: 2px solid #abb2b9;
+    box-shadow: 0 0 0 2px #abb2b9;
   }
 }
 
@@ -991,7 +1049,8 @@ and (max-width: 767px) {
 }
 
 .contact-page-text {
-  margin: auto auto;
+  margin: auto auto auto auto;
+  padding: 30px;
 }
 
 @media only screen 
@@ -1199,10 +1258,14 @@ nav {
 
 .nav-bar-contents {
   display: flex;
-  padding: 0 43px;
+  padding: 0 20px;
   justify-content: space-between;
   align-self: center;
   height: 100%;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 43px;
+  }
 }
 
 .blue-grey {
@@ -1261,11 +1324,13 @@ nav {
 
 
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .navbox{
-    background-color: var(--navbox-color);
+    background-color: var(--navbox-color) !important;
   }
 }
+  
+
 
 .theme-toggler {
   margin-right: 10px;
@@ -1316,23 +1381,19 @@ nav {
   height: 24px;
   padding: 0;
   border-radius: 30px;
-  background-color: #079adf;
+  background-color: #000000;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #000000;
-}
+
 
 .react-toggle--checked .react-toggle-track {
-  background-color: #110050;
+  background-color: var(--primary-color);
 }
 
-.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color:  #1a0077;
-}
+
 
 .react-toggle-track-check {
   position: absolute;
@@ -1402,15 +1463,11 @@ nav {
   border-color: #110050;
 }
 
-.react-toggle--focus .react-toggle-thumb {
-  -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
-  -moz-box-shadow: 0px 0px 3px 2px #0099E0;
-  box-shadow: 0px 0px 2px 3px #0099E0;
-}
 
-.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-  -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
-  -moz-box-shadow: 0px 0px 5px 5px #0099E0;
-  box-shadow: 0px 0px 5px 5px #0099E0;
+
+.react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 2px 2px var(--toggle-thumb-color);
+  -moz-box-shadow: 0px 0px 2px 2px var(--toggle-thumb-color);
+  box-shadow: 0px 0px 2px 2px var(--toggle-thumb-color);
 }
 

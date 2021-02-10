@@ -38,7 +38,7 @@ export default function Template({
           <div className="post-info grid-item2">
 <div className="type-category">
           <div className="post-type"> {frontmatter.type} </div>
-          <Link to={"/blog/"+frontmatter.category}><div className="category"> {frontmatter.category} </div></Link>
+          <Link to={"/blog/"+frontmatter.category.replace(" ","-")}><div className="category"> {frontmatter.category} </div></Link>
 </div>
           <h2 className="post-title blue-grey-heading">{frontmatter.title}</h2>
 
@@ -56,7 +56,7 @@ export default function Template({
             <FaClock />
             &nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read
             </div>
-          <div className="post-meta"><ShareButtons path={"https://darrendube.com"+frontmatter.path}/></div>
+          <div className="post-meta"><ShareButtons path={"https://darrendube.com"+frontmatter.path} title={frontmatter.title}/></div>
           </div>
           </div>
           </div>

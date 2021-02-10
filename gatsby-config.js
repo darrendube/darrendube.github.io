@@ -17,6 +17,17 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+       
+        trackingIds: [
+          "G-GNYBTQ2SKL", // Google Analytics / GA
+         
+        ],
+      },
+    },
+
+    {
       resolve:`gatsby-plugin-netlify`,
       options: {
         headers: {

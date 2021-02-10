@@ -1,20 +1,35 @@
 import React from "react"
-import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , LinkedinShareButton} from "react-share"
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope} from "react-icons/fa"
+import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , LinkedinShareButton , PocketShareButton} from "react-share"
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope , FaGetPocket} from "react-icons/fa"
+
+function objToString(obj, ndeep) {
+    if(obj == null){ return String(obj); }
+    switch(typeof obj){
+      case "string": return '"'+obj+'"';
+      case "function": return obj.name || obj.toString();
+      case "object":
+        var indent = Array(ndeep||1).join('\t'), isArray = Array.isArray(obj);
+        return '{['[+isArray] + Object.keys(obj).map(function(key){
+             return '\n\t' + indent + key + ': ' + objToString(obj[key], (ndeep||1)+1);
+           }).join(',') + '\n' + indent + '}]'[+isArray];
+      default: return obj.toString();
+    }
+  }
 
 
-export default function ShareButtons(path) {
+
+export default function ShareButtons(path , title) {
     return (
 <div>
 
-        <TwitterShareButton url={JSON.stringify(path)}>
+        <TwitterShareButton url={path.path}>
             <div className="share-icon-container">
                 <FaTwitter />
             </div>
         </TwitterShareButton>
 
 
-        <FacebookShareButton url={JSON.stringify(path)} quote={"Darren Dube"} hashtag={"#darrendube"} >
+        <FacebookShareButton url={path.path}>
             <div className="share-icon-container">
                 <FaFacebook />
          </div>
@@ -22,15 +37,17 @@ export default function ShareButtons(path) {
 
         
 
-        <LinkedinShareButton url={JSON.stringify(path)}>
+        <PocketShareButton url={path.path}>
             <div className="share-icon-container">
                 <FaLinkedinIn />
             </div>
-        </LinkedinShareButton>
+        </PocketShareButton>
 
-        <EmailShareButton url={JSON.stringify(path)}>
+        <EmailShareButton url={path.path}>
+           
             <div className="share-icon-container">
-                <FaRegEnvelope />
+                
+                <FaGetPocket />
             </div>
         </EmailShareButton>
         

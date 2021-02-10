@@ -2,6 +2,8 @@ import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
+import { FaInstagram , FaTwitter , FaYoutube , FaRegEnvelope} from "react-icons/fa"
+
 
 const ContactPage = ({
   data: {
@@ -15,10 +17,18 @@ const ContactPage = ({
         <meta name="description" content={"Contact page of " + site.siteMetadata.description} />
       </Helmet>
       <div className="two-grids">
+        
         <div className="contact-page-text">
           <h1 className="contact-heading">Get in Touch</h1>
           <p className="contact-text">Feel free to ask any questions or give feedback &rarr;</p>
+          
+          <div className="footer-icons-row">
+<a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram className="contact-page-icon"/></a>
+<a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="contact-page-icon"/></a>
+<a href="https://facebook.com/darrenzdube" target="_blank"><FaYoutube className="contact-page-icon"/></a>
+</div>
         </div>
+
         <div>
           <form name="Contact Form" className="form-container" method="POST" data-netlify="true" >
 <input type="hidden" name="form-name" value="Contact Form" />
