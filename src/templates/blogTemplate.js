@@ -65,7 +65,7 @@ export default function Template({
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <div>darrendube.com/{frontmatter.path}</div>
+          
           <SubscribeSection/>
         </article>
       </div>
