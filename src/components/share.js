@@ -1,5 +1,5 @@
 import React from "react"
-import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , LinkedinShareButton , PocketShareButton} from "react-share"
+import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , WhatsappShareButton , PocketShareButton} from "react-share"
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope , FaGetPocket} from "react-icons/fa"
 
 function objToString(obj, ndeep) {
@@ -29,27 +29,27 @@ export default function ShareButtons(path , title) {
         </TwitterShareButton>
 
 
-        <FacebookShareButton url={path.path}>
+        <WhatsappShareButton url={path.path}>
             <div className="share-icon-container">
-                <FaFacebook />
+                <FaWhatsapp />
          </div>
-        </FacebookShareButton>
+        </WhatsappShareButton>
 
         
 
-        <PocketShareButton url={path.path}>
+        <FacebookShareButton url={path.path}>
             <div className="share-icon-container">
-                <FaLinkedinIn />
+                <FaFacebook />
             </div>
-        </PocketShareButton>
+        </FacebookShareButton>
 
-        <EmailShareButton url={path.path}>
+        <PocketShareButton url={path.path}>
            
             <div className="share-icon-container">
                 
                 <FaGetPocket />
             </div>
-        </EmailShareButton>
+        </PocketShareButton>
         
 </div>
     )

@@ -47,20 +47,20 @@ export default ({ children }) => {
 </div>
         </div>
          <div className="footer-section2">
-         <div>
-          <p><Link to="/blog/blockchain">BLOCKCHAIN</Link></p>
-          <p><Link to="/blog/web-development">WEB DEVELOPMENT</Link></p>
-          </div>
-          <div>
-          <p><Link to="/">MACHINE LEARNING</Link></p>
+       
+          <p className="footer-heading">CATEGORIES</p>
+          <p><Link to="/blog/blockchain">Blockchain</Link></p>
+          <p><Link to="/blog/web-development">Web Development</Link></p>
+        
+          <p><Link to="/">Machine Learning</Link></p>
           
-          </div>
+          
         </div>
 
         <div className="footer-section3">
           <p className="footer-heading">PAGES</p>
           <p><Link to="/">Home</Link></p>
-          <p><Link to="404">About</Link></p>
+       
           <p><Link to="contact">Contact</Link></p>
         </div>
 

@@ -14,7 +14,11 @@ module.exports = {
         name: `markdown-pages`,
         path: `${__dirname}/_data`,
       },
+
+    
     },
+
+    
 
     {
       resolve: `gatsby-plugin-google-gtag`,

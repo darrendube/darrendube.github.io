@@ -12,11 +12,12 @@ const ICONS = {
 
 
 export default () => (
-  
+  <div className="toggle-container">
   <ThemeToggler>
     {({ theme, toggleTheme }) => (
       <Toggle checked={theme === 'dark'} icons={ICONS} onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')} />
     )}
   </ThemeToggler>
+  </div>
 )
 

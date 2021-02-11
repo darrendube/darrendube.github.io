@@ -1,12 +1,14 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import SubscribeForm from "./subscribe-form"
+import Img from "gatsby-image"
 
 
 export default () => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
+        
         site {
           siteMetadata {
             home {
@@ -25,7 +27,10 @@ export default () => (
         <div 
           className="primary-content" >News, tutorials, videos.  </div><SubscribeForm /></div>
         <div className="hero-image">
+       
           <img src="/assets/econ-image.png" className=""/>
+
+          
         </div>
 
         
