@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: /blog/uncategorised/byzantine-generals-problem
+path: /blog/blockchain/byzantine-generals-problem
 date: 2020-08-11T15:14:42.806Z
 title: The Byzantine General's Problem
 metaDescription: Meta description for blog post

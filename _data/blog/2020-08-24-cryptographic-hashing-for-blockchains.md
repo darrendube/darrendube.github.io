@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: /blog/uncategorised/cryptographic-hashing-for-blockchains
+path: /blog/blockchain/cryptographic-hashing-for-blockchains
 date: 2020-08-12T15:19:52.718Z
 title: Cryptographic Hashing for Blockchains
 metaDescription: Meta description for blog post

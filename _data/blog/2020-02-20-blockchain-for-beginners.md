@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-path: /blog/uncategorised/blockchain-for-beginners
+path: /blog/blockchain/blockchain-for-beginners
 date: 2020-08-10T14:59:36.571Z
 title: Blockchain for Beginners
 metaDescription: Meta description for blog post
