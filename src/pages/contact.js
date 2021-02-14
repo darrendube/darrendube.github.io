@@ -13,9 +13,10 @@ const ContactPage = ({
   return (
     <Layout>
       <Helmet>
-        <title>Contact — {site.siteMetadata.title}</title>
-        <meta name="description" content={"Contact page of " + site.siteMetadata.description} />
+        <title>Contact | {site.siteMetadata.title}</title>
+        <meta name="description" content="Get in touch with any questions, suggestions, or feedback you may have. I typically answer within 24 hours." />
       </Helmet>
+
       <div className="two-grids">
         
         <div className="contact-page-text">
@@ -25,7 +26,7 @@ const ContactPage = ({
           <div className="footer-icons-row">
 <a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram className="contact-page-icon"/></a>
 <a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="contact-page-icon"/></a>
-<a href="https://facebook.com/darrenzdube" target="_blank"><FaYoutube className="contact-page-icon"/></a>
+<a href="https://www.youtube.com/channel/UCUuowwJOmQzQfH_ub-qNxiA" target="_blank"><FaYoutube className="contact-page-icon"/></a>
 </div>
         </div>
 

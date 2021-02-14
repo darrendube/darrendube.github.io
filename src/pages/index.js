@@ -20,8 +20,10 @@ const IndexPage = ({
     <Layout>
       <Helmet>
         <title>{site.siteMetadata.title}</title>
-        <meta name="description" content={site.siteMetadata.description} />
+        <meta name="description" content="Find answers to your most burning coding questions, in under 5 minutes. Making your coding journey easier!" />
       </Helmet>
+
+
       <HeroHeader/>
       <div className="posts-section">
       <div className="items-wrapper">
@@ -37,6 +39,7 @@ const IndexPage = ({
 }
 
 export default IndexPage
+
 export const pageQuery = graphql`
   query indexPageQuery {
     site {

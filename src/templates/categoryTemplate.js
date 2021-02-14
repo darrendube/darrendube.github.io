@@ -22,12 +22,13 @@ const Tags = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMarkdownRemark
   const Posts = edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   const Category = pageContext.tag
+  const description = "Read articles under the "+{Category}+"category. Find answers to your most burning coding questions, in under 5 minutes. Making your coding journey easier! "
 
   return (
     <Layout>
       <Helmet>
         <title>{Category} Category | Darren Dube</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Read articles under the" />
 
       </Helmet>
       <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">{Category}</h2></div></div>

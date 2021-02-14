@@ -97,6 +97,8 @@ const NavbarLinks = () => {
       <Link className="nav-item" to="/">Home</Link>
       
       <Link className="nav-item" to="/contact">Contact</Link>
+
+      <Link className="nav-item" to="/privacy-policy">Privacy Policy</Link>
       
     </>
   )
