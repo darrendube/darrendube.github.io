@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link , navigate } from "gatsby"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { FaCalendar , FaClock} from "react-icons/fa"
@@ -7,7 +7,7 @@ import { FaCalendar , FaClock} from "react-icons/fa"
 
 
 const PostLink = ({ post }) => (
-  <article className="card ">
+  <div className="card " onClick={() => navigate(post.frontmatter.path)}>
     <div className="fill"><Link to={post.frontmatter.path}>
       {!!post.frontmatter.thumbnail && (
         <img className="card-image" src={post.frontmatter.thumbnail} alt={post.frontmatter.title + "- Featured Shot"} />
@@ -33,7 +33,7 @@ const PostLink = ({ post }) => (
       
       <p>{post.excerpt}</p></div>
     </div>
-  </article>
+  </div>
 )
 
 export default PostLink
