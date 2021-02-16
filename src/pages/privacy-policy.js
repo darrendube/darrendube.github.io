@@ -13,7 +13,7 @@ const PrivacyPolicyPage = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Privacy Policy | Darren Dube</title>
+                <title>Privacy Policy - Darren Dube</title>
                 <meta name="description" content="On my website, accessible from darrendube.com, one of my main priorities is the privacy of my visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how I use it." />
 
             </Helmet>

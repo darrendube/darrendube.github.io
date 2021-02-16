@@ -21,7 +21,7 @@ export default function Template({
   return (
     <Layout>
       <Helmet>
-        <title>{frontmatter.title} | {siteMetadata.title}</title>
+        <title>{frontmatter.title}</title>
         <meta name="description" content={markdownRemark.excerpt} />
 
       </Helmet>

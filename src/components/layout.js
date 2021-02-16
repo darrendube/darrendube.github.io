@@ -77,7 +77,7 @@ export default ({ children }) => {
 </div>
       </footer>
       <div className="copyright-notice">
-          <p className=""> Copyright &copy; 2021 <Link to="/">Darren Dube</Link> &bull; All Rights Reserved | <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a></p>
+          <p className=""> Copyright &copy; 2021 <Link to="/">Darren Dube</Link>.  All Rights Reserved. &nbsp;&nbsp; <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a> &bull; <Link to="/privacy-policy">Privacy Policy</Link></p>
         </div>
     </div>
   )

@@ -13,7 +13,7 @@ const ContactPage = ({
   return (
     <Layout>
       <Helmet>
-        <title>Contact | {site.siteMetadata.title}</title>
+        <title>Contact - {site.siteMetadata.title}</title>
         <meta name="description" content="Get in touch with any questions, suggestions, or feedback you may have. I typically answer within 24 hours." />
       </Helmet>
 

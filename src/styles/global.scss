@@ -945,6 +945,15 @@ and (max-width: 767px) {
   color: #ffffff;
   background: #000000;
   
+  a {
+    color: #eee;
+
+    
+  }
+
+  a:hover {
+    color: var(--primary-color) !important;
+  }
  
 }
 

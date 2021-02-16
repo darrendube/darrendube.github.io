@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 const Projects = () => {
 	return(
 		<Layout>
-		<h1> Underconstruction </h1></Layout>
+		<h1> Under Construction </h1></Layout>
 		)
 }
 
