@@ -21,6 +21,11 @@ const IndexPage = ({
       <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content="Find answers to your most burning coding questions, in under 5 minutes. Making your coding journey easier!" />
+
+        <meta property="og:title" content={site.siteMetadata.title}/>
+        <meta property="og:description" content="Find answers to your most burning coding questions, in under 5 minutes. Making your coding journey easier!"/>
+       
+        <meta property="og:url" content="https://darrendube.com"/>
       </Helmet>
 
 

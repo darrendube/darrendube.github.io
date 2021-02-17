@@ -23,9 +23,12 @@ export default function Template({
       <Helmet>
         <title>{frontmatter.title}</title>
         <meta name="description" content={markdownRemark.excerpt} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@darrendube" />
+        <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:title" content={frontmatter.title}/>
         <meta property="og:description" content={!!frontmatter.intro && frontmatter.intro}/>
-        <meta property="og:image" content={frontmatter.thumbnail}/>
+        <meta property="og:image" content={"https://darrendube.com" +frontmatter.thumbnail}/>
         <meta property="og:url" content={"https://darrendube.com" + frontmatter.path}/>
 
       </Helmet>

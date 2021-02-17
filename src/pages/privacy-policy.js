@@ -15,6 +15,12 @@ const PrivacyPolicyPage = () => {
             <Helmet>
                 <title>Privacy Policy - Darren Dube</title>
                 <meta name="description" content="On my website, accessible from darrendube.com, one of my main priorities is the privacy of my visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how I use it." />
+                
+        <meta property="og:title" content="Privacy Policy - Darren Dube"/>
+        <meta property="og:description" content="On my website, accessible from darrendube.com, one of my main priorities is the privacy of my visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how I use it."/>
+       
+        <meta property="og:url" content="https://darrendube.com/privacy-policy"/>
+
 
             </Helmet>
             <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">HOME / </h5><h2 className="category-title">Privacy Policy</h2></div></div>

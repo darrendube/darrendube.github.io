@@ -3,7 +3,7 @@ template: BlogPost
 path: /blog/web-development/personal-website
 date: 2020-10-05T12:29:52.196Z
 title: The Importance of Having a Personal Website
-thumbnail: /assets/le-buzz-KiEiI2b9GkU-unsplash.jpg
+thumbnail: /assets/website-image.png
 category: web development
 type: article
 ---

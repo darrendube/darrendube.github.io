@@ -15,6 +15,12 @@ const ContactPage = ({
       <Helmet>
         <title>Contact - {site.siteMetadata.title}</title>
         <meta name="description" content="Get in touch with any questions, suggestions, or feedback you may have. I typically answer within 24 hours." />
+
+        <meta property="og:title" content={"Contact - "+ site.siteMetadata.title}/>
+        <meta property="og:description" content="Get in touch with any questions, suggestions, or feedback you may have. I typically answer within 24 hours."/>
+       
+        <meta property="og:url" content="https://darrendube.com/contact"/>
+
       </Helmet>
 
       <div className="two-grids">

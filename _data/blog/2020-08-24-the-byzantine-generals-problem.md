@@ -4,7 +4,7 @@ path: /blog/blockchain/byzantine-generals-problem
 date: 2020-08-11T15:14:42.806Z
 title: The Byzantine General's Problem
 metaDescription: Meta description for blog post
-thumbnail: /assets/0_tcl0Y4YNDZjA3JkE.jpg
+thumbnail: /assets/castle-image.png
 category: blockchain
 type: article
 ---

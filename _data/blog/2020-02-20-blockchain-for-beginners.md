@@ -4,7 +4,7 @@ path: /blog/blockchain/blockchain-for-beginners
 date: 2020-08-10T14:59:36.571Z
 title: Blockchain for Beginners
 metaDescription: Meta description for blog post
-thumbnail: /assets/blockchain.jpg
+thumbnail: /assets/blockchain-image.png
 category: blockchain
 type: article
 intro: Blockchain is a complicated topic with a whole branch of Computer science dedicated to it. It’s what’s behind the rise of a new type of currency — cryptocurrencies like Bitcoin, Ethereum, Litecoin and Ripple, and yet, at its core, a blockchain is just a store of records
