@@ -23,6 +23,10 @@ export default function Template({
       <Helmet>
         <title>{frontmatter.title}</title>
         <meta name="description" content={markdownRemark.excerpt} />
+        <meta property="og:title" content={frontmatter.title}/>
+        <meta property="og:description" content={!!frontmatter.intro && frontmatter.intro}/>
+        <meta property="og:image" content={frontmatter.thumbnail}/>
+        <meta property="og:url" content={"https://darrendube.com" + frontmatter.path}/>
 
       </Helmet>
 
