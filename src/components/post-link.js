@@ -1,8 +1,10 @@
 import React from "react"
 import { Link , navigate } from "gatsby"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { FaCalendar , FaClock} from "react-icons/fa"
+import Img from "gatsby-image"
+
 
 
 
@@ -10,7 +12,7 @@ const PostLink = ({ post }) => (
   <div className="card " onClick={() => navigate(post.frontmatter.path)}>
     <div className="fill"><Link to={post.frontmatter.path}>
       {!!post.frontmatter.thumbnail && (
-        <img className="card-image" src={post.frontmatter.thumbnail} alt={post.frontmatter.title + "- Featured Shot"} />
+        <Img className="card-image" fluid={post.frontmatter.thumbnail.childImageSharp.fluid} alt={post.frontmatter.title + "- Featured Shot"} />
       )}
     </Link></div>
     <div className="post-details">
@@ -35,6 +37,7 @@ const PostLink = ({ post }) => (
     </div>
   </div>
 )
+
 
 export default PostLink
 

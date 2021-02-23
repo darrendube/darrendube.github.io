@@ -721,8 +721,7 @@ and (max-width: 480px) {
 }
 
 .post-thumbnail {
-  background-size: cover;
-  background-repeat: no-repeat;
+  
   max-height: 80%;
   height: 0;
   padding-top: 56.25%;
@@ -880,7 +879,7 @@ and (max-width: 767px) {
   margin: 32px;
 }
 
-.fill img {
+.fill .card-image {
 
 
   position: absolute;
@@ -889,6 +888,7 @@ and (max-width: 767px) {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+ 
 }
 
 .hero-text {
@@ -897,14 +897,17 @@ and (max-width: 767px) {
 
 
 .fill {
+  margin: -12px 0 0 0;
   position: relative;
+  
+  
   
 }
 
 .fill::after {
   display:block;
   content: '';
-  padding-bottom: 56.25%
+ 
 }
 
 

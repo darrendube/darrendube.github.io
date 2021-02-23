@@ -8,6 +8,15 @@ module.exports = {
   /* Your site config here */
   siteMetadata: require("./site-meta-data.json"),
   plugins: [
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: 'assets',
+      },
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,6 +26,8 @@ module.exports = {
 
     
     },
+    
+    
 
     
 
@@ -58,6 +69,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-reading-time`,
+
         {
           resolve: `gatsby-remark-prismjs`,
           options: {
@@ -70,7 +82,27 @@ module.exports = {
         },
         {
           resolve: 'gatsby-remark-emojis',
-        }],
+        },
+
+        { resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },},
+
+  {
+    resolve: `gatsby-remark-images`,
+    options: {
+      // It's important to specify the maxWidth (in pixels) of
+      // the content container as this plugin uses this as the
+      // base for generating different widths of each image.
+      maxWidth: 930,
+      backgroundColor: 'transparent', // required to display blurred image first
+    },
+  },
+       
+
+        ],
+
       },
     },
     {
@@ -105,6 +137,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-fontawesome-css`,
+
+   { resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },}
+  
+  ,
    {
       resolve: `gatsby-plugin-feed`,
       options: {

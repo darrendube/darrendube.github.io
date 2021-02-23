@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar, FaClock } from "react-icons/fa"
 import ShareButtons from "../components/share"
+import Img from 'gatsby-image'
 
 
 
@@ -41,8 +42,8 @@ export default function Template({
           <div className="post-header ">
             <div className="header-wrapper post-grid">
               {!!frontmatter.thumbnail && (
-                <div className="post-thumbnail grid-item1" style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}>
-                </div>
+                <Img fluid={frontmatter.thumbnail.childImageSharp.fluid} className="post-thumbnail grid-item1"/>
+               
               )}
 
               <div className="post-info grid-item2">
@@ -97,7 +98,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        thumbnail
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         category
         type
         intro
