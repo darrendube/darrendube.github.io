@@ -9,11 +9,13 @@ module.exports = {
   siteMetadata: require("./site-meta-data.json"),
   plugins: [
 
+    
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/static/assets`,
-        name: 'assets',
+        name: 'images',
       },
     },
 
@@ -27,7 +29,39 @@ module.exports = {
     
     },
     
-    
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-reading-time`,
+
+        {
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: "language-",
+            inlineCodeMarker: null,
+            aliases: {},
+            showLineNumbers: false,
+            noInlineHighlight: false,
+          },
+        },
+        {
+          resolve: 'gatsby-remark-emojis',
+        },
+
+        { resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },},
+
+  
+       
+
+        ],
+
+      },
+    },
 
     
 
@@ -65,46 +99,7 @@ module.exports = {
       }
     },
 
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [`gatsby-remark-reading-time`,
-
-        {
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
-          },
-        },
-        {
-          resolve: 'gatsby-remark-emojis',
-        },
-
-        { resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `/static/admin/config.yml`,
-  },},
-
-  {
-    resolve: `gatsby-remark-images`,
-    options: {
-      // It's important to specify the maxWidth (in pixels) of
-      // the content container as this plugin uses this as the
-      // base for generating different widths of each image.
-      maxWidth: 930,
-      backgroundColor: 'transparent', // required to display blurred image first
-    },
-  },
-       
-
-        ],
-
-      },
-    },
+    
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -133,8 +128,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-fontawesome-css`,
 
