@@ -8,7 +8,7 @@ import styled from "styled-components"
 import SubscribeForm from "./subscribe-form"
 import SubscribeFormFooter from "./subscribe-form-footer"
 import FooterLogo from "./footer-logo"
-import { FaInstagram , FaTwitter , FaYoutube} from "react-icons/fa"
+import { FaInstagram , FaTwitter , FaYoutube , FaDev} from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
 
 
@@ -43,7 +43,7 @@ export default ({ children }) => {
      <div className="footer-icons-row">
 <a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram className="footer-icon"/></a>
 <a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="footer-icon"/></a>
-<a href="https://facebook.com/darrenzdube" target="_blank"><FaYoutube className="footer-icon"/></a>
+<a href="https://dev.to/darrendube" target="_blank"><FaDev className="footer-icon"/></a>
 </div>
         </div>
          <div className="footer-section2">
