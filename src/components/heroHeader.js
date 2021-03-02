@@ -1,7 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import SubscribeForm from "./subscribe-form"
-import Img from "gatsby-image"
+import { GatsbyImage , StaticImage} from "gatsby-plugin-image";
+import "../images/econ-image.png";
 
 
 export default () => (
@@ -28,7 +29,12 @@ export default () => (
           className="primary-content" >News, tutorials, videos.  </div><SubscribeForm /></div>
         <div className="hero-image">
        
-          <img src="/assets/econ-image.png" className=""/>
+          <StaticImage 
+            src="../images/econ-image.png" 
+            alt="econ-image"
+          
+            />
+     
 
           
         </div>

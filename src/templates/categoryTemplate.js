@@ -19,7 +19,7 @@ const Posts = edges
 
 const Tags = ({ pageContext, data }) => {
   
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges, totalCount } = data.allMdx
   const Posts = edges.map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   const Category = pageContext.tag
   const description = "Read articles under the "+{Category}+"category. Find answers to your most burning coding questions, in under 5 minutes. Making your coding journey easier! "
@@ -48,7 +48,7 @@ Tags.propTypes = {
     tag: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
@@ -67,41 +67,33 @@ Tags.propTypes = {
 }
 export default Tags
 
-export const pageQuery = graphql`
-  query($tag: String) {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-         
-          id
-          excerpt(pruneLength: 150)
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            thumbnail {
-              childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`query ($tag: String) {
+  allMdx(limit: 2000, sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {category: {in: [$tag]}}}) {
+    totalCount
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 150)
+        frontmatter {
+          title
+          date(formatString: "MMMM DD, YYYY")
+          path
+          title
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
             }
-            category
-            type
           }
-          fields {
-            readingTime {
-              minutes
-            }
+          category
+          type
+        }
+        fields {
+          readingTime {
+            minutes
           }
         }
       }
     }
   }
+}
 `

@@ -5,7 +5,8 @@ import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar, FaClock } from "react-icons/fa"
 import ShareButtons from "../components/share"
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 
 
@@ -13,17 +14,17 @@ import Img from 'gatsby-image'
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { site, markdownRemark } = data // data.markdownRemark holds your post data
+  const { site, mdx } = data 
   const { siteMetadata } = site
-  const { frontmatter, html, fields } = markdownRemark
-
+  const { frontmatter, body, fields } = mdx
+  
 
 
   return (
     <Layout>
       <Helmet>
         <title>{frontmatter.title}</title>
-        <meta name="description" content={markdownRemark.excerpt} />
+        <meta name="description" content={mdx.excerpt} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
@@ -42,7 +43,10 @@ export default function Template({
           <div className="post-header ">
             <div className="header-wrapper post-grid">
               {!!frontmatter.thumbnail && (
-                <Img fluid={frontmatter.thumbnail.childImageSharp.fluid} className="post-thumbnail grid-item1"/>
+                <GatsbyImage
+                  image={frontmatter.thumbnail.childImageSharp.gatsbyImageData}
+                  className="post-thumbnail grid-item1" 
+                  placeholder="dominantColor"/>
                
               )}
 
@@ -72,49 +76,44 @@ export default function Template({
             </div>
           </div>
 
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+    
+
+          <div className="blog-post-content"><MDXRenderer className="blog-post-content">{body}</MDXRenderer></div>
 
           <SubscribeSection />
         </article>
       </div>
     </Layout>
-  )
+  );
 }
 
-export const pageQuery = graphql`
-  query($path: String!) {
-    site {
-      siteMetadata {
-        title
-      }
+export const pageQuery = graphql`query ($path: String!) {
+  site {
+    siteMetadata {
+      title
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      excerpt(pruneLength: 200)
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 1024) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+  }
+  mdx(frontmatter: {path: {eq: $path}}) {
+    body
+    excerpt(pruneLength: 200)
+    frontmatter {
+      date(formatString: "MMMM DD, YYYY")
+      path
+      title
+      thumbnail {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
-        category
-        type
-        intro
-        
       }
-      fields {
-        readingTime {
-          minutes
-        }
+      category
+      type
+      intro
+    }
+    fields {
+      readingTime {
+        minutes
       }
     }
   }
+}
 `

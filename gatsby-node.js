@@ -8,7 +8,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
@@ -26,7 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      postsRemark: allMarkdownRemark(
+      postsRemark: allMdx(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -40,7 +40,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      categoryGroup: allMarkdownRemark(limit: 2000) {
+      categoryGroup: allMdx(limit: 2000) {
         group(field: frontmatter___category) {
           fieldValue
         }

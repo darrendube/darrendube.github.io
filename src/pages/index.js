@@ -8,7 +8,7 @@ import HeroHeader from "../components/heroHeader"
 const IndexPage = ({
   data: {
     site,
-    allMarkdownRemark: { edges },
+    allMdx: { edges },
   },
 }) => {
 
@@ -45,40 +45,37 @@ const IndexPage = ({
 
 export default IndexPage
 
-export const pageQuery = graphql`
-  query indexPageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
+export const pageQuery = graphql`query indexPageQuery {
+  site {
+    siteMetadata {
+      title
+      description
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 150)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            thumbnail {
-              childImageSharp {
-                fluid(maxWidth: 1024) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+  }
+  allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
+    edges {
+      node {
+        id
+        excerpt(pruneLength: 150)
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          path
+          title
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
             }
-            category
-            type
           }
-          fields {
-            readingTime {
-              minutes
-            }
+          category
+          type
+        }
+        fields {
+          readingTime {
+            minutes
           }
         }
       }
     }
   }
+}
 `
