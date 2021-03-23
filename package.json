@@ -25,7 +25,6 @@
     "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-mdx": "^1.10.1",
     "gatsby-plugin-netlify": "^2.11.1",
-    "gatsby-plugin-netlify-cms": "^4.10.0",
     "gatsby-plugin-netlify-cms-paths": "^1.3.0",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-react-helmet": "^3.10.0",
@@ -51,7 +50,8 @@
     "react-icons": "^4.2.0",
     "react-share": "^4.4.0",
     "react-toggle": "^4.1.2",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "webpack": "^5.27.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
