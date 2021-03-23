@@ -65,12 +65,11 @@
     "type": "git",
     "url": "git+https://github.com/darrendube/website.git"
   },
-    "resolutions": {
-      "graphql": "^15.5.0",
-      "graphql-compose": "^7.25.0",
-      "webpack": "^5.24.2"
-    },
-  
+  "resolutions": {
+    "graphql": "^15.5.0",
+    "graphql-compose": "^7.25.0",
+    "webpack": "^5.24.2"
+  },
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",

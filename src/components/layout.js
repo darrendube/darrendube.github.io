@@ -11,7 +11,7 @@ import FooterLogo from "./footer-logo"
 import { FaInstagram , FaTwitter , FaYoutube , FaDev} from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
 import Carbonbadge from "react-carbonbadge"
-import { graphql } from "gatsby"
+
 
 
 

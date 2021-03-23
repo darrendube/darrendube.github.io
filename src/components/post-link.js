@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { FaCalendar , FaClock} from "react-icons/fa"
 import { GatsbyImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby"
+
 
 
 

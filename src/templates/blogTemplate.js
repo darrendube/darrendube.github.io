@@ -7,7 +7,7 @@ import { FaCalendar, FaClock } from "react-icons/fa"
 import ShareButtons from "../components/share"
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { graphql } from "gatsby"
+
 
 
 
