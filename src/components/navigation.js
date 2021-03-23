@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import Logo from "./logo"
 import ThemeChanger from "./themeChanger"
+import { graphql } from "gatsby"
 
 
 const Navigation = styled.nav`

@@ -7,6 +7,7 @@ import Helmet from 'react-helmet';
 import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar , FaClock} from "react-icons/fa"
+import { graphql } from "gatsby"
 
 
 // Components

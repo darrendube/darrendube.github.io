@@ -10,6 +10,8 @@ import SubscribeFormFooter from "./subscribe-form-footer"
 import FooterLogo from "./footer-logo"
 import { FaInstagram , FaTwitter , FaYoutube , FaDev} from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
+import Carbonbadge from "react-carbonbadge"
+import { graphql } from "gatsby"
 
 
 
@@ -45,6 +47,8 @@ export default ({ children }) => {
 <a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="footer-icon"/></a>
 <a href="https://dev.to/darrendube" target="_blank"><FaDev className="footer-icon"/></a>
 </div>
+<div className="footer-icons-row">
+<Carbonbadge darkMode={true} /></div>
         </div>
          <div className="footer-section2">
        

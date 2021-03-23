@@ -3,6 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import SubscribeForm from "./subscribe-form"
 import { GatsbyImage , StaticImage} from "gatsby-plugin-image";
 import "../images/econ-image.png";
+import { graphql } from "gatsby"
 
 
 export default () => (

@@ -1,6 +1,8 @@
 import React from "react"
 import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , WhatsappShareButton , PocketShareButton} from "react-share"
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope , FaGetPocket} from "react-icons/fa"
+import { graphql } from "gatsby"
+
 
 function objToString(obj, ndeep) {
     if(obj == null){ return String(obj); }

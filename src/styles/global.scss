@@ -129,11 +129,14 @@ body.light {
   --post-header-background: linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%);
   --dube-color: #4a4a4a;
   --toggle-thumb-color: #164bc5;
+  --tldr-color: #000000;
+  --tldr-background: #2f14ff9a;
   
 }
 body.dark {
-  
-  --dube-color: #6c8299;
+  --tldr-color: #ffffff;
+  --tldr-background: rgba(255,255,255,0.1);
+  --dube-color: #030303;
   --posts-section-background: #06121f;
   --required-color: #fff;
   --input-border: #eee;
@@ -1496,3 +1499,18 @@ nav {
   box-shadow: 0px 0px 2px 2px var(--toggle-thumb-color);
 }
 
+.tldr {
+  max-width: 768px;
+
+  padding: 20px;
+  color: var(--tldr-color);
+  background: var(--tldr-background);
+  height: 300px;
+  border-radius: 20px;
+  
+  margin: 20px 18px 20px 18px;
+ 
+  h2 {
+    margin: unset;
+  }
+}

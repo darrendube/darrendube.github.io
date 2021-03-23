@@ -3,6 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ThemeChanger from "./themeChanger"
+import { graphql } from "gatsby"
 
 
 
