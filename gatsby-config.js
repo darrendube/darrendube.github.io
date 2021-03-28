@@ -36,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-
+          `gatsby-plugin-netlify-cms-paths`,
         {
           resolve: `gatsby-remark-prismjs`,
           options: {

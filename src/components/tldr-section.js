@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const TLDR = (props) => {
     return (<div className="tldr">
-        <h2>Too Long; Didn't Read (TLDR)</h2>
+        <h2>Key Takeaways:</h2>
         {props.children}
     </div>)
 }

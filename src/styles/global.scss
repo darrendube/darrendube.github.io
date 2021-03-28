@@ -130,13 +130,13 @@ body.light {
   --dube-color: #4a4a4a;
   --toggle-thumb-color: #164bc5;
   --tldr-color: #000000;
-  --tldr-background: #2f14ff9a;
+  --tldr-background: #2f14ff22;
   
 }
 body.dark {
   --tldr-color: #ffffff;
   --tldr-background: rgba(255,255,255,0.1);
-  --dube-color: #030303;
+  --dube-color: #6c8299;
   --posts-section-background: #06121f;
   --required-color: #fff;
   --input-border: #eee;
@@ -202,9 +202,11 @@ body p {
 }
 
 a {
-  color: var(--primary-color);
+  /*color: var(--primary-color);*/
+  color:rgb(1, 94, 255);
 
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 a:hover {
@@ -645,6 +647,17 @@ and (max-width: 480px) {
     h1, h2, h3, h4, h5, h6 {
       margin: 48px 18px 24px 18px;
     }
+
+    ul, ol {
+      h1, h2, h3, h4 ,h5, h6 {
+        margin: 48px 18px 24px 0;
+        > a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    
 
     >h3 {
       margin-top: 2rem;
@@ -1505,12 +1518,31 @@ nav {
   padding: 20px;
   color: var(--tldr-color);
   background: var(--tldr-background);
-  height: 300px;
-  border-radius: 20px;
+ 
+  border-radius: 10px;
   
   margin: 20px 18px 20px 18px;
+  border: solid rgba(7, 72, 202, 0.904);
  
   h2 {
     margin: unset;
+  }
+   
+  ul {
+    padding: 0 0 0 20px;
+    list-style: none;
+
+    >li {
+      margin: 0 0 10px 0;
+    }
+
+    >li::before {
+      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: rgb(1, 94, 255); /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
   }
 }

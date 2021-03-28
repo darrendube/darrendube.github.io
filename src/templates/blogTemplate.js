@@ -1,12 +1,15 @@
 import React from "react"
 import Helmet from 'react-helmet';
-import { graphql, Link } from "gatsby"
+import { graphql, Link , GatsbyLink } from "gatsby"
 import Layout from "../components/layout"
 import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar, FaClock } from "react-icons/fa"
 import ShareButtons from "../components/share"
 import { GatsbyImage } from "gatsby-plugin-image";
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer , MDXProvider } from "gatsby-plugin-mdx"
+import ExternalLink from "../components/link"
+
+
 
 
 
@@ -118,3 +121,5 @@ export const pageQuery = graphql`query ($path: String!) {
   }
 }
 `
+
+
