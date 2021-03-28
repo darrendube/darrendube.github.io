@@ -638,17 +638,21 @@ and (max-width: 480px) {
     word-break: normal;
     font-size: 18px;
 
-    > p {
+    > p, li {
      margin: 0 18px 24px 18px;
      line-height: 1.6;
      
     }
+
+    
 
     h1, h2, h3, h4, h5, h6 {
       margin: 48px 18px 24px 18px;
     }
 
     ul, ol {
+      padding-left: 16px;
+
       h1, h2, h3, h4 ,h5, h6 {
         margin: 48px 18px 24px 0;
         > a {
@@ -659,7 +663,7 @@ and (max-width: 480px) {
 
     
 
-    >h3 {
+    > h3 {
       margin-top: 2rem;
     }
 
