@@ -12,7 +12,7 @@ const SubscribeForm = () => {
   action="https://buttondown.email/api/emails/embed-subscribe/darrendube"
   method="post"
   target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
+  onSubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
   class="embeddable-buttondown-form subscribe-form"
 >
         

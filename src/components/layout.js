@@ -10,7 +10,7 @@ import SubscribeFormFooter from "./subscribe-form-footer"
 import FooterLogo from "./footer-logo"
 import { FaInstagram , FaTwitter , FaYoutube , FaDev} from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
-import Carbonbadge from "react-carbonbadge"
+import Carbonbadge from "./carbon-badge"
 
 
 
@@ -48,7 +48,10 @@ export default ({ children }) => {
 <a href="https://dev.to/darrendube" target="_blank"><FaDev className="footer-icon"/></a>
 </div>
 <div className="footer-icons-row">
-<Carbonbadge darkMode={true} /></div>
+  <div className="carbonbadge"><Carbonbadge/></div>
+
+</div>
+
         </div>
          <div className="footer-section2">
        

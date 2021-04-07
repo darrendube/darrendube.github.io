@@ -33,8 +33,8 @@ export default function Template({
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:title" content={frontmatter.title}/>
-        <meta property="og:description" content={!!frontmatter.intro && frontmatter.intro}/>
-        <meta property="og:image" content={"https://darrendube.com" +frontmatter.thumbnail}/>
+        <meta property="og:description" content={frontmatter.intro ? frontmatter.intro : mdx.excerpt}/>
+        <meta property="og:image" content={frontmatter.ogimage}/>
         <meta property="og:url" content={"https://darrendube.com" + frontmatter.path}/>
 
       </Helmet>
