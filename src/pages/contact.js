@@ -23,7 +23,7 @@ const ContactPage = ({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
-        <meta property="og:image" content={"https://darrendube.com/assets/icon.png"}/>
+        <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
 
       </Helmet>
 

@@ -34,7 +34,7 @@ const Tags = ({ pageContext, data }) => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
-        <meta property="og:image" content={"https://darrendube.com/assets/icon.png"}/>
+        <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
       </Helmet>
       <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">{Category}</h2></div></div>
     <div className="posts-section">
