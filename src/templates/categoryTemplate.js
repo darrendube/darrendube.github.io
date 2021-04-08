@@ -29,8 +29,12 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
       <Helmet>
         <title>{Category} Category - Darren Dube</title>
+        <meta property="og:title" content={Category + "Category - Darren Dube"}/>
         <meta name="description" content="Read articles under the" />
-
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@darrendube" />
+        <meta name="twitter:creator" content="@darrendube" />
+        <meta property="og:image" content={"https://darrendube.com/assets/icon.png"}/>
       </Helmet>
       <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">{Category}</h2></div></div>
     <div className="posts-section">

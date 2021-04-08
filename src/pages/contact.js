@@ -18,8 +18,12 @@ const ContactPage = ({
 
         <meta property="og:title" content={"Contact - "+ site.siteMetadata.title}/>
         <meta property="og:description" content="Get in touch with any questions, suggestions, or feedback you may have. I typically answer within 24 hours."/>
-       
+        
         <meta property="og:url" content="https://darrendube.com/contact"/>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@darrendube" />
+        <meta name="twitter:creator" content="@darrendube" />
+        <meta property="og:image" content={"https://darrendube.com/assets/icon.png"}/>
 
       </Helmet>
 

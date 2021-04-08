@@ -29,7 +29,7 @@ export default function Template({
       <Helmet>
         <title>{frontmatter.title}</title>
         <meta name="description" content={mdx.excerpt} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:title" content={frontmatter.title}/>
