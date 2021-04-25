@@ -11,14 +11,14 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const ResourceCard = ({ props, thumbnail, title, link }) => (
   <div className="card resource-card " onClick={() => navigate(link)}>
-    <div className=""><Link to="/">
+    <div className=""><a href={link}>
      
         <img
           src={thumbnail}
           className="card-image"
           
          
-          /></Link>
+          /></a>
       <h3>{title}</h3>
     </div>
 
