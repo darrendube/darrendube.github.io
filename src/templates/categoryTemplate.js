@@ -28,8 +28,8 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{Category.charAT(0).toUpperCase() + Category.slice(1)} Category - Darren Dube</title>
-        <meta property="og:title" content={Category.charAT(0).toUpperCase() + Category.slice(1) + " Category - Darren Dube"}/>
+        <title>{Category} Category - Darren Dube</title>
+        <meta property="og:title" content={Category + " Category - Darren Dube"}/>
         <meta name="description" content="Read articles under the" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
