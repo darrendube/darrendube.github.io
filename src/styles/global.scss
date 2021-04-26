@@ -175,9 +175,10 @@ body p {
 
 a {
   /*color: var(--primary-color);*/
-  color:rgb(1, 94, 255);
+  color:var(--primary-text-color);
 
   text-decoration: underline;
+  text-decoration-color: rgb(1, 94, 255);
   text-underline-position: under;
 }
 
