@@ -4,6 +4,7 @@ path: /blog/web-development/jamstack
 date: 2021-04-30T14:59:36.571Z
 title: Introduction to the Jamstack - the New Frontier in Web Development
 thumbnail: /assets/jamstack-thumbnail.png
+ogimage: jamstack-thumbnail.png
 category: web development
 type: article
 intro: JAMstack is an abbreviation that stands for JavaScript, APIs, and Mark-up. It is an architecture that promises, among other things, faster, cheaper, and more secure sites. And, increasingly, more and more websites are switching over.
@@ -33,13 +34,13 @@ There are many Web Development stacks out there: [LAMPstack](https://www.liquidw
 
 ![Legacy-architecture-diagram](https://i.ibb.co/s5rRv51/legacy-websites-diagram.png)
 
-This approach has its advantages - they tend to be <b>easier</b> for the average person to run, they can be <b>highly dynamic</b> because the page is only built at load time, and they are <b>less reliant</b> on third-party providers for synamic functionality - since they run on a literal server!
+This approach has its advantages - they tend to be <b>easier</b> for the average person to run, they can be <b>highly dynamic</b> because the page is only built at load time, and they are <b>less reliant</b> on third-party providers for dynamic functionality - since they run on a literal server!
 
 However, legacy websites tend to be slow (especially for those on unstable internet connections), harder and more expensive to scale, and less secure. So, in 2015, Mathias Biilmann, the CEO of Netlify, coined the term *JAMstack*, which was later renamed *Jamstack*, referring to a new Web architecture that he and Chris Bach, a co-founder, were working on at Netlify, and that other Web developers were starting to explore. 
 
 ## The Jamstack
 
-Instead of a server processing a request, a pre-built html page is served from a Content Delivery Network (CDN) and delivered to the user. No server involved. 
+Instead of a server processing a request, a pre-built HTML page is served from a Content Delivery Network (CDN) and delivered to the user. No server involved. 
 
 ![Jamstack-architecture-diagram](https://i.ibb.co/YZT5vw2/jamstack-websites-diagram.png)
 
@@ -57,7 +58,7 @@ You might already be familiar with popular JavaScript UI libraries like [React](
 
 **Application Programming Interfaces (APIs)** are what allow two or more programs to talk to each other. They are how things like cryptocurrency trading bots can communicate with cryptocurrency exchanges without a human in the mix.
 
-Just because we've decoupled the website's frontend from it's backend doesn't mean we can't make use of any server functionality. Third-party services can provide dynamic functionality like database access, payments, and authentication. Jamstack takes the <b>microservices</b> approach, which is different from the monolithic approach (I go through this in more detail below).
+Just because we've decoupled the website's frontend from its backend doesn't mean we can't make use of any server functionality. Third-party services can provide dynamic functionality like database access, payments, and authentication. Jamstack takes the <b>microservices</b> approach, which is different from the monolithic approach (I go through this in more detail below).
 
 Headless CMSs are another example of APIs. Normal <b>[Content Management Services](https://kinsta.com/knowledgebase/content-management-system/) (CMSs)</b> (like WordPress) deal with both the website content and the frontend. Jamstack decouples this, meaning Headless CMSs deal only with the content, leaving the frontend to [Static Site Generators](http://darrendube.com/blog/web-development/static-site-generators-wordpress-alternative).
 
@@ -65,7 +66,7 @@ The decoupling of these services from the actual websites gives greater portabil
 
 ### M is for **Mark-up**
 
-The M part of Jamstack is probably it's most important part. It stands for **Mark-up**. This means that Static HTML files are served to the user. 
+The M part of Jamstack is probably its most important part. It stands for **Mark-up**. This means that Static HTML files are served to the user. 
 
 But this not only includes how the website is served to the user - almost all websites have JavaScript, APIs, and Mark-up in some form - M also includes how the pages are made in the first place. There are generally two approaches to generating Static HTML files:
 
@@ -76,7 +77,7 @@ Because of the functionality and advantages that dynamic websites have over conv
 
 ## CDNs
 
-Unlike traditional web servers, which are usually in one place and serve dynamic, server generated pages, **Content Delivery Networks (CDNs)** are geographically distributed, storing website data on several servers around the world so requests can be serviced from the server geographically closest to the user. CDNs are still servers, but because they are distributed, you can't really pinpoint the exact physical server your website is hosted on.
+Unlike traditional web servers, which are usually in one place and serve dynamic, server-generated pages, **Content Delivery Networks (CDNs)** are geographically distributed, storing website data on several servers around the world so requests can be serviced from the server geographically closest to the user. CDNs are still servers, but because they are distributed, you can't really pinpoint the exact physical server your website is hosted on.
 
 CDNs themselves can't generate web pages, but since Jamstack web pages are pre-built, they can be served from CDNs. 
 
@@ -88,17 +89,17 @@ Examples of serverless hosting providers are [Netlify](https://netlify.com) and 
 
 Traditional websites are, simply put, built as a unit. They have all their functionality - comments, contact forms, authentication - built in. This functionality can still be in the form of plugins (like in the case of WordPress) but they are still a part of the overall website structure, and not external. This model is called a **monolithic architecture**.
 
-The Jamstack takes the **microservices** approach where parts of a website are broken up and outsourced to third-parties through APIs. Examples can be using a payments provider like Square or Paypal to process payments, or using Auth0 for authentication.
+The Jamstack takes the **microservices** approach where parts of a website are broken up and outsourced to third parties through APIs. Examples can be using a payments provider like Square or Paypal to process payments, or using Auth0 for authentication.
 
 ![microservices-vs-monolithic-diagram](https://i.ibb.co/BGQD2W5/monolithic-vs-microservices.png)
 
-A useful analogy created by [The New Stack](https://thenewstack.io/microservices-vs-monoliths-an-operational-comparison/) is that of an air ticket booking website. The process of booking a ticket contains many sub-steps which, in this scenario, are *reserving the ticket*, *billing the customer*, and sending a *confirmation email* that the ticket is booked. In a monolithic architecture, all three processes would be built into a single application. In a microservices architecture, however, each stage works independently of the other and can be outsourced to third-parties. The core function of the website might be to book the ticket, but billing could be outsourced to a payments company like Stripe, and emailing could be outsourced to an email company like Mailchimp, all through APIs.
+A useful analogy created by [The New Stack](https://thenewstack.io/microservices-vs-monoliths-an-operational-comparison/) is that of an air ticket booking website. The process of booking a ticket contains many sub-steps which, in this scenario, are *reserving the ticket*, *billing the customer*, and sending a *confirmation email* that the ticket is booked. In a monolithic architecture, all three processes would be built into a single application. In a microservices architecture, however, each stage works independently of the other and can be outsourced to third parties. The core function of the website might be to book the ticket, but billing could be outsourced to a payments company like Stripe, and emailing could be outsourced to an email company like Mailchimp, all through APIs.
 
 ## Conclusion
 
 Jamstack websites are usually called Static Sites because of how they are served to the user, but this sometimes gives the misconception that they can't have dynamic functionality when in fact they **can** through the use of APIs and Headless CMSs.
 
-The Jamstack is a movement thats spreading across the web development world. Many established Web Developers [are switching over](https://www.prnewswire.com/news-releases/modern-websites-are-built-on-the-jamstack-architecture-due-to-performance-reliability-and-speed-of-developer-workflows-according-to-industry-survey-by-netlify-301065730.html). Maybe it's time you switched over too, don't you think?
+The Jamstack is a movement that's spreading across the web development world. Many established Web Developers [are switching over](https://www.prnewswire.com/news-releases/modern-websites-are-built-on-the-jamstack-architecture-due-to-performance-reliability-and-speed-of-developer-workflows-according-to-industry-survey-by-netlify-301065730.html). Maybe it's time you switched over too, don't you think?
 
 ## Resources
 
