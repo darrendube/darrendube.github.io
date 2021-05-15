@@ -11,10 +11,10 @@ const SubscribeSection = () => (
   <div className="subscribe-section">
   <div className="subscribe-section-wrapper">
   <div>
-    <h2 className="subscribe-heading">Get the newsletter and get notified about new content</h2>
+    <h2 className="subscribe-heading">Get the newsletter and get notified about new content!</h2>
   </div>
   <div>
-    <p className="subscribe-content"> Be the first to know when I post new content. 
+    <p className="subscribe-content"> Be the first to know when I post new content, and get <b>free exclusive resources.</b> 
     I promise not to spam your inbox or share your email with any third parties. 
     You can opt-out at any time</p>
    </div>

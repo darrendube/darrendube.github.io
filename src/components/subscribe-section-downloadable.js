@@ -7,7 +7,7 @@ const SubscribeSectionDownloadable = (props) => {
     return (<div className="ssdownloadable">
         <div>
         {props.children}
-        <SubscribeForm/>
+        <SubscribeForm downloadable={true}/>
         </div>
 
         <div className="center">

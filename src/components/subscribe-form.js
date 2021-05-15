@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 
 
-const SubscribeForm = () => {
+const SubscribeForm = (props) => {
   return (
 
    <form
@@ -18,7 +18,7 @@ const SubscribeForm = () => {
         
 	        <input type="email" className="text-box" name="email" placeholder="Email" required></input>
 	        <input type="hidden" value="1" name="embed"></input>
-	        <input type="submit" className="hero-button" value=" SUBSCRIBE &rarr;"></input>
+	        <input type="submit" className="hero-button" value={props.downloadable ? "DOWNLOAD" : "SUBSCRIBE >"}></input>
         
         </form>
      

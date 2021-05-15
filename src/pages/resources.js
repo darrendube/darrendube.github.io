@@ -42,6 +42,12 @@ const ResourcesPage = ({ pageContext, data }) => {
               title="Introduction to Static Site Generators"
             />
 
+            <ResourceCard
+              link="https://github.com/darrendube/websiteresources/blob/main/ebooks/INFOGRAPHIC-The%20Jamstack%20in%20a%20nutshell.pdf?raw=true"
+              thumbnail="/downloadable-thumbnails/jamstack-infographic.jpg"
+              title="INFOGRAPHIC - The Jamstack, in a nutshell."
+            />
+
 
 
 

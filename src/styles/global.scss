@@ -99,7 +99,7 @@ body.light {
   --toggle-thumb-color: #164bc5;
   --tldr-color: #000000;
   --tldr-background: #2f14ff22;
-  --ssdownloadable-bg-color:  linear-gradient(to right, #010338, #070a60);
+  --ssdownloadable-bg-color:  linear-gradient(to right, #0a005d, #001eff92);
   --resource-card-shadow: rgba(73, 79, 84, 0.523) 0px 8px 24px;
   
 }
@@ -641,7 +641,7 @@ and (max-width: 480px) {
     }
 
     ul, ol {
-      margin: 1rem auto 0 auto;
+      margin: 1rem auto 1rem auto;
     }
 
     img {
@@ -1543,6 +1543,7 @@ nav {
     margin: unset;
     color: #ffffff;
     padding-bottom: 20px;
+    line-height: 2rem;
   }
 
   img {
