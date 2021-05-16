@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, createRef} from "react"
 import Helmet from 'react-helmet';
 import { graphql, Link , GatsbyLink } from "gatsby"
 import Layout from "../components/layout"
@@ -8,6 +8,7 @@ import ShareButtons from "../components/share"
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer , MDXProvider } from "gatsby-plugin-mdx"
 import ExternalLink from "../components/link"
+import Comments from "../components/comments"
 
 
 
@@ -21,6 +22,23 @@ export default function Template({
   const { site, mdx } = data 
   const { siteMetadata } = site
   const { frontmatter, body, fields } = mdx
+  const commentBox = createRef()
+
+  useEffect(() => {
+    const commentScript = document.createElement("script");
+    commentScript.async = true;
+    commentScript.src = "https://utteranc.es/client.js";
+    commentScript.setAttribute("repo", "darrendube/website"); // PLEASE CHANGE THIS TO YOUR REPO
+    commentScript.setAttribute("issue-term", "pathname");
+    commentScript.setAttribute("id", "utterances");
+    commentScript.setAttribute("theme", "preferred-color-scheme");
+    commentScript.setAttribute("crossorigin", "anonymous");
+    if (commentBox && commentBox.current) {
+      commentBox.current.appendChild(commentScript);
+    } else {
+      console.log(`Error adding utterances comments on: ${commentBox}`);
+    }
+  }, [commentBox]);
   
 
 
@@ -85,6 +103,7 @@ export default function Template({
           <div className="blog-post-content"><MDXRenderer className="blog-post-content">{body}</MDXRenderer></div>
 
           <SubscribeSection />
+          <Comments commentBox={commentBox}/>
         </article>
       </div>
     </Layout>

@@ -101,9 +101,11 @@ body.light {
   --tldr-background: #2f14ff22;
   --ssdownloadable-bg-color:  linear-gradient(to right, #0a005d, #001eff92);
   --resource-card-shadow: rgba(73, 79, 84, 0.523) 0px 8px 24px;
+  --comments-section-background: #ffffff;
   
 }
 body.dark {
+  --comments-section-background: #ffffff22;
   --resource-card-shadow: rgba(54, 80, 106, 0.605) 0px 8px 24px;
   --ssdownloadable-bg-color: linear-gradient(to left, #a856f8, #484ace);
   --tldr-color: #ffffff;
@@ -601,8 +603,20 @@ and (max-width: 480px) {
 
 .subscribe-section-wrapper {
   max-width: 768px;
+      margin: 0 auto;
+      padding: 43px;
+}
+
+.comments-section-wrapper {
+
     margin: 0 auto;
-    padding: 43px;
+   
+    background: var(--comments-section-background);
+    .inner-section {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 43px;
+    }
 }
 
 .blog-post-content {
