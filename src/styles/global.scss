@@ -513,10 +513,6 @@ and (max-width: 480px) {
   color: var(--text-color);
   line-height: 1.5;
 
-  > .blog-post-content *:last-child,
-  > *:last-child {
-    margin-bottom: 0;
-  }
   .post-title {
     
     
@@ -1627,3 +1623,10 @@ nav {
     margin: auto;
   }
 }
+
+div.container {
+  margin: 0 0 1em 0 !important;
+  font-size: 0.9em !important;
+  background: black;
+}
+

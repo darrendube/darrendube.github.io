@@ -37,16 +37,13 @@ module.exports = {
       options: {
         gatsbyRemarkPlugins: [
           `gatsby-plugin-netlify-cms-paths`,
-        {
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon'
+            }
           },
-        },
+        
         {
           resolve: 'gatsby-remark-emojis',
         },

@@ -11,7 +11,7 @@ import FooterLogo from "./footer-logo"
 import { FaInstagram , FaTwitter , FaYoutube , FaDev} from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
 import Carbonbadge from "./carbon-badge"
-
+import {MDXProvider} from '@mdx-js/react'
 
 
 
@@ -28,6 +28,7 @@ export default ({ children }) => {
     `
   )
   return (
+ 
     <div><header className="">
         <Navbar />
       </header>
@@ -87,5 +88,6 @@ export default ({ children }) => {
           <p className=""> Copyright &copy; 2021 <Link to="/">Darren Dube</Link>.  All Rights Reserved. &nbsp;&nbsp; <a href="https://www.darrendube.com/sitemap.xml" target="_blank">Sitemap</a> &bull; <Link to="/privacy-policy">Privacy Policy</Link></p>
         </div>
     </div>
+    
   )
 }

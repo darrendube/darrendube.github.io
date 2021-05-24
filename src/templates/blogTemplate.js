@@ -10,6 +10,9 @@ import { MDXRenderer , MDXProvider } from "gatsby-plugin-mdx"
 import ExternalLink from "../components/link"
 import Comments from "../components/comments"
 
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
+
 
 
 
