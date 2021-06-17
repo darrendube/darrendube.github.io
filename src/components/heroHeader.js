@@ -25,7 +25,7 @@ export default () => (
       <div className="hero-header">
         <div className="items-wrapper hero-grid">
         <div className="hero-text">
-        <div className="headline">Making Your <br/>Coding Journey<br/><span className="easier">Easier</span><span className="blue-dot">.</span></div>
+        <div className="headline">Making Your <br/>Economics Journey<br/><span className="easier">Easier</span><span className="blue-dot">.</span></div>
         <div 
           className="primary-content" >News, tutorials, videos.  </div><SubscribeForm /></div>
         <div className="hero-image">

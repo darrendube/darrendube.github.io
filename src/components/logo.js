@@ -3,6 +3,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import ThemeChanger from "./themeChanger"
+import logoimg from "../images/logo.png"
+
 
 
 
@@ -30,8 +32,8 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap className="logo-link" as={Link} to="/">
-      {/*<img src="/logo/logo.png" className="logoimg"/>*/}
-      <p className="logo-text"> DARREN&nbsp;<span className="dube">DUBE</span></p>
+      <img src={logoimg} className="logoimg"/>
+      {/*<p className="logo-text"> DARREN&nbsp;<span className="dube">DUBE</span></p>*/}
       
     </LogoWrap>
     

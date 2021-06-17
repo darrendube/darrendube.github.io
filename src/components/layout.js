@@ -46,7 +46,7 @@ export default ({ children }) => {
      <div className="footer-icons-row">
 <a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram className="footer-icon"/></a>
 <a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="footer-icon"/></a>
-<a href="https://dev.to/darrendube" target="_blank"><FaDev className="footer-icon"/></a>
+
 </div>
 <div className="footer-icons-row">
   <div className="carbonbadge"><Carbonbadge/></div>
@@ -57,10 +57,10 @@ export default ({ children }) => {
          <div className="footer-section2">
        
           <p className="footer-heading">CATEGORIES</p>
-          <p><Link to="/blog/blockchain">Blockchain</Link></p>
-          <p><Link to="/blog/web-development">Web Development</Link></p>
+          <p><Link to="/blog/macroeconomics">Macroeconomics</Link></p>
+          <p><Link to="/blog/microeconomics">Microeconomics</Link></p>
         
-          <p><Link to="/">Machine Learning</Link></p>
+          <p><Link to="/blog/cryptocurrency">Cryptocurrency</Link></p>
           
           
         </div>

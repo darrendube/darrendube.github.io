@@ -1630,3 +1630,11 @@ div.container {
   background: black;
 }
 
+.logoimg {
+  height: 60px;
+  max-width: unset;
+
+  @media (max-width: 768px) {
+    height: 42px;
+  }
+}

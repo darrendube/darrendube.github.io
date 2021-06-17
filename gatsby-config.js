@@ -109,11 +109,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Darren Dube`,
-        short_name: `Darren Dube`,
+        name: `NeoCapitalist - Economics, Business, Finance`,
+        short_name: `NeoCapitalist`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#381696`,
+        theme_color: `#C90056`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },
