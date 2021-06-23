@@ -3,6 +3,7 @@ import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import { FaInstagram , FaTwitter , FaYoutube , FaRegEnvelope} from "react-icons/fa"
+import { Textarea , Radio, RadioGroup , Stack} from "@chakra-ui/react"
 
 
 const ContactPage = ({
@@ -58,6 +59,16 @@ const ContactPage = ({
             <div>
               <label htmlFor="w3lMessage">Message<span className="required">*</span></label>
               <textarea name="Message" id="w3lMessage" required></textarea>
+              <RadioGroup defaultValue="2">
+  <Stack spacing={5} direction="row">
+    <Radio colorScheme="red" value="1">
+      Radio
+    </Radio>
+    <Radio colorScheme="green" value="2">
+      Radio
+    </Radio>
+  </Stack>
+</RadioGroup>
             </div>
             <div style={{display: "flex", justifyContent: "flex-end"}}>
               <input type="submit" className="hero-button"/>

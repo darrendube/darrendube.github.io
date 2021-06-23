@@ -1,7 +1,7 @@
 import React from "react"
 import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , WhatsappShareButton , PocketShareButton} from "react-share"
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope , FaGetPocket} from "react-icons/fa"
-
+import { Heading, Text, HStack, Box } from "@chakra-ui/react"
 
 
 function objToString(obj, ndeep) {
@@ -25,9 +25,9 @@ export default function ShareButtons(path , title) {
 <div>
 
         <TwitterShareButton url={path.path}>
-            <div className="share-icon-container">
+            <Box p="5px" h="20px" w="20px" className="share-icon-container">
                 <FaTwitter />
-            </div>
+            </Box>
         </TwitterShareButton>
 
 

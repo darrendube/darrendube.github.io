@@ -129,6 +129,7 @@ module.exports = {
     
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-fontawesome-css`,
+    `@chakra-ui/gatsby-plugin`,
 
    { resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {

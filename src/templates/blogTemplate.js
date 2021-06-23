@@ -8,6 +8,7 @@ import ShareButtons from "../components/share"
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer , MDXProvider } from "gatsby-plugin-mdx"
 import ExternalLink from "../components/link"
+import { Heading, Text, HStack } from "@chakra-ui/react"
 
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
@@ -63,7 +64,7 @@ export default function Template({
                   <div className="post-type"> {frontmatter.type} </div>
                   <Link to={"/blog/" + frontmatter.category.replace(" ", "-")}><div className="category"> {frontmatter.category} </div></Link>
                 </div>
-                <h2 className="post-title blue-grey-heading">{frontmatter.title}</h2>
+                <Heading className="post-title blue-grey-heading">{frontmatter.title}</Heading>
 
 
 
@@ -72,12 +73,14 @@ export default function Template({
                   <div className="post-intro"> {frontmatter.intro}
                   </div>
                 )}
-                <div className="post-meta">
-
+                <div className="post-meta"><HStack>
+<HStack>
                   <FaCalendar />
-            &nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;<Text>{frontmatter.date}</Text>&nbsp;&nbsp;&nbsp;&nbsp;</HStack>
+
+            <HStack>
             <FaClock />
-            &nbsp;&nbsp;{Math.round(fields.readingTime.minutes)} minute read
+            &nbsp;&nbsp;<Text>{Math.round(fields.readingTime.minutes)} minute read</Text> </HStack></HStack>
             </div>
                 <div className="post-meta"><ShareButtons path={"https://darrendube.com" + frontmatter.path} title={frontmatter.title} /></div>
               </div>
