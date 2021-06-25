@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
+import {Heading} from "@chakra-ui/react"
 
 const IndexPage = ({
   data: {
@@ -37,7 +38,7 @@ const IndexPage = ({
       <div className="items-wrapper">
 
       
-      <h2>Blog Posts &darr;</h2>
+      <Heading size="lg">Blog Posts &darr;</Heading>
       <div className="grids">
         {Posts}
       </div></div></div>

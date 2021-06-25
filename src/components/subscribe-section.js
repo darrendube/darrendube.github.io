@@ -8,37 +8,26 @@ import {
   
   Heading,
   Text,
+  Box
 } from "@chakra-ui/react"
 
 
 const SubscribeSection = () => (
   <div className="subscribe-section">
-  <div className="subscribe-section-wrapper">
+  <Box p="43px" m="0px auto" className="subscribe-section-wrapper">
   <div>
-    <Heading className="subscribe-heading">Get the newsletter and get notified about new content!</Heading>
+    <Heading fontSize="1.5em" mb="20px" className="subscribe-heading">Get the newsletter and get notified about new content!</Heading>
   </div>
   <div>
-    <Text className="subscribe-content"> Be the first to know when I post new content, and get <b>free exclusive resources.</b> 
+    <Text className="subscribe-content" mb="16px"> Be the first to know when I post new content, and get <b>free exclusive resources.</b> 
     I promise not to spam your inbox or share your email with any third parties. 
     You can opt-out at any time</Text>
    </div>
    
-   <form
-  action="https://buttondown.email/api/emails/embed-subscribe/darrendube"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
-  class="embeddable-buttondown-form subscribe-form"
->
-        
-	        <input type="email" className="text-box-sectionform" name="email" placeholder="Email" required></input>
-	        <input type="hidden" value="1" name="embed"></input>
-	        <input type="submit" className="hero-button" value=" SUBSCRIBE &rarr;"></input>
-        
-        </form>
+   <SubscribeForm />
         
      
-  </div></div>
+  </Box></div>
 )
 
 export default SubscribeSection

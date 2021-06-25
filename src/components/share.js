@@ -25,32 +25,32 @@ export default function ShareButtons(path , title) {
 <div>
 
         <TwitterShareButton url={path.path}>
-            <Box p="5px" h="20px" w="20px" className="share-icon-container">
+            <Box p="9px" h="30px" w="30px" className="share-icon-container">
                 <FaTwitter />
             </Box>
         </TwitterShareButton>
 
 
         <WhatsappShareButton url={path.path}>
-            <div className="share-icon-container">
+        <Box p="9px" h="30px" w="30px" className="share-icon-container">
                 <FaWhatsapp />
-         </div>
+         </Box>
         </WhatsappShareButton>
 
         
 
         <FacebookShareButton url={path.path}>
-            <div className="share-icon-container">
+        <Box p="9px" h="30px" w="30px" className="share-icon-container">
                 <FaFacebook />
-            </div>
+            </Box>
         </FacebookShareButton>
 
         <PocketShareButton url={path.path}>
            
-            <div className="share-icon-container">
+        <Box p="9px" h="30px" w="30px" className="share-icon-container">
                 
                 <FaGetPocket />
-            </div>
+            </Box>
         </PocketShareButton>
         
 </div>

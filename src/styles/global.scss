@@ -269,10 +269,7 @@ img {
 
 
 
-.posts-section {
-  background: var(--posts-section-background);
 
-}
 
 .footer-logo {
   margin: 0 auto;
@@ -315,7 +312,7 @@ img {
 .hero-header {
   padding: 0 0 64px;
 
-  background: var(--hero-header-bg);
+  
  
 
   
@@ -621,43 +618,6 @@ and (max-width: 480px) {
     word-break: normal;
     font-size: 20px;
 
-    > p, li {
-     margin: 0 18px 24px 18px;
-     line-height: 1.6;
-     
-    }
-
-    
-
-    h1, h2, h3, h4, h5, h6 {
-      margin: 48px 18px 24px 18px;
-    }
-
-    ul, ol {
-      padding-left: 16px;
-
-      h1, h2, h3, h4 ,h5, h6 {
-        margin: 48px 18px 24px 0;
-        > a {
-          text-decoration: none;
-        }
-      }
-    }
-
-    
-
-    > h3 {
-      margin-top: 2rem;
-    }
-
-    ul, ol {
-      margin: 1rem auto 1rem auto;
-    }
-
-    img {
-      border-radius: 10px;
-    }
-
     blockquote {
       
         font-weight: 100;
@@ -959,10 +919,9 @@ and (max-width: 767px) {
 
 .share-icon-container {
   border-radius: 50px;
-  padding: 5px;
+ 
   background: #9da4bb6b;
-  height: 20px;
-  width: 20px;
+
   margin: 0 10px 0 0;
   
 
@@ -1264,7 +1223,7 @@ nav {
   height: 100px;
 
   
-  background: var(--navbar-bg);
+ /* background: var(--navbar-bg); */
  
   backdrop-filter: blur(15px) saturate(125%);
   

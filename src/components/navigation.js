@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import Logo from "./logo"
 
+import Logo from "./logo"
+import { FaMoon, FaSun, FaYoutube } from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
+import {Box, useColorModeValue, Link} from "@chakra-ui/react"
 
 
 
@@ -96,9 +97,9 @@ const NavbarLinks = () => {
   return (
     <>
     
-      <Link className="nav-item" to="/">Home</Link>
+      <Link className="nav-item" href="/">Home</Link>
       
-      <Link className="nav-item" to="/contact">Contact</Link>
+      <Link className="nav-item" href="/contact">Contact</Link>
 
       
       
@@ -110,9 +111,10 @@ const NavbarLinks = () => {
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(14,24,42,0.7)")
 
   return (
-    <nav className="nav-bar">
+    <Box as="nav" className="nav-bar" bg={bg}>
       <div className="nav-bar-contents items-wrapper">
       <Logo />
       
@@ -135,7 +137,7 @@ const Navbar = () => {
         </Navbox>
       )}
       </div></div>
-    </nav>
+    </Box>
   )
 }
 

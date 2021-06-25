@@ -6,15 +6,48 @@ import SubscribeSection from "../components/subscribe-section"
 import { FaCalendar, FaClock } from "react-icons/fa"
 import ShareButtons from "../components/share"
 import { GatsbyImage } from "gatsby-plugin-image";
-import { MDXRenderer , MDXProvider } from "gatsby-plugin-mdx"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react";
 import ExternalLink from "../components/link"
-import { Heading, Text, HStack } from "@chakra-ui/react"
+import { Heading, Text, HStack, chakra, Code } from "@chakra-ui/react"
+
+
 
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();
 
-
+const components = {
+  h1: (props) => <Heading mt="48px" mr="18px" mb="24px" ml="18px" textAlign='center' {...props} />,
+  h2: (props) => <Heading mt="48px" mr="18px" mb="24px" ml="18px" {...props} fontSize='4xl' />,
+  h3: (props) => <Heading mt="48px" mr="18px" mb="24px" ml="18px" {...props} fontSize='3xl' />,
+  a: (props) => (
+    <chakra.a target='_blank' {...props} color='blue.600' _hover={{ color: 'blue.800' }} />
+  ),
+  p: (props) => <Text size="20px" py={1} mr="18px" mb="10px" ml="18px" lineHeight="1.6"{...props} />,
+  ul: (props) => <chakra.ul size="20px" p={5} pl="16px" mr="18px" ml="18px" lineHeight="1.6"{...props} />,
+  ol: (props) => <chakra.ol size="20px" p={5} pl="16px" mr="18px" ml="18px" lineHeight="1.6"{...props} />,
+  li: (props) => <chakra.li size="20px" {...props} fontSize='lg' pb={1} color='gray.600' />,
+  pre: (props) => <chakra.pre borderRadius='lg' {...props} />,
+  img: (props) => (
+    <chakra.img rounded='lg' my={5} maxH={500} borderColor='gray.200' {...props} />
+  ),
+ 
+  inlineCode: (props) => (
+    <Code
+      fontSize='md'
+      fontFamily='monospace'
+      rounded='lg'
+      letterSpacing={0.1}
+      px={2}
+      {...props}
+      colorScheme='orange'
+    />
+  ),
+  blockquote: (props) => (
+    <chakra.blockquote px={3} borderLeft={4} borderLeftColor='green.400' {...props} />
+  ),
+}
 
 
 
@@ -64,7 +97,7 @@ export default function Template({
                   <div className="post-type"> {frontmatter.type} </div>
                   <Link to={"/blog/" + frontmatter.category.replace(" ", "-")}><div className="category"> {frontmatter.category} </div></Link>
                 </div>
-                <Heading className="post-title blue-grey-heading">{frontmatter.title}</Heading>
+                <Heading mb="30px" className="post-title blue-grey-heading">{frontmatter.title}</Heading>
 
 
 
@@ -89,7 +122,12 @@ export default function Template({
 
     
 
-          <div className="blog-post-content"><MDXRenderer className="blog-post-content">{body}</MDXRenderer></div>
+          <div className="blog-post-content">
+            <MDXProvider components={components}
+            >
+            <MDXRenderer className="blog-post-content">{body}</MDXRenderer>
+            </MDXProvider>
+            </div>
 
           <SubscribeSection />
           
