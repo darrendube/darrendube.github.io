@@ -1,4 +1,4 @@
-import { Box, Stack, StackDivider, VStack } from '@chakra-ui/react'
+import { Box, Stack, StackDivider, useColorModeValue, VStack } from '@chakra-ui/react'
 import React from "react"
 import { Copyright } from './footerutils/Copyright'
 import { LinkGrid } from './footerutils/LinkGrid'
@@ -18,6 +18,7 @@ export const WebsiteFooter = () => (
       base: '4',
       md: '8',
     }}
+    bg={useColorModeValue("#e9f1ff","#1c2e53")}
   >
     <Stack spacing="10" divider={<StackDivider />}>
       <Stack

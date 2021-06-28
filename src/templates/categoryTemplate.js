@@ -12,6 +12,7 @@ import { FaCalendar , FaClock} from "react-icons/fa"
 
 // Components
 import { Link, graphql } from "gatsby"
+import { chakra, Text } from "@chakra-ui/react";
 
 /*
 const Posts = edges
@@ -36,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
         <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
       </Helmet>
-      <div className="category-header "><div className="cat-header-wrapper items-wrapper"><h5 className="category-breadcrumb">BLOG / </h5><h2 className="category-title">{Category}</h2></div></div>
+      <div className="category-header "><div className="cat-header-wrapper items-wrapper"><Text as="strong" className="category-breadcrumb">BLOG / </Text><Text fontWeight="bold" className="category-title">{Category}</Text></div></div>
     <div className="posts-section">
 
       <div className="items-wrapper">

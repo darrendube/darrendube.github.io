@@ -12,7 +12,7 @@ const theme = extendTheme({
     global: (props) => ({
       "html, body": {
         background: props.colorMode === "light" ? "#ffffff" : "#0e182a",
-        
+     
       },
     }),
   },

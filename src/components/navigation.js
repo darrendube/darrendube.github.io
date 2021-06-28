@@ -49,49 +49,7 @@ const Navbox = styled.div`
   }
 `
 
-const Hamburger = styled.div`
-  
-  width: 30px;
-  height: 4px;
-  border-radius: 10px;
-  transition: all .3s linear;
-  align-self: center;
-  position: relative;
-  transform: ${props => (props.open ? "rotate(-45deg) " : "inherit")};
 
-  ::before {
-    width: 30px;
-    height: 4px;
-    border-radius: 10px;
-    
-    content: "";
-    position: absolute;
-    transition: all 0.3s linear;
-    
-  }
-
-  ::after {
-    width: 30px;
-    height: 4px;
-    border-radius: 10px;
-    
-    content: "";
-    position: absolute;
-    transition: all 0.3s linear;
-  }
-
-  ::before {
-    transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 1px)" : "rotate(0deg)"};
-    top: -10px;
-  }
-
-  ::after {
-    opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
-    top: 10px;
-  }
-`
 
 const NavbarLinks = () => {
   return (
@@ -110,6 +68,55 @@ const NavbarLinks = () => {
 
 
 const Navbar = () => {
+  const Hamburger = styled.div`
+  
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  transition: all .3s linear;
+  align-self: center;
+  position: relative;
+  transform: ${props => (props.open ? "rotate(-45deg) " : "inherit")};
+  background-color: ${hbcolor}
+
+  ::before {
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    
+    content: "";
+    position: absolute;
+    transition: all 0.3s linear;
+    background-color: ${hbcolor}
+  }
+
+  ::after {
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    
+    content: "";
+    position: absolute;
+    transition: all 0.3s linear;
+    background-color: ${hbcolor}
+  }
+
+  ::before {
+    transform: ${props =>
+      props.open ? "rotate(-90deg) translate(-10px, 1px)" : "rotate(0deg)"};
+    top: -10px;
+    background-color: ${hbcolor}
+  }
+
+  ::after {
+    opacity: ${props => (props.open ? "0" : "1")};
+    transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
+    top: 10px;
+    background-color: ${hbcolor}
+
+  }
+`
+const hbcolor = useColorModeValue("#000000","#ffffff")
   const [navbarOpen, setNavbarOpen] = useState(false)
   const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(14,24,42,0.7)")
 

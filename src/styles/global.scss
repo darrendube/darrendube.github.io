@@ -145,7 +145,7 @@ body.dark {
   --category-text-color: #2e3748;
   --hero-header-bg: #0e182a;
   --logo-dot: #ffffff;
-  --post-title-color: #fff;
+  --post-title-color: #ffffff;
   --navbox-color: #000;
   --card-border: 1px solid #333;
   --footer-bg: #212121;
@@ -342,13 +342,13 @@ img {
 }
 
 .subscribe-section {
-  background: var(--subscribe-section-bg);
+  
   margin-top: 40px;
 
  }
 
 .post-header {
-  background: var(--post-header-background);
+
   /*background: #f5f9fb;*/
     margin-bottom: 32px;
   color: black ;
@@ -377,11 +377,7 @@ img {
   padding: 10px;
 }
 
-.post-intro {
-  color: var(--text-color);
-  font-style: italic;
-  font-weight: 500;
-}
+
 
 .contact-button:hover {
   background: var(--primary-color);
@@ -532,9 +528,7 @@ and (max-width: 480px) {
     font-weight: bold;
   }
 
-  > h1, h2, h3, h4 {
-    color: var(--post-title-color);
-  }
+
 
  
   
@@ -762,10 +756,7 @@ and (max-width: 767px) {
   padding: 10px;
   transition: top .2s ease-in-out;
 
-  &:hover .post-link {
-    color: var(--primary-color);
-    
-  }
+
   
   > div {
     padding:15px 0 0 0;
@@ -782,7 +773,7 @@ and (max-width: 767px) {
   .post-title {
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
-    color: var(--post-title-color);
+   
   }
   .post-meta {
     color: grey;
@@ -805,10 +796,7 @@ and (max-width: 767px) {
 
 }
 
-.card:hover {
-  
-  background-color: var(--card-bg-hover);
-}
+
 
 .hero-grid {
   display: grid;
@@ -1595,5 +1583,17 @@ div.container {
 
   @media (max-width: 768px) {
     height: 42px;
+  }
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  z-index: 5;
+
+  @media (max-width: 768px) {
+    display: flex;
   }
 }

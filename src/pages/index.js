@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
-import {Heading} from "@chakra-ui/react"
+import {Heading, Box, useColorModeValue} from "@chakra-ui/react"
 
 const IndexPage = ({
   data: {
@@ -34,14 +34,14 @@ const IndexPage = ({
 
 
       <HeroHeader/>
-      <div className="posts-section">
-      <div className="items-wrapper">
+      <Box className="posts-section" bg={useColorModeValue("#f5f9fb","#06121f")}>
+      <Box className="items-wrapper">
 
       
       <Heading size="lg">Blog Posts &darr;</Heading>
-      <div className="grids">
+      <Box className="grids">
         {Posts}
-      </div></div></div>
+      </Box></Box></Box>
 
     </Layout>
   )

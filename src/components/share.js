@@ -1,7 +1,7 @@
 import React from "react"
 import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , WhatsappShareButton , PocketShareButton} from "react-share"
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope , FaGetPocket} from "react-icons/fa"
-import { Heading, Text, HStack, Box } from "@chakra-ui/react"
+import { Heading, Text, HStack, Box, useColorModeValue } from "@chakra-ui/react"
 
 
 function objToString(obj, ndeep) {
@@ -25,14 +25,14 @@ export default function ShareButtons(path , title) {
 <div>
 
         <TwitterShareButton url={path.path}>
-            <Box p="9px" h="30px" w="30px" className="share-icon-container">
+            <Box p="9px" h="30px" w="30px" className="share-icon-container" color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}>
                 <FaTwitter />
             </Box>
         </TwitterShareButton>
 
 
         <WhatsappShareButton url={path.path}>
-        <Box p="9px" h="30px" w="30px" className="share-icon-container">
+        <Box p="9px" h="30px" w="30px" className="share-icon-container" color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}>
                 <FaWhatsapp />
          </Box>
         </WhatsappShareButton>
@@ -40,14 +40,14 @@ export default function ShareButtons(path , title) {
         
 
         <FacebookShareButton url={path.path}>
-        <Box p="9px" h="30px" w="30px" className="share-icon-container">
+        <Box p="9px" h="30px" w="30px" className="share-icon-container" color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}>
                 <FaFacebook />
             </Box>
         </FacebookShareButton>
 
         <PocketShareButton url={path.path}>
            
-        <Box p="9px" h="30px" w="30px" className="share-icon-container">
+        <Box p="9px" h="30px" w="30px" className="share-icon-container" color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}>
                 
                 <FaGetPocket />
             </Box>

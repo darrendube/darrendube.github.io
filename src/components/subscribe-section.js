@@ -8,18 +8,19 @@ import {
   
   Heading,
   Text,
-  Box
+  Box,
+  useColorModeValue
 } from "@chakra-ui/react"
 
 
 const SubscribeSection = () => (
-  <div className="subscribe-section">
+  <Box bg={useColorModeValue("#f2f6ff","#06121f")} mt="40px">
   <Box p="43px" m="0px auto" className="subscribe-section-wrapper">
   <div>
     <Heading fontSize="1.5em" mb="20px" className="subscribe-heading">Get the newsletter and get notified about new content!</Heading>
   </div>
   <div>
-    <Text className="subscribe-content" mb="16px"> Be the first to know when I post new content, and get <b>free exclusive resources.</b> 
+    <Text className="subscribe-content" mb="16px"> Be the first to know when I post new content, and get <b>free exclusive resources. </b> 
     I promise not to spam your inbox or share your email with any third parties. 
     You can opt-out at any time</Text>
    </div>
@@ -27,7 +28,7 @@ const SubscribeSection = () => (
    <SubscribeForm />
         
      
-  </Box></div>
+  </Box></Box>
 )
 
 export default SubscribeSection

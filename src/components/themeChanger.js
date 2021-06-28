@@ -30,7 +30,7 @@ export default function Toggle() {
       ml={{ base: "0", md: "3" }}
       onClick={toggleColorMode}
       
-      icon={colorMode === "light" ? <FaSun/> : <FaMoon />}
+      icon={colorMode === "light" ? <FaMoon color="#555555"/> : <FaSun color="rgba(255,255,255,0.66)" />}
     />
     
   

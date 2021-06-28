@@ -4,9 +4,10 @@ import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { HStack, VStack, Text, Box } from "@chakra-ui/react";
+import { HStack, VStack, Text, Box, useColorModeValue } from "@chakra-ui/react";
 
 const PostLink = ({ post }) => (
+
   <div className="card " onClick={() => navigate(post.frontmatter.path)}>
     <div className="fill">
       <Link to={post.frontmatter.path}>
@@ -28,11 +29,12 @@ const PostLink = ({ post }) => (
           <div className="category"> {post.frontmatter.category} </div>
         )}
       </div>
-      <Text as="strong" size="1.1rem" mb="0.3rem" className="post-title blue-grey-heading">
-        <Link to={post.frontmatter.path} className="post-link">
+       <Link to={post.frontmatter.path}  className="post-link">
+      <Text mb="0.3rem" fontWeight="bold" size="1.1rem"  fontSize="1.1rem" color={useColorModeValue("#2e3748", "#ffffff")}>
+       
           {post.frontmatter.title}
-        </Link>
-      </Text>
+        
+      </Text></Link>
       <div className="post-meta">
         <p className="blue-grey-text bold">
           <Box mb="12px">
@@ -45,7 +47,7 @@ const PostLink = ({ post }) => (
           <Text ms="0px !important">&nbsp;&nbsp;{Math.round(post.fields.readingTime.minutes)} minute read</Text></HStack></HStack></Box>
         </p>
 
-        <Box><p>{post.excerpt}</p></Box>
+        <Box><Text color={useColorModeValue("#33475b","#718097")}>{post.excerpt}</Text></Box>
       </div>
     </div>
   </div>
