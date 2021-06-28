@@ -68,6 +68,7 @@ const NavbarLinks = () => {
 
 
 const Navbar = () => {
+  const hbcolor = useColorModeValue("#000000","#ffffff")
   const Hamburger = styled.div`
   
   width: 30px;
@@ -116,7 +117,7 @@ const Navbar = () => {
 
   }
 `
-const hbcolor = useColorModeValue("#000000","#ffffff")
+
   const [navbarOpen, setNavbarOpen] = useState(false)
   const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(14,24,42,0.7)")
 
