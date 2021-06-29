@@ -12,9 +12,10 @@ import {
   Flex,
   Button,
   IconButton,
-  Box, Link, useColorModeValue
+  Box, useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+import { Link } from "gatsby"
 
 
 
@@ -139,6 +140,7 @@ const Navbar = () => {
       <Flex
         position="fixed"
         top="11px"
+        
         right="0rem"
         align="center"
         
@@ -147,6 +149,7 @@ const Navbar = () => {
         
         <Flex
           display={['none', 'none', 'flex','flex']}
+          mr="11px"
         >
           <Link to="/" >
             <Button
@@ -155,6 +158,7 @@ const Navbar = () => {
               aria-label="Home"
               my={5}
               w="100%"
+              
             >
               Home
                     </Button>
