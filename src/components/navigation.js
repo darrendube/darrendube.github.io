@@ -4,7 +4,19 @@ import styled from "styled-components"
 import Logo from "./logo"
 import { FaMoon, FaSun, FaYoutube } from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
-import {Box, useColorModeValue, Link} from "@chakra-ui/react"
+
+
+import {
+  useColorMode,
+  Switch,
+  Flex,
+  Button,
+  IconButton,
+  Box, Link, useColorModeValue
+} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+
+
 
 
 
@@ -20,7 +32,6 @@ const Toggle = styled.div`
   height: 100%;
   cursor: pointer;
   z-index: 5;
-
   @media (max-width: 768px) {
     display: flex;
   }
@@ -34,7 +45,6 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
   z-index: 3;
-
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
@@ -69,6 +79,8 @@ const NavbarLinks = () => {
 
 const Navbar = () => {
   const hbcolor = useColorModeValue("#000000","#ffffff")
+  
+  const [display, changeDisplay] = useState('none')
   const Hamburger = styled.div`
   
   width: 30px;
@@ -79,7 +91,6 @@ const Navbar = () => {
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg) " : "inherit")};
   background-color: ${hbcolor}
-
   ::before {
     width: 30px;
     height: 4px;
@@ -90,7 +101,6 @@ const Navbar = () => {
     transition: all 0.3s linear;
     background-color: ${hbcolor}
   }
-
   ::after {
     width: 30px;
     height: 4px;
@@ -101,20 +111,17 @@ const Navbar = () => {
     transition: all 0.3s linear;
     background-color: ${hbcolor}
   }
-
   ::before {
     transform: ${props =>
       props.open ? "rotate(-90deg) translate(-10px, 1px)" : "rotate(0deg)"};
     top: -10px;
     background-color: ${hbcolor}
   }
-
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
     top: 10px;
     background-color: ${hbcolor}
-
   }
 `
 
@@ -127,26 +134,159 @@ const Navbar = () => {
       <Logo />
       
      	<div className="togglewrapper">
-     	<div className="theme-toggler"><ThemeChanger /></div>
-      <Toggle
-      	className="no-select"
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
+     	<Flex>
+      
+      <Flex
+        position="fixed"
+        top="11px"
+        right="0rem"
+        align="center"
+        
+      ><ThemeChanger />
+        {/* Desktop */}
+        
+        <Flex
+          display={['none', 'none', 'flex','flex']}
+        >
+          <Link to="/" >
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Home"
+              my={5}
+              w="100%"
+            >
+              Home
+                    </Button>
+          </Link>
+
+          <Link to="/about" >
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="About"
+              my={5}
+              w="100%"
+            >
+              About
+                    </Button>
+          </Link>
+
+          <Link to="/contact" >
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Contact"
+              my={5}
+              w="100%"
+            >
+              Contact
+                    </Button>
+          </Link>
+        </Flex>
+
+        {/* Mobile */}
+        <IconButton
+        variant="unstyled"
+          aria-label="Open Menu"
+          size="lg"
+          mr={2}
+          icon={
+            <HamburgerIcon />
+          }
+          onClick={() => changeDisplay('flex')}
+          display={['flex', 'flex', 'none', 'none']}
+        />
+        
+      </Flex>
+
+      {/* Mobile Content */}
+      <Flex
+        w='100vw'
+        display={display}
+        bgColor={useColorModeValue("gray.50","black")}
+        zIndex={20}
+        h="100vh"
+        pos="fixed"
+        top="0"
+        left="0"
+        zIndex={20}
+        overflowY="auto"
+        flexDir="column"
       >
-        {navbarOpen ? <Hamburger className="hamburger" open /> : <Hamburger className="hamburger"/>}
-      </Toggle>
-      {navbarOpen ? (
-        <Navbox className="navbox">
-          <NavbarLinks />
-        </Navbox>
-      ) : (
-        <Navbox className="navbox" open>
-          <NavbarLinks />
-        </Navbox>
-      )}
+        <Flex justify="flex-end">
+          <IconButton
+            variant="unstyled"
+            mt={5}
+            mr={5}
+            aria-label="Open Menu"
+            size="lg"
+            icon={
+              <CloseIcon />
+            }
+            onClick={() => changeDisplay('none')}
+          />
+        </Flex>
+
+        <Flex
+          flexDir="column"
+          align="center"
+        >
+          <Link to="/" >
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Home"
+              my={5}
+              w="100%"
+            >
+              Home
+                    </Button>
+          </Link>
+
+          <Link to="/about" >
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="About"
+              my={5}
+              w="100%"
+            >
+              About
+                    </Button>
+          </Link>
+
+          <Link to="/contact" >
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Contact"
+              my={5}
+              w="100%"
+            >
+              Contact
+            </Button>
+          </Link>
+        </Flex>
+      </Flex>
+    </Flex>
       </div></div>
     </Box>
   )
 }
 
 export default Navbar
+
+
+
+
+
+
+
+
+
+
+
+
+
+

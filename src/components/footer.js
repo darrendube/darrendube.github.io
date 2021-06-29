@@ -8,6 +8,7 @@ import { SubscribeForm } from './footerutils/SubscribeForm'
 
 
 export const WebsiteFooter = () => (
+  <Box bg={useColorModeValue("#e9f1ff","#1c2e53")}>
   <Box
     as="footer"
     role="contentinfo"
@@ -18,7 +19,8 @@ export const WebsiteFooter = () => (
       base: '4',
       md: '8',
     }}
-    bg={useColorModeValue("#e9f1ff","#1c2e53")}
+    
+   
   >
     <Stack spacing="10" divider={<StackDivider />}>
       <Stack
@@ -74,5 +76,5 @@ export const WebsiteFooter = () => (
         <SocialMediaLinks />
       </Stack>
     </Stack>
-  </Box>
+  </Box></Box>
 )
