@@ -3,7 +3,8 @@ import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import { FaInstagram , FaTwitter , FaYoutube , FaRegEnvelope} from "react-icons/fa"
-import { Textarea , Radio, RadioGroup , Stack} from "@chakra-ui/react"
+import { Text, Radio, RadioGroup , Stack, HStack, Heading, Textarea, Button, Input, useColorModeValue, chakra, Box} from "@chakra-ui/react"
+
 
 
 const ContactPage = ({
@@ -28,54 +29,56 @@ const ContactPage = ({
 
       </Helmet>
 
-      <div className="two-grids">
+      <Box className="two-grids">
         
-        <div className="contact-page-text">
-          <h1 className="contact-heading">Get in Touch</h1>
-          <p className="contact-text">Feel free to ask any questions or give feedback &rarr;</p>
+        <Box className="contact-page-text">
+          <Heading mb="1.5rem" className="contact-heading">Get in Touch</Heading>
+          <Text className="contact-text" mb="1.5rem">Feel free to ask any questions or give feedback &rarr;</Text>
           
-          <div className="footer-icons-row">
-<a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram className="contact-page-icon"/></a>
-<a href="https://twitter.com/darrendube" target="_blank"><FaTwitter className="contact-page-icon"/></a>
-<a href="https://www.youtube.com/channel/UCUuowwJOmQzQfH_ub-qNxiA" target="_blank"><FaYoutube className="contact-page-icon"/></a>
-</div>
-        </div>
+          <HStack spacing={3}>
+<a href="https://instagram.com/darrenzdube" target="_blank"><FaInstagram fontSize="1.3rem" mr="2rem"/></a>
+<a href="https://twitter.com/darrendube" target="_blank"><FaTwitter fontSize="1.3rem"/></a>
+<a href="https://www.youtube.com/channel/UCUuowwJOmQzQfH_ub-qNxiA" target="_blank"><FaYoutube fontSize="1.3rem"/></a>
+</HStack>
+        </Box>
 
-        <div>
-          <form name="Contact Form" className="form-container" method="POST" data-netlify="true" >
+        <Box>
+          <chakra.form name="Contact Form" className="" method="POST" data-netlify="true" p="32px">
 <input type="hidden" name="form-name" value="Contact Form" />
-            <div>
-              <label htmlFor="w3lName">Name</label>
-              <input type="text" name="Name" id="w3lName"/>
-            </div>
-            <div>
+            <Box mb="1.5rem">
+              <label htmlFor="w3lName" >Name</label>
+              <Input type="text" name="Name" id="w3lName"  mt="5px" />
+            </Box>
+            <Box mb="1.5rem">
               <label htmlFor="w3lSender">Email<span className="required">*</span></label>
-              <input type="email" name="Email" id="w3lSender" required/>
-            </div>
-            <div>
+              <Input type="email" name="Email" id="w3lSender" mt="5px" required/>
+            </Box>
+            <Box mb="1.5rem">
               <label htmlFor="w3lSubject">Subject</label>
-              <input type="text" name="Subject" id="w3lSubject"/>
-            </div>
-            <div>
+              <Input type="text" name="Subject" id="w3lSubject" mt="5px" />
+            </Box>
+            <Box mb="1.5rem">
               <label htmlFor="w3lMessage">Message<span className="required">*</span></label>
-              <textarea name="Message" id="w3lMessage" required></textarea>
-              <RadioGroup defaultValue="2">
-  <Stack spacing={5} direction="row">
-    <Radio colorScheme="red" value="1">
-      Radio
-    </Radio>
-    <Radio colorScheme="green" value="2">
-      Radio
-    </Radio>
-  </Stack>
-</RadioGroup>
-            </div>
-            <div style={{display: "flex", justifyContent: "flex-end"}}>
-              <input type="submit" className="hero-button"/>
-            </div>
-          </form>
-        </div>
-      </div>
+              <Textarea name="Message" id="w3lMessage" required mt="5px" ></Textarea>
+              
+            </Box>
+            <Box style={{display: "flex", justifyContent: "flex-end"}}>
+            <Button
+            type="submit"
+            colorScheme="blue"
+            flexShrink={0}
+            width={{
+              base: 'full',
+              md: 'auto',
+            }}
+
+          >
+            Submit
+          </Button>
+            </Box>
+          </chakra.form>
+        </Box>
+      </Box>
     </Layout>
   )
 }

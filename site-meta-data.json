@@ -1,10 +1,10 @@
 {
-  "title": "Neo Capitalist - Economics, Business, Finance",
+  "title": "NeoCapitalist - Economics, Business, Finance",
   "siteUrl": "https://neocapitalist.darrendube.com/",
   "description": "",
-  "iconUrl": "https://raw.githubusercontent.com/darrendube/website/master/src/images/icon.png",
+  "iconUrl": "https://raw.githubusercontent.com/darrendube/economicsweekly/master/src/images/icon.png",
   "home": {
-    "title": "Hi! I'm Darren",
-    "description": "Welcome to my blog, where I post about coding, tech, and science.  Subscribe below to get the newsletter :). "
+    "title": "",
+    "description": " "
   }
 }

@@ -6,7 +6,7 @@ const theme = extendTheme({
     heading: "Jost",
     body: "Jost",
   },
-  initialColorMode: "light",
+  initialColorMode: "system",
   useSystemColorMode: true,
   styles: {
     global: (props) => ({
@@ -14,6 +14,15 @@ const theme = extendTheme({
         background: props.colorMode === "light" ? "#ffffff" : "#0e182a",
      
       },
+      "a:hover": {
+        color: "blue.500",
+        textDecoration: "underline"
+      },
+      "a.normal": {
+        textDecoration: "underline",
+        textDecorationColor: "blue.500"
+      }
+
     }),
   },
 })

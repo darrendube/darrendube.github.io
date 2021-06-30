@@ -10,21 +10,28 @@ export default function CustomLink({ children, href }) {
     // Use Gatsby's Link component for internal site navigation
     // to benefit from the preloading features
     // See: https://www.gatsbyjs.org/docs/gatsby-link/
-    return <Link color='blue.600' _hover={{ color: 'blue.800' }} href={href}>{children}</Link>;
+    return <Link  _hover={{ color: 'blue.500' }}
+    textDecoration="underline"
+      textDecorationColor="blue.500"
+    
+    href={href}>{children}</Link>;
   }
   // Check if the link is for a section on the page
   // We don't want to add the attributes for the on page links
   const onPage = href.startsWith('#');
   return (
     <Link
+      textDecoration="underline"
+      textDecorationColor="blue.500"
+
       href={href}
       // Open the link in a new page
       target={onPage ? null : '_blank'}
       // Add noopener and noreferrer for security reasons
       rel={onPage ? null : 'noopener noreferrer'}
-      color='blue.600' _hover={{ color: 'blue.800' }}
+       _hover={{ color: 'blue.500' }}
     >
-      {children} 
+      {children}{onPage ? null : <ExternalLinkIcon  h="0.8rem"/>}
     </Link>
   );
 }

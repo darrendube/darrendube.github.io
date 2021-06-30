@@ -68,7 +68,7 @@ module.exports = {
       options: {
        
         trackingIds: [
-          "G-GNYBTQ2SKL", // Google Analytics / GA
+          "G-P7E4QF2WH8", // Google Analytics / GA
          
         ],
       },

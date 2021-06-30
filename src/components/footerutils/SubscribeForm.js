@@ -7,7 +7,7 @@ export const SubscribeForm = (props) => {
     <chakra.form {...props} onSubmit={(e) => e.preventDefault()}>
       <Stack spacing="4">
         <FooterHeading>Subscribe to our newsletter</FooterHeading>
-        <Text>Get notified when we add new components or we have exciting news for you.</Text>
+        <Text>Be the first to know when I post new content, and get <strong>free exclusive resources</strong>.</Text>
         <Stack
           spacing="4"
           direction={{

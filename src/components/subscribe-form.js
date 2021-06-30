@@ -1,17 +1,29 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import { Button, chakra, Input, Stack, Text, useColorModeValue, Heading } from '@chakra-ui/react'
+import { Button, chakra, Input, Stack, Text, useColorModeValue, Heading, useToast } from '@chakra-ui/react'
+
+
+
 
 
 
 const SubscribeForm = (props) => {
+  const toast = useToast()
   return (
 
     <chakra.form action="https://buttondown.email/api/emails/embed-subscribe/darrendube"
     method="post"
     target="popupwindow"
-    onSubmit="window.open('https://buttondown.email/darrendube', 'popupwindow')"
+    onSubmit= {() =>
+      toast({
+        title: "Subscription successful",
+        description: "You've successfully subscribed. ",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      })
+    }
     class="embeddable-buttondown-form subscribe-form">
         <Stack spacing="4">
         
@@ -21,6 +33,7 @@ const SubscribeForm = (props) => {
               base: 'column',
               md: 'row',
             }}
+            maxWidth="600px"
           >
             <Input
               bg={useColorModeValue('white', 'inherit')}
@@ -35,6 +48,7 @@ const SubscribeForm = (props) => {
               }}
             />
             <Input type="hidden" value="1" name="embed"/>
+            
             <Button
               type="submit"
               colorScheme="blue"
@@ -47,6 +61,7 @@ const SubscribeForm = (props) => {
             >
               Subscribe
             </Button>
+            <Input type="hidden" value="NeoCapitalist" name="tag"/>
           </Stack>
         </Stack>
       </chakra.form>

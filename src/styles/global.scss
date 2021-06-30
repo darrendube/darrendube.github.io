@@ -177,7 +177,7 @@ body p {
 
 a {
   /*color: var(--primary-color);*/
-  color:var(--primary-text-color);
+  color: blue;
 
   text-decoration: underline;
   text-decoration-color: rgb(1, 94, 255);
@@ -356,7 +356,7 @@ img {
 }
 
 .category-header {
-  background: var(--post-header-background);
+
   /*background: #f5f9fb;*/
 
   color: black ;
@@ -800,7 +800,7 @@ and (max-width: 767px) {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
 }
 
 
@@ -983,9 +983,9 @@ and (max-width: 768px) {
     border-radius: 10px;
     line-height: 32px;
     padding: 6px 20px;
-    width: calc(100% - 37px);
+  
     margin-bottom: 1.5rem;
-    background: #e0e5ef;;
+    background: #e0e5ef;
   
   }
   textarea {

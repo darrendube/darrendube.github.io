@@ -158,23 +158,13 @@ const Navbar = () => {
               aria-label="Home"
               my={5}
               w="100%"
-              
+              color={useColorModeValue("#0000000","#a0aec0")}
             >
               Home
                     </Button>
           </Link>
 
-          <Link to="/about" >
-            <Button
-              as="a"
-              variant="ghost"
-              aria-label="About"
-              my={5}
-              w="100%"
-            >
-              About
-                    </Button>
-          </Link>
+          
 
           <Link to="/contact" >
             <Button
@@ -183,6 +173,7 @@ const Navbar = () => {
               aria-label="Contact"
               my={5}
               w="100%"
+              color={useColorModeValue("#0000000","#a0aec0")}
             >
               Contact
                     </Button>
@@ -198,6 +189,7 @@ const Navbar = () => {
           icon={
             <HamburgerIcon />
           }
+          color={useColorModeValue("#0000000","#a0aec0")}
           onClick={() => changeDisplay('flex')}
           display={['flex', 'flex', 'none', 'none']}
         />
@@ -205,10 +197,11 @@ const Navbar = () => {
       </Flex>
 
       {/* Mobile Content */}
+      
       <Flex
         w='100vw'
         display={display}
-        bgColor={useColorModeValue("gray.50","black")}
+        bgColor={useColorModeValue("#ffffff","#0e182a")}
         zIndex={20}
         h="100vh"
         pos="fixed"
@@ -221,14 +214,15 @@ const Navbar = () => {
         <Flex justify="flex-end">
           <IconButton
             variant="unstyled"
-            mt={5}
-            mr={5}
+            mt={2.5}
+            mr={2}
             aria-label="Open Menu"
             size="lg"
             icon={
               <CloseIcon />
             }
             onClick={() => changeDisplay('none')}
+            color={useColorModeValue("#0000000","#a0aec0")}
           />
         </Flex>
 
@@ -243,22 +237,13 @@ const Navbar = () => {
               aria-label="Home"
               my={5}
               w="100%"
+              color={useColorModeValue("#0000000","#a0aec0")}
             >
               Home
                     </Button>
           </Link>
 
-          <Link to="/about" >
-            <Button
-              as="a"
-              variant="ghost"
-              aria-label="About"
-              my={5}
-              w="100%"
-            >
-              About
-                    </Button>
-          </Link>
+          
 
           <Link to="/contact" >
             <Button
@@ -267,6 +252,7 @@ const Navbar = () => {
               aria-label="Contact"
               my={5}
               w="100%"
+              color={useColorModeValue("#0000000","#a0aec0")}
             >
               Contact
             </Button>

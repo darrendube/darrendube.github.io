@@ -12,7 +12,7 @@ import { FaCalendar , FaClock} from "react-icons/fa"
 
 // Components
 import { Link, graphql } from "gatsby"
-import { chakra, Text } from "@chakra-ui/react";
+import { chakra, Text, Box, useColorModeValue } from "@chakra-ui/react";
 
 /*
 const Posts = edges
@@ -37,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
         <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
       </Helmet>
-      <div className="category-header "><div className="cat-header-wrapper items-wrapper"><Text as="strong" className="category-breadcrumb">BLOG / </Text><Text fontWeight="bold" className="category-title">{Category}</Text></div></div>
+      <Box  maxWidth="100%" bg={useColorModeValue("linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%)","linear-gradient(to bottom, #14223d 0%, #1c2e53 100%)")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" >BLOG / </Text><Text fontWeight="bold" className="category-title">{Category}</Text></div></Box>
     <div className="posts-section">
 
       <div className="items-wrapper">
