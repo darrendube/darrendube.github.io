@@ -35,7 +35,7 @@ const Tags = ({ pageContext, data }) => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
-        <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
+        <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
       </Helmet>
       <Box  maxWidth="100%" bg={useColorModeValue("linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%)","linear-gradient(to bottom, #14223d 0%, #1c2e53 100%)")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" >BLOG / </Text><Text fontWeight="bold" className="category-title">{Category}</Text></div></Box>
     <div className="posts-section">

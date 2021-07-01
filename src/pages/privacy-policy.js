@@ -19,11 +19,11 @@ const PrivacyPolicyPage = () => {
                 
         <meta property="og:title" content="Privacy Policy - Darren Dube"/>
         <meta property="og:description" content="On our website, accessible from darrendube.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how we use it."/>
-        <meta property="og:url" content="https://darrendube.com/privacy-policy"/>
+        <meta property="og:url" content="https://neocapitalist.darrendube.com/privacy-policy"/>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
-        <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
+        <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
 
 
             </Helmet>

@@ -2,6 +2,7 @@ import React from "react"
 import Helmet from 'react-helmet';
 import Layout from "../components/layout"
 import { Link } from "gatsby";
+import { Text, Box , chakra } from "@chakra-ui/react";
 
 const notFound = () => {
   return (
@@ -9,8 +10,9 @@ const notFound = () => {
       <Helmet>
         <title>Page not found</title>
       </Helmet>
-      <div style={{textAlign: "center", padding:"5vh 0", lineHeight: "1.5"}}>
-        <svg
+      <Box  style={{textAlign: "center", padding:"5vh 0", lineHeight: "1.5"}}>
+        <chakra.svg
+        display="inline-block"
           width="256"
           height="256"
           viewBox="0 0 24 24"
@@ -36,9 +38,9 @@ const notFound = () => {
             d="M2.74884 14.6663C3.73056 16.6421 5.76939 18 8.12537 18H16.1254C18.5654 18 20.6652 16.5435 21.6029 14.4525C22.3722 13.9093 22.8746 13.0133 22.8746 12C22.8746 10.9867 22.3722 10.0907 21.6029 9.54753C20.6652 7.45651 18.5654 6 16.1254 6H8.12537C5.76939 6 3.73056 7.3579 2.74884 9.33375C1.78448 9.83263 1.12537 10.8393 1.12537 12C1.12537 13.1607 1.78448 14.1674 2.74884 14.6663ZM8.12537 8H16.1254C17.5088 8 18.7282 8.70234 19.4465 9.76991C19.7227 10.4593 19.8746 11.2119 19.8746 12C19.8746 12.7881 19.7227 13.5407 19.4465 14.2301C18.7282 15.2977 17.5088 16 16.1254 16H8.12537C5.91623 16 4.12537 14.2091 4.12537 12C4.12537 9.79086 5.91623 8 8.12537 8Z"
             fill="currentColor"
           />
-        </svg>
-        <p>Either you're in a wrong page or you're lost. Lets go back <Link to="/">home</Link> safely</p>
-      </div>
+        </chakra.svg>
+        <Text>Either you're in a wrong page or you're lost. Lets go back <Link to="/">home</Link> safely</Text>
+      </Box>
     </Layout>
   )
 }

@@ -6,7 +6,7 @@ import { FaExternalLink } from 'react-icons/fa';
 import { faChalkboard } from '@fortawesome/free-solid-svg-icons';
 
 export default function CustomLink({ children, href }) {
-  if (href.startsWith('/')) {
+  if (href.startsWith('/') || href.startsWith('https://neocapitalist.darrendube.com') || href.startsWith('neocapitalist.darrendube.com')) {
     // Use Gatsby's Link component for internal site navigation
     // to benefit from the preloading features
     // See: https://www.gatsbyjs.org/docs/gatsby-link/

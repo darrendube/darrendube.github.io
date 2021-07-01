@@ -151,11 +151,11 @@ export default function Template({
         />
         <meta
           property="og:image"
-          content={"https://darrendube.com/assets/" + frontmatter.ogimage}
+          content={"https://neocapitalist.darrendube.com/assets/" + frontmatter.ogimage}
         />
         <meta
           property="og:url"
-          content={"https://darrendube.com" + frontmatter.path}
+          content={"https://neocapitalist.darrendube.com" + frontmatter.path}
         />
       </Helmet>
 
@@ -204,7 +204,7 @@ export default function Template({
                 </div>
                 <div className="post-meta">
                   <ShareButtons
-                    path={"https://darrendube.com" + frontmatter.path}
+                    path={"https://neocapitalist.darrendube.com" + frontmatter.path}
                     title={frontmatter.title}
                   />
                 </div>

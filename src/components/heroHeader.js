@@ -26,7 +26,7 @@ export default () => (
       <Box bg={useColorModeValue("#ffffff", "#0e182a")} className="hero-header">
         <div className="items-wrapper hero-grid">
         <div className="hero-text">
-        <div className="headline">Making Your <br/>Economics Journey<br/><span className="easier">Easier</span><span className="blue-dot">.</span></div>
+        <div className="headline">Making Your <br/>Economics Journey<br/><span className="blue-dot">Easier</span>.</div>
         <div 
           className="primary-content" >News, tutorials, videos.  </div><SubscribeForm /></div>
         <div className="hero-image">
