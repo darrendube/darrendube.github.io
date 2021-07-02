@@ -37,6 +37,7 @@ export const SubscribeForm = (props) => {
           >
             Subscribe
           </Button>
+          <Input type="hidden" value="NeoCapitalist" name="tag"/>
         </Stack>
       </Stack>
     </chakra.form>
