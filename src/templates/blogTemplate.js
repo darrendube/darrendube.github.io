@@ -160,7 +160,7 @@ export default function Template({
       </Helmet>
 
       <div className="blog-post-container">
-        <chakra.article className="post" bg={useColorModeValue("ffffff","#0e182a")} color={useColorModeValue("#000000","#ffffff !important")}>
+        <chakra.article className="post" bg={useColorModeValue("#ffffff","#0e182a")} color={useColorModeValue("#000000","#ffffff !important")}>
           <Box className="post-header " bg={useColorModeValue("linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%)","linear-gradient(to bottom, #14223d 0%, #1c2e53 100%)")}>
             <div className="header-wrapper post-grid">
               {!!frontmatter.thumbnail && (
