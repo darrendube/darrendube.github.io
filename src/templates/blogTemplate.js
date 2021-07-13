@@ -95,7 +95,7 @@ const components = {
     />
   ),
   li: (props) => (
-    <chakra.li size="20px" {...props} fontSize="lg" pb={1}  />
+    <chakra.li size="20px !important" {...props} pb={1}  />
   ),
   pre: (props) => <chakra.pre borderRadius="lg" {...props} />,
   img: (props) => (
