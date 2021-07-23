@@ -151,6 +151,7 @@ module.exports = {
                 title
                 description
                 siteUrl
+                iconUrl
                 
                 site_url: siteUrl
                 image_url: iconUrl
@@ -192,8 +193,10 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Your Site's RSS Feed",
+            title: "NeoCapitalist - Economics, Business, Finance",
+            link: "https://feeds.feedburner.com/neocapitalist",
           },
+        
         ],
       }
     } ,
