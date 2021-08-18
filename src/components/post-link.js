@@ -19,7 +19,7 @@ const PostLink = ({ post }) => (
           <Text as="p" ms="0px !important">&nbsp;&nbsp;{post.frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
       </div>
        <Link to={post.frontmatter.path}  className="post-link">
-      <Text mb="0.8rem" fontWeight="800" size="2rem"  fontSize="1.4rem" color={useColorModeValue("#000000", "#ffffff")} lineHeight="1.2">
+      <Text mb="0.8rem" mt="0.4rem" fontWeight="800" size="2rem"  fontSize="1.4rem" color={useColorModeValue("#000000", "#ffffff")} lineHeight="1.2">
        
           {post.frontmatter.title}
         

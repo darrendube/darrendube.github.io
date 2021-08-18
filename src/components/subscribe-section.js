@@ -20,7 +20,7 @@ const SubscribeSection = () => (
     <Heading fontSize="1.5em" fontWeight="800" mb="20px" className="subscribe-heading">Enjoyed the article? Get the newsletter and get notified about new content!</Heading>
   </div>
   <div>
-    <Text className="subscribe-content" mb="16px"> Be the first to know when I post new content, and get <b>free exclusive resources. </b> 
+    <Text className="subscribe-content" mb="16px"> Be the first to know when NeoCapitalist posts new content, and get <b>free exclusive resources. </b> 
     I promise not to spam your inbox or share your email with any third parties. 
     You can opt-out at any time</Text>
    </div>

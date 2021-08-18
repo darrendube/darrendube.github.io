@@ -29,8 +29,8 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{Category} Category - Darren Dube</title>
-        <meta property="og:title" content={Category + " Category - Darren Dube"}/>
+        <title>{Category} Category - NeoCapitalist</title>
+        <meta property="og:title" content={Category + " Category - NeoCapitalist"}/>
         <meta name="description" content="Read articles under the" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />

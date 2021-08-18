@@ -20,7 +20,7 @@ const ResourcesPage = ({ pageContext, data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Resources - Darren Dube</title>
+        <title>Resources - NeoCapitalist</title>
         <meta name="robots" content="noindex"/>
 
       </Helmet>

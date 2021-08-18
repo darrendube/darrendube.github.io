@@ -28,7 +28,7 @@ export default () => (
         <div className="hero-text">
         <Text className="headline" fontWeight="800">Making Your <br/>Economics Journey<br/><chakra.span color={useColorModeValue("#a6374e","#a0aec0")}>Easier</chakra.span>.</Text>
         <div 
-          className="primary-content" >News, tutorials, videos.  </div><SubscribeForm /></div>
+          className="primary-content" >Subscribe to NeoCapitalist for engaging, in-depth, and trustworthy economic articles.  </div><SubscribeForm /></div>
         <div className="hero-image">
        
           <StaticImage 
