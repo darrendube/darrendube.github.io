@@ -34,11 +34,11 @@ const IndexPage = ({
 
 
       <HeroHeader/>
-      <Box className="posts-section" bg={useColorModeValue("#f5f9fb","#06121f")}>
-      <Box className="items-wrapper">
+      <Box className="posts-section" bg={useColorModeValue("#f3f3f3","#000000")}>
+      <Box className="blog-posts-wrapper">
 
-      
-      <Heading size="lg">Blog Posts &darr;</Heading>
+     
+     
       <Box className="grids">
         {Posts}
       </Box></Box></Box>

@@ -127,10 +127,10 @@ const Navbar = () => {
 `
 
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(14,24,42,0.7)")
+  const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(0,0,0,0.7)")
 
   return (
-    <Box as="nav" className="nav-bar" bg={bg}>
+    <Box as="nav" className="nav-bar" bg={bg} >
       <div className="nav-bar-contents items-wrapper">
       <Logo />
       
@@ -139,17 +139,18 @@ const Navbar = () => {
       
       <Flex
         position="fixed"
-        top="11px"
+        top="0"
         
         right="0rem"
         align="center"
-        
+        height="70px"
       ><ThemeChanger />
         {/* Desktop */}
         
         <Flex
           display={['none', 'none', 'flex','flex']}
           mr="11px"
+          
         >
           <Link to="/" >
             <Button
@@ -182,6 +183,7 @@ const Navbar = () => {
 
         {/* Mobile */}
         <IconButton
+       
         variant="unstyled"
           aria-label="Open Menu"
           size="lg"

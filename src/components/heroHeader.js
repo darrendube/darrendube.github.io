@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import SubscribeForm from "./subscribe-form"
 import { GatsbyImage , StaticImage} from "gatsby-plugin-image";
 import "../images/econ-image.png";
-import { useColorModeValue, Box, chakra } from "@chakra-ui/react";
+import { useColorModeValue, Box, chakra, Text } from "@chakra-ui/react";
 
 
 
@@ -23,10 +23,10 @@ export default () => (
       }
     `}
     render={data => (
-      <Box bg={useColorModeValue("#ffffff", "#0e182a")} className="hero-header">
+      <Box bg={useColorModeValue("#ffffff", "#000000")} className="hero-header">
         <div className="items-wrapper hero-grid">
         <div className="hero-text">
-        <div className="headline">Making Your <br/>Economics Journey<br/><chakra.span color={useColorModeValue("#007783","#a0aec0")}>Easier</chakra.span>.</div>
+        <Text className="headline" fontWeight="800">Making Your <br/>Economics Journey<br/><chakra.span color={useColorModeValue("#a6374e","#a0aec0")}>Easier</chakra.span>.</Text>
         <div 
           className="primary-content" >News, tutorials, videos.  </div><SubscribeForm /></div>
         <div className="hero-image">

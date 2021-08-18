@@ -70,6 +70,7 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
+      fontFamily="STIX Two Text"
     />
   ),
   ul: (props) => (
@@ -160,9 +161,34 @@ export default function Template({
       </Helmet>
 
       <div className="blog-post-container">
-        <chakra.article className="post" bg={useColorModeValue("#ffffff","#0e182a")} color={useColorModeValue("#000000","#ffffff !important")}>
-          <Box className="post-header " bg={useColorModeValue("linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%)","linear-gradient(to bottom, #14223d 0%, #1c2e53 100%)")}>
+        <chakra.article className="post" bg={useColorModeValue("#ffffff","#000000")} color={useColorModeValue("#000000","#ffffff !important")}>
+          <Box className="post-header ">
             <div className="header-wrapper post-grid">
+              
+
+              <div className="post-info grid-item2">
+                <div className="inner-post-info">
+                  <Box height="15px"></Box>
+                <div className="type-category">
+                  
+                  <Link to={"/blog/" + frontmatter.category.replace(" ", "-")}>
+                    <chakra.div color={useColorModeValue("#276152","#50b197")} className="category"> {frontmatter.category} </chakra.div>
+                  </Link> <Text  ms="0px !important">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                </div>
+                <Heading mt="8px" mb="15px" fontWeight="800" className="post-title" color={useColorModeValue("#000000","#ffffff")}>
+                  {frontmatter.title}
+                </Heading>
+
+               
+                  <Text mb="10px" fontSize="1.2rem" fontWeight="500" color={useColorModeValue("#33475b","#ffffffa0")}> {!!frontmatter.intro && (frontmatter.intro)}</Text>
+                
+                <div className="post-meta">
+                  
+                </div>
+                
+                </div>
+              </div>
+              
               {!!frontmatter.thumbnail && (
                 <GatsbyImage
                   image={frontmatter.thumbnail.childImageSharp.gatsbyImageData}
@@ -170,45 +196,6 @@ export default function Template({
                   placeholder="dominantColor"
                 />
               )}
-
-              <div className="post-info grid-item2">
-                <div className="type-category">
-                  <div className="post-type"> {frontmatter.type} </div>
-                  <Link to={"/blog/" + frontmatter.category.replace(" ", "-")}>
-                    <div className="category"> {frontmatter.category} </div>
-                  </Link>
-                </div>
-                <Heading mb="30px" className="post-title" color={useColorModeValue("#2e3748","#ffffff")}>
-                  {frontmatter.title}
-                </Heading>
-
-               
-                  <Text fontStyle="italic" fontWeight="500" color={useColorModeValue("#33475b","#ffffff")}> {!!frontmatter.intro && (frontmatter.intro)}</Text>
-                
-                <div className="post-meta">
-                  <HStack>
-                    <HStack>
-                      <FaCalendar color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}/>
-                      &nbsp;&nbsp;<Text color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}>{frontmatter.date}</Text>
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                    </HStack>
-
-                    <HStack>
-                      <FaClock color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}/>
-                      &nbsp;&nbsp;
-                      <Text color={useColorModeValue("#000000","rgba(255,255,255,0.66)")}>
-                        {Math.round(fields.readingTime.minutes)} minute read
-                      </Text>{" "}
-                    </HStack>
-                  </HStack>
-                </div>
-                <div className="post-meta">
-                  <ShareButtons
-                    path={"https://neocapitalist.darrendube.com" + frontmatter.path}
-                    title={frontmatter.title}
-                  />
-                </div>
-              </div>
             </div>
           </Box>
 

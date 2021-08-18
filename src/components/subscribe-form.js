@@ -36,28 +36,34 @@ const SubscribeForm = (props) => {
             maxWidth="600px"
           >
             <Input
-              bg={useColorModeValue('white', 'inherit')}
+              bg={useColorModeValue('gray.100', 'inherit')}
               placeholder="Enter your email"
               type="email"
               name="email"
+              borderRadius="0"
               required
-              focusBorderColor={useColorModeValue('blue.500', 'blue.300')}
+              focusBorderColor={useColorModeValue('#282828', 'blue.300')}
               _placeholder={{
                 opacity: 1,
                 color: useColorModeValue('gray.500', 'whiteAlpha.700'),
               }}
+              color={useColorModeValue('#000000','#ffffff')}
             />
             <Input type="hidden" value="1" name="embed"/>
             
             <Button
               type="submit"
-              colorScheme="blue"
+              
               flexShrink={0}
               width={{
                 base: 'full',
                 md: 'auto',
               }}
               value={props.downloadable ? "DOWNLOAD" : "SUBSCRIBE >"}
+              bg="#282828"
+              borderRadius="0"
+              _hover={{background:"black"}}
+              color="white"
             >
               Subscribe
             </Button>

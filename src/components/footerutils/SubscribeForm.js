@@ -25,15 +25,18 @@ export const SubscribeForm = (props) => {
               opacity: 1,
               color: useColorModeValue('gray.500', 'whiteAlpha.700'),
             }}
+            borderRadius="0"
+            color={useColorModeValue('#000000','#ffffff')}
           />
           <Button
             type="submit"
-            colorScheme="blue"
+            bg="#a6374e"
             flexShrink={0}
             width={{
               base: 'full',
               md: 'auto',
             }}
+            borderRadius="0"
           >
             Subscribe
           </Button>

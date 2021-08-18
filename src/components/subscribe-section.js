@@ -14,10 +14,10 @@ import {
 
 
 const SubscribeSection = () => (
-  <Box bg={useColorModeValue("#f2f6ff","#06121f")} mt="40px">
+  <Box bg={useColorModeValue("radial-gradient(circle at center, #a6374e, #903244)","#080808")} mt="40px" color="white">
   <Box p="43px" m="0px auto" className="subscribe-section-wrapper">
   <div>
-    <Heading fontSize="1.5em" mb="20px" className="subscribe-heading">Enjoyed the article? Get the newsletter and get notified about new content!</Heading>
+    <Heading fontSize="1.5em" fontWeight="800" mb="20px" className="subscribe-heading">Enjoyed the article? Get the newsletter and get notified about new content!</Heading>
   </div>
   <div>
     <Text className="subscribe-content" mb="16px"> Be the first to know when I post new content, and get <b>free exclusive resources. </b> 

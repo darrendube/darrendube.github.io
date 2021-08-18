@@ -37,8 +37,8 @@ const Tags = ({ pageContext, data }) => {
         <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
       </Helmet>
-      <Box  maxWidth="100%" bg={useColorModeValue("linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%)","linear-gradient(to bottom, #14223d 0%, #1c2e53 100%)")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" >BLOG / </Text><Text fontWeight="bold" className="category-title">{Category}</Text></div></Box>
-    <div className="posts-section">
+      <Box  maxWidth="100%" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" color="white">BLOG / </Text><Text fontWeight="bold" color="white" className="category-title">{Category}</Text></div></Box>
+      <Box className="posts-section" bg={useColorModeValue("#f3f3f3","#000000")}>
 
       <div className="items-wrapper">
 
@@ -46,7 +46,7 @@ const Tags = ({ pageContext, data }) => {
      
       <div className="grids">
         {Posts}
-      </div></div></div></Layout>
+      </div></div></Box></Layout>
   )
 }
 Tags.propTypes = {
