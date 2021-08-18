@@ -33,7 +33,7 @@ export default function CustomLink({ children, href }) {
       rel={onPage ? null : 'noopener noreferrer'}
        _hover={{ color: 'blue.400' }}
     >
-      {children}{onPage ? null : <ExternalLinkIcon  h="0.8rem"/>}
+      {children}
     </Link>
   );
 }

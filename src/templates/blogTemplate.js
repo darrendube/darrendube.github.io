@@ -82,6 +82,7 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
+      fontFamily="STIX Two Text"
     />
   ),
   ol: (props) => (
@@ -93,15 +94,16 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
+      fontFamily="STIX Two Text"
     />
   ),
   li: (props) => (
-    <chakra.li size="20px !important" {...props} pb={1}  />
+    <chakra.li size="20px !important" {...props} pb={1} fontFamily="STIX Two Text" />
   ),
   pre: (props) => <chakra.pre borderRadius="lg" {...props} />,
   img: (props) => (
     <chakra.img
-      rounded="lg"
+      
       my={5}
       maxH={500}
       borderColor="gray.200"
