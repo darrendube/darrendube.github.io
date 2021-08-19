@@ -1,8 +1,8 @@
 #OLD URL                                                     NEW URL
 
-/blog/macroeconomics                                         /macroeconomics                  301
-/blog/welfare                                                /welfare-economics               301
-/blog/miscellaneous                                          /miscellaneous                   301
-/blog/macroeconomics/*                                       /macroeconomics/:splat           301
-/blog/welfare/*                                              /welfare-economics/:splat        301
-/blog/miscellaneous/*                                        /miscellaneous/:splat            301
+/blog/macroeconomics                                         /macroeconomics                  
+/blog/welfare                                                /welfare-economics               
+/blog/miscellaneous                                          /miscellaneous                   
+/blog/macroeconomics/*                                       /macroeconomics/:splat           
+/blog/welfare/*                                              /welfare-economics/:splat        
+/blog/miscellaneous/*                                        /miscellaneous/:splat            
