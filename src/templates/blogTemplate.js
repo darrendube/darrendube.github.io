@@ -102,6 +102,7 @@ const components = {
   ),
   pre: (props) => <chakra.pre borderRadius="lg" {...props} />,
   img: (props) => (
+    <chakra.figure>
     <chakra.img
       
       my={5}
@@ -109,6 +110,8 @@ const components = {
       borderColor="gray.200"
       {...props}
     />
+    <chakra.figcaption color="gray.400" fontFamily="Inter" fontSize="xs" mt="-10px">{props.title}</chakra.figcaption>
+    </chakra.figure>
   ),
 
   inlineCode: (props) => (
@@ -173,7 +176,7 @@ export default function Template({
                   <Box height="15px"></Box>
                 <div className="type-category">
                   
-                  <Link to={"/blog/" + frontmatter.category.replace(" ", "-")}>
+                  <Link to={"/" + frontmatter.category.replace(" ", "-")}>
                     <chakra.div color={useColorModeValue("#276152","#50b197")} className="category"> {frontmatter.category} </chakra.div>
                   </Link> <Text  ms="0px !important">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
                 </div>

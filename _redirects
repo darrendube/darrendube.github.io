@@ -1,6 +1,8 @@
 #OLD URL                                                     NEW URL
 
-/web-development/personal-website                            /blog/web-development/personal-website
-/blog/uncategorised/cryptographic-hashing-for-blockchains    /blog/blockchain/cryptographic-hashing-for-blockchains
-/blog/uncategorised/byzantine-generals-problem               /blog/blockchain/byzantine-generals-problem
-/blog/uncategorised/blockchain-for-beginners                 /blog/blockchain/blockchain-for-beginners
+/blog/macroeconomics                                         /macroeconomics                  301
+/blog/welfare                                                /welfare-economics               301
+/blog/miscellaneous                                          /miscellaneous                   301
+/blog/macroeconomics/*                                       /macroeconomics/:splat           301
+/blog/welfare/*                                              /welfare-economics/:splat        301
+/blog/miscellaneous/*                                        /miscellaneous/:splat            301

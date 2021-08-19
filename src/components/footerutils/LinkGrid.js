@@ -9,9 +9,9 @@ export const LinkGrid = (props) => (
       <FooterHeading mb="4">Product</FooterHeading>
       <Stack>
         
-        <Link to="/blog/macroeconomics">Macroeconomics</Link>
-        <Link to="/blog/welfare">Welfare Economics</Link>
-        <Link to="/blog/miscellaneous">Miscellaneous</Link>
+        <Link to="/macroeconomics">Macroeconomics</Link>
+        <Link to="/welfare-economics">Welfare Economics</Link>
+        <Link to="/financial-economics">Financial Economics</Link>
       </Stack>
     </Box>
     <Box minW="130px">

@@ -127,10 +127,10 @@ const Navbar = () => {
 `
 
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(0,0,0,0.7)")
+  const bg = useColorModeValue("rgba(255,255,255,1)", "rgba(0,0,0,0.7)")
 
   return (
-    <Box as="nav" className="nav-bar" bg={bg} >
+    <Box as="nav" className="nav-bar" bg={bg} boxShadow="0 3px 12px rgba(0,0,0,.1)">
       <div className="nav-bar-contents items-wrapper">
       <Logo />
       
