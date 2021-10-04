@@ -70,7 +70,8 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
-      fontFamily="STIX Two Text"
+      fontFamily="Inter"
+      color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
   ul: (props) => (
@@ -82,7 +83,8 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
-      fontFamily="STIX Two Text"
+      fontFamily="Inter"
+      color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
   ol: (props) => (
@@ -94,11 +96,12 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
-      fontFamily="STIX Two Text"
+      fontFamily="Inter"
+      color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
   li: (props) => (
-    <chakra.li size="20px !important" {...props} pb={1} fontFamily="STIX Two Text" />
+    <chakra.li size="20px !important" {...props} pb={1} fontFamily="Inter" color={() => useColorModeValue("#242729","#ffffff")} />
   ),
   pre: (props) => <chakra.pre borderRadius="lg" {...props} />,
   img: (props) => (
