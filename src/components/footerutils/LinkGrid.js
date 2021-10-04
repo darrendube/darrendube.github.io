@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 export const LinkGrid = (props) => (
   <SimpleGrid columns={2} {...props}>
     <Box minW="130px">
-      <FooterHeading mb="4">Product</FooterHeading>
+      <FooterHeading mb="4">Categories</FooterHeading>
       <Stack>
         
         <Link to="/macroeconomics">Macroeconomics</Link>
