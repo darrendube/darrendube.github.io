@@ -23,7 +23,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "chakra-ui-markdown-renderer": "^3.0.1",
     "framer-motion": "^4.1.17",
-    "gatsby": "^3.1.1",
+    "gatsby": "^4.4.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^2.13.1",
@@ -62,7 +62,7 @@
     "react-share": "^4.4.0",
     "react-toggle": "^4.1.2",
     "styled-components": "^5.2.1",
-    "webpack": "^5.27.2"
+    "webpack": "^5.65.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
@@ -77,9 +77,9 @@
     "url": "git+https://github.com/darrendube/website.git"
   },
   "resolutions": {
-    "graphql": "^15.5.0",
+    "graphql": "^16.4.0",
     "graphql-compose": "^7.25.0",
-    "webpack": "^5.24.2"
+    "webpack": "^5.65.0"
   },
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
