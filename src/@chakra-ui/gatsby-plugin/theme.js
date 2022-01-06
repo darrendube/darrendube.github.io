@@ -4,7 +4,7 @@ import { extendTheme, useColorModeValue } from "@chakra-ui/react"
 const theme = extendTheme({
   fonts: {
     heading: "Inter",
-    body: "Inter",
+    body: "Inter, sans-serif",
   },
   initialColorMode: "system",
   useSystemColorMode: true,

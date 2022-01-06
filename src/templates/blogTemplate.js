@@ -70,7 +70,7 @@ const components = {
       ml="18px"
       lineHeight="1.6"
       {...props}
-      fontFamily="Inter"
+      fontFamily="Inter, Arial"
       color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
