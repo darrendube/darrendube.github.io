@@ -30,7 +30,7 @@ export const SubscribeForm = (props) => {
           />
           <Button
             type="submit"
-            bg="#a6374e"
+            bg="#3f4076"
             flexShrink={0}
             width={{
               base: 'full',

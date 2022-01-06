@@ -26,7 +26,7 @@ export default () => (
       <Box bg={useColorModeValue("#ffffff", "#000000")} className="hero-header">
         <div className="items-wrapper hero-grid">
         <div className="hero-text">
-        <Text className="headline" fontWeight="800">Making Your <br/>Economics Journey<br/><chakra.span color={useColorModeValue("#a6374e","#a0aec0")}>Easier</chakra.span>.</Text>
+        <Text className="headline" fontWeight="800">Making Your <br/>Economics Journey<br/><chakra.span color={useColorModeValue("#26a69a","#a0aec0")}>Easier</chakra.span>.</Text>
         <div 
           className="primary-content" >Subscribe to NeoCapitalist for engaging, in-depth, and trustworthy economic articles.  </div><SubscribeForm /></div>
         <div className="hero-image">

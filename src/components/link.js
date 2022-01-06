@@ -8,7 +8,7 @@ import { faChalkboard } from "@fortawesome/free-solid-svg-icons";
 export default function CustomLink({ children, href }) {
   const color = useColorModeValue("black !important","white !important")
   const fw = useColorModeValue("inherit","bold")
-  const background = useColorModeValue("linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a6374e55 10%, #a6374e55 41%, rgba(255,0,255,0) 41%)","linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a6374e99 10%, #a6374e99 41%, rgba(255,0,255,0) 41%)")
+  const background = useColorModeValue("linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffebaa 10%, #a7ffebaa 41%, rgba(255,0,255,0) 41%)","linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb77 10%, #a7ffeb77 41%, rgba(255,0,255,0) 41%)")
   if (
     href.startsWith("/") ||
     href.startsWith("https://neocapitalist.darrendube.com") ||
@@ -19,11 +19,11 @@ export default function CustomLink({ children, href }) {
     // See: https://www.gatsbyjs.org/docs/gatsby-link/
     return (
       <chakra.a
-        _hover={{  background: "linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a6374e 10%, #a6374e 41%, rgba(255,0,255,0) 41%)",
+        _hover={{  background: "linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb 10%, #a7ffeb 41%, rgba(255,0,255,0) 41%)",
         textDecoration: "none",
         color: "inherit"  }}
         boxDecorationBreak="clone"
-        background="linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a6374e55 10%, #a6374e55 41%, rgba(255,0,255,0) 41%)"
+        background="linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb55 10%, #a7ffeb55 41%, rgba(255,0,255,0) 41%)"
         href={href}
       >
         {children}
@@ -45,7 +45,7 @@ export default function CustomLink({ children, href }) {
       rel={onPage ? null : "noopener noreferrer"}
       _hover={{
      
-        background: "linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a6374e 10%, #a6374e 41%, rgba(255,0,255,0) 41%)",
+        background: "linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb 10%, #a7ffeb 41%, rgba(255,0,255,0) 41%)",
         textDecoration: "none",
         color: "inherit"
       }}

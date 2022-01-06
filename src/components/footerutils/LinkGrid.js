@@ -12,6 +12,7 @@ export const LinkGrid = (props) => (
         <Link to="/macroeconomics">Macroeconomics</Link>
         <Link to="/welfare-economics">Welfare Economics</Link>
         <Link to="/financial-economics">Financial Economics</Link>
+        <Link to="/behavioural-economics">Behavioural Economics</Link>
       </Stack>
     </Box>
     <Box minW="130px">
