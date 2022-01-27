@@ -8,7 +8,7 @@ import { SubscribeForm } from './footerutils/SubscribeForm'
 
 
 export const WebsiteFooter = () => (
-  <Box bg={useColorModeValue("#282828","#121212")} color="#ffffff">
+  <Box bg={useColorModeValue("#1f1f2e","#121212")} color="#ffffff">
   <Box
     as="footer"
     role="contentinfo"

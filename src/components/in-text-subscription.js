@@ -8,7 +8,7 @@ import { Heading, Text, useColorModeValue, Box } from "@chakra-ui/react"
 
 const InTextSubscription = (props) => {
  
-    return (<Box bg={useColorModeValue("#a6374e","#080808")} color="white" className="in-text-sub">
+    return (<Box bg={useColorModeValue("#a6374e","#080808")} color="white" className="in-text-sub" borderRadius="10px">
         <Heading mb="1rem" fontSize="xl">ENJOYING THE ARTICLE?</Heading>
         <Text mb="1rem"><b>Subscribe for free</b> for more content!</Text>
         <SubscribeForm />

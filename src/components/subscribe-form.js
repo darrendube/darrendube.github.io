@@ -40,7 +40,7 @@ const SubscribeForm = (props) => {
               placeholder="Enter your email"
               type="email"
               name="email"
-              borderRadius="0"
+              borderRadius="10px"
               required
               focusBorderColor={useColorModeValue('#282828', 'blue.300')}
               _placeholder={{
@@ -60,8 +60,8 @@ const SubscribeForm = (props) => {
                 md: 'auto',
               }}
               value={props.downloadable ? "DOWNLOAD" : "SUBSCRIBE >"}
-              bg="#282828"
-              borderRadius="0"
+              bg="#1f1f2e"
+              borderRadius="10px"
               _hover={{background:"black"}}
               color="white"
             >

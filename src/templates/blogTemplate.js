@@ -12,6 +12,7 @@ import ExternalLink from "../components/link";
 import { Heading, Text, HStack, chakra, Code, Box, useColorModeValue } from "@chakra-ui/react";
 import CustomLink from "../components/link";
 
+
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
@@ -112,6 +113,7 @@ const components = {
       maxH={500}
       borderColor="gray.200"
       {...props}
+      borderRadius="10px"
     />
     <chakra.figcaption color="gray.400" fontFamily="Inter" fontSize="xs" mt="-10px">{props.title}</chakra.figcaption>
     </chakra.figure>
@@ -181,7 +183,7 @@ export default function Template({
                   
                   <Link to={"/" + frontmatter.category.replace(" ", "-")}>
                     <chakra.div color={useColorModeValue("#276152","#50b197")} className="category"> {frontmatter.category} </chakra.div>
-                  </Link> <Text  ms="0px !important">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                  </Link> <Text  ms="0px !important">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text> 
                 </div>
                 <Heading mt="8px" mb="15px" fontWeight="800" className="post-title" color={useColorModeValue("#000000","#ffffff")}>
                   {frontmatter.title}
@@ -199,9 +201,11 @@ export default function Template({
               
               {!!frontmatter.thumbnail && (
                 <GatsbyImage
+                  
                   image={frontmatter.thumbnail.childImageSharp.gatsbyImageData}
                   className="post-thumbnail grid-item1"
                   placeholder="dominantColor"
+                  class="post-thumbnail"
                 />
               )}
             </div>

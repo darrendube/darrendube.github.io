@@ -34,7 +34,7 @@ const IndexPage = ({
 
 
       <HeroHeader/>
-      <Box className="posts-section" bg={useColorModeValue("#f3f3f3","#000000")}>
+      <Box className="posts-section" bg={useColorModeValue("#ffffff","#000000")}>
       <Box className="blog-posts-wrapper">
 
      

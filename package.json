@@ -24,6 +24,7 @@
     "chakra-ui-markdown-renderer": "^3.0.1",
     "framer-motion": "^4.1.17",
     "gatsby": "^4.4.0",
+    "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^2.13.1",
@@ -50,6 +51,7 @@
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-remark": "^4.2.0",
     "gatsby-transformer-sharp": "^4.4.0",
+    "gbimage-bridge": "^0.2.1",
     "graphql": "^15.5.0",
     "lmdb-store": "^1.6.14",
     "netlify-cms-app": "^2.14.32",
@@ -66,6 +68,7 @@
     "webpack": "^5.65.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "prettier": "^1.19.1"
   },
   "homepage": "https://github.com/darrendube/website#readme",
