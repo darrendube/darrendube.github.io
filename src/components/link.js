@@ -15,16 +15,18 @@ export default function CustomLink({ children, href }) {
     href.startsWith("neocapitalist.darrendube.com")
   ) {
     // Use Gatsby's Link component for internal site navigation
-    // to benefit from the preloading features
+    // to benefi t from the preloading features
     // See: https://www.gatsbyjs.org/docs/gatsby-link/
     return (
       <chakra.a
-        _hover={{  background: "linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb 10%, #a7ffeb 41%, rgba(255,0,255,0) 41%)",
-        textDecoration: "none",
-        color: "inherit"  }}
+        _hover={{ color: "inherit", textDecorationThickness:"0.2rem", textDecorationColor: "#ff3853" }}
         boxDecorationBreak="clone"
-        background="linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb55 10%, #a7ffeb55 41%, rgba(255,0,255,0) 41%)"
+        
         href={href}
+        textDecoration="underline"
+        textDecorationThickness="0.17rem"
+        textDecorationColor="#ff3853"
+        style={{textUnderlinePosition: "under"}}
       >
         {children}
       </chakra.a>
@@ -37,18 +39,17 @@ export default function CustomLink({ children, href }) {
   return (
     <chakra.a
       boxDecorationBreak="clone"
-      background={background}
+      
+      textDecoration="underline"
+      textDecorationThickness="0.17rem"
+      textDecorationColor="#ff3853"
+      style={{textUnderlinePosition: "under"}}
       href={href}
       // Open the link in a new page
       target={onPage ? null : "_blank"}
       // Add noopener and noreferrer for security reasons
       rel={onPage ? null : "noopener noreferrer"}
-      _hover={{
-     
-        background: "linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb 10%, #a7ffeb 41%, rgba(255,0,255,0) 41%)",
-        textDecoration: "none",
-        color: "inherit"
-      }}
+      _hover={{ color: "inherit", textDecorationThickness:"0.2rem", textDecorationColor: "#ff3853" }}
     >
       {children}
     </chakra.a>

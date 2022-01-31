@@ -20,9 +20,9 @@ const components = {
   h1: (props) => (
     <Heading
       mt="48px"
-      mr="18px"
+      mr="32px"
       mb="24px"
-      ml="18px"
+      ml="32px"
       textAlign="center"
       {...props}
       color={() => useColorModeValue("#2e3748","#ffffff")}
@@ -31,9 +31,9 @@ const components = {
   h2: (props) => (
     <Heading
       mt="48px"
-      mr="18px"
+      mr="32px"
       mb="24px"
-      ml="18px"
+      ml="32px"
       {...props}
       fontSize="4xl"
       color={() => useColorModeValue("#2e3748","#ffffff")}
@@ -42,9 +42,9 @@ const components = {
   h3: (props) => (
     <Heading
       mt="48px"
-      mr="18px"
+      mr="32px"
       mb="24px"
-      ml="18px"
+      ml="32px"
       {...props}
       fontSize="3xl"
       color={() => useColorModeValue("#2e3748","#ffffff")}
@@ -53,9 +53,9 @@ const components = {
   h4: (props) => (
     <Heading
       mt="48px"
-      mr="18px"
+      mr="32px"
       mb="24px"
-      ml="18px"
+      ml="32px"
       {...props}
       fontSize="2xl"
       color={() => useColorModeValue("#2e3748","#ffffff")}
@@ -66,9 +66,9 @@ const components = {
     <Text
       size="20px"
       py={1}
-      mr="18px"
+      mr="32px"
       mb="10px"
-      ml="18px"
+      ml="32px"
       lineHeight="1.6"
       {...props}
       fontFamily="Inter, Arial"
@@ -80,8 +80,8 @@ const components = {
       size="20px"
       p={5}
       pl="16px"
-      mr="18px"
-      ml="18px"
+      mr="32px"
+      ml="32px"
       lineHeight="1.6"
       {...props}
       fontFamily="Inter"
@@ -93,8 +93,8 @@ const components = {
       size="20px"
       p={5}
       pl="16px"
-      mr="18px"
-      ml="18px"
+      mr="32px"
+      ml="32px"
       lineHeight="1.6"
       {...props}
       fontFamily="Inter"

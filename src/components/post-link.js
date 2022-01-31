@@ -22,7 +22,7 @@ const PostLink = ({ post }) => (
       background={useColorModeValue("#ffffff00", "#11111100")}
       className="card "
       onClick={() => navigate(post.frontmatter.path)}
-      borderRadius="30px"
+      borderRadius="20px"
       display="grid"
       
       transition="all 0.5s"
@@ -50,7 +50,7 @@ const PostLink = ({ post }) => (
           placeItems: "center",
           display: "grid",
           height: "100% !important",
-          background: "linear-gradient(45deg, #00000033,#ffffff00)"
+          background: "radial-gradient( #ffffff11,#00000022)"
 
         }}>
           <div className="fill"/>
@@ -58,10 +58,10 @@ const PostLink = ({ post }) => (
         background={useColorModeValue("#ffffff", "#111111")}
         margin="7px"
         padding="20px"
-        borderRadius="27px"
+        borderRadius="16px"
         display="inline-block"
         height="fit-content"
-        opacity="90%"
+        opacity="100%"
         width="calc(100% - 14px)"
         className="bdfilter"
         backdropFilter=" blur(20px) saturate(125%) !important"
