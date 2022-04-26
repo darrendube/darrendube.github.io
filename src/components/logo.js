@@ -19,7 +19,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap className="logo-link" as={Link} to="/">
-      <img src={useColorModeValue(logoimg, logoimgplain)} className="logoimg" />
+      <img src={useColorModeValue(logoimgplain, logoimgplain)} className="logoimg" />
       {/*<p className="logo-text"> DARREN&nbsp;<span className="dube">DUBE</span></p>*/}
     </LogoWrap>
   );

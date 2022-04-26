@@ -71,7 +71,7 @@ const components = {
       ml="32px"
       lineHeight="1.6"
       {...props}
-      fontFamily="Inter, Arial"
+      fontFamily="Ubuntu, Arial"
       color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
@@ -84,7 +84,7 @@ const components = {
       ml="32px"
       lineHeight="1.6"
       {...props}
-      fontFamily="Inter"
+      fontFamily="Ubuntu"
       color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
@@ -172,32 +172,32 @@ export default function Template({
 
       <div className="blog-post-container">
         <chakra.article className="post" bg={useColorModeValue("#ffffff","#000000")} color={useColorModeValue("#000000","#ffffff !important")}>
-          <Box className="post-header ">
+          <Box className="post-header " background={useColorModeValue("linear-gradient(to top, #ffffff00 0px, #ffffff00 278px, "+frontmatter.color+" 278px)")}>
             <div className="header-wrapper post-grid">
               
 
-              <div className="post-info grid-item2">
+              <chakra.div className="post-info grid-item2"  >
                 <div className="inner-post-info">
                   <Box height="15px"></Box>
-                <div className="type-category">
+                <chakra.div className="type-category" >
                   
                   <Link to={"/" + frontmatter.category.replace(" ", "-")}>
-                    <chakra.div color={useColorModeValue("#276152","#50b197")} className="category"> {frontmatter.category} </chakra.div>
-                  </Link> <Text  ms="0px !important">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text> 
-                </div>
-                <Heading mt="8px" mb="15px" fontWeight="800" className="post-title" color={useColorModeValue("#000000","#ffffff")}>
+                    <chakra.div color={useColorModeValue("#ffffff","#50b197")} className="category" fontSize="1.5em"> {frontmatter.category} </chakra.div>
+                  </Link> <Text  ms="0px !important" color="#ffffff">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                </chakra.div>
+                <Heading mt="20px" mb="30px" fontWeight="800" fontSize="6xl" className="post-title" color={useColorModeValue("#ffffff","#ffffff")} >
                   {frontmatter.title}
                 </Heading>
 
                
-                  <Text mb="10px" fontSize="1.2rem" fontWeight="500" color={useColorModeValue("#33475b","#ffffffa0")}> {!!frontmatter.intro && (frontmatter.intro)}</Text>
+                  <Text mb="10px" fontSize="1.7rem" fontWeight="500" color={useColorModeValue("#ffffffa0","#ffffffa0")}> {!!frontmatter.intro && (frontmatter.intro)}</Text>
                 
                 <div className="post-meta">
                   
                 </div>
                 
                 </div>
-              </div>
+              </chakra.div>
               
               {!!frontmatter.thumbnail && (
                 <GatsbyImage
@@ -247,6 +247,7 @@ export const pageQuery = graphql`
         category
         type
         intro
+        color
       }
       fields {
         readingTime {

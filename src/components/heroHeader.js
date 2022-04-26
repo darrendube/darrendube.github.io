@@ -23,12 +23,12 @@ export default () => (
       }
     `}
     render={data => (
-      <Box bg={useColorModeValue("#ffffff", "#000000")} className="hero-header">
+      <Box bg={useColorModeValue("#12358f", "#000000")} className="hero-header" paddingTop="70px">
         <div className="items-wrapper hero-grid">
         <div className="hero-text">
-        <Text className="headline" fontWeight="800" color={useColorModeValue("#161626","#ffffff")}>Making Your <br/>Economics Journey<br/><chakra.span color={useColorModeValue("#ff3954","#a0aec0")}>Easier</chakra.span>.</Text>
-        <div 
-          className="primary-content" >Subscribe to NeoCapitalist for engaging, in-depth, and trustworthy economic articles.  </div><SubscribeForm /></div>
+        <Text className="headline" fontFamily="Open Sans" fontWeight="800" color={useColorModeValue("#ffffff","#ffffff")}><chakra.span color={useColorModeValue("#ff3954","#a0aec0")}>Data Science,</chakra.span> <br/>Math, and<br/>Economics.</Text>
+        <chakra.div color={useColorModeValue("#ffffff","#ffffff")}
+          className="primary-content" >All in one place. Subscribe Now: </chakra.div><SubscribeForm /></div>
         <div className="hero-image">
        
           <StaticImage 

@@ -127,11 +127,11 @@ const Navbar = () => {
 `
 
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const bg = useColorModeValue("rgba(255,255,255,0.7)", "rgba(0,0,0,0.7)")
-  const bs = useColorModeValue("inset 0px -1px 0px #f3f3f4;","")
+  const bg = useColorModeValue("rgba(255,100,200,0)", "rgba(0,0,0,0.0)")
+
 
   return (
-    <Box as="nav" className="nav-bar" bg={bg} boxShadow={bs}>
+    <Box as="nav" className="nav-bar" >
       <div className="nav-bar-contents items-wrapper">
       <Logo />
       
@@ -139,9 +139,9 @@ const Navbar = () => {
      	<Flex>
       
       <Flex
-        position="fixed"
+
         top="0"
-        
+
         right="0rem"
         align="center"
         height="70px"
@@ -160,7 +160,8 @@ const Navbar = () => {
               aria-label="Home"
               my={5}
               w="100%"
-              color={useColorModeValue("#0000000","#a0aec0")}
+              fontSize="xl"
+              color={useColorModeValue("#ffffff","#a0aec0")}
             >
               Home
                     </Button>
@@ -175,7 +176,8 @@ const Navbar = () => {
               aria-label="Contact"
               my={5}
               w="100%"
-              color={useColorModeValue("#0000000","#a0aec0")}
+              fontSize="xl"
+              color={useColorModeValue("#ffffff","#a0aec0")}
             >
               Contact
                     </Button>
@@ -192,7 +194,7 @@ const Navbar = () => {
           icon={
             <HamburgerIcon />
           }
-          color={useColorModeValue("#0000000","#a0aec0")}
+          color={useColorModeValue("#ffffff","#a0aec0")}
           onClick={() => changeDisplay('flex')}
           display={['flex', 'flex', 'none', 'none']}
         />
@@ -204,7 +206,8 @@ const Navbar = () => {
       <Flex
         w='100vw'
         display={display}
-        bgColor={useColorModeValue("#ffffff","#0e182a")}
+        bgColor={useColorModeValue("#12358f","#0e182a")}
+        color="white"
         zIndex={20}
         h="100vh"
         pos="fixed"
@@ -240,7 +243,7 @@ const Navbar = () => {
               aria-label="Home"
               my={5}
               w="100%"
-              color={useColorModeValue("#0000000","#a0aec0")}
+              color={useColorModeValue("#ffffff !important","#a0aec0")}
             >
               Home
                     </Button>
@@ -255,7 +258,7 @@ const Navbar = () => {
               aria-label="Contact"
               my={5}
               w="100%"
-              color={useColorModeValue("#0000000","#a0aec0")}
+              color={useColorModeValue("#ffffff","#a0aec0")}
             >
               Contact
             </Button>

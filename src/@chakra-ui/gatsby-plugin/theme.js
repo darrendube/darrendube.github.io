@@ -3,8 +3,8 @@ import { extendTheme, useColorModeValue } from "@chakra-ui/react"
 
 const theme = extendTheme({
   fonts: {
-    heading: "Inter",
-    body: "Inter, sans-serif",
+    heading: "Open Sans",
+    body: "Open Sans",
   },
   initialColorMode: "system",
   useSystemColorMode: true,

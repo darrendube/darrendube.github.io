@@ -22,7 +22,7 @@ const PostLink = ({ post }) => (
       background={useColorModeValue("#ffffff00", "#11111100")}
       className="card "
       onClick={() => navigate(post.frontmatter.path)}
-      borderRadius="20px"
+
       display="grid"
       
       transition="all 0.5s"
@@ -32,7 +32,7 @@ const PostLink = ({ post }) => (
         image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
         alt={"testimage"}
         style={{
-          gridArea: "1/1",
+
           // You can set a maximum height for the image, if you wish.
           // maxHeight: 600,
         }}
@@ -42,37 +42,37 @@ const PostLink = ({ post }) => (
       />  
 
       <div class="filldetails" style={{
-          gridArea: "1/1",
+
           // You can set a maximum height for the image, if you wish.
           // maxHeight: 600,
           position: "relative",
           // This centers the other elements inside the hero component
           placeItems: "center",
-          display: "grid",
-          height: "100% !important",
-          background: "radial-gradient( #ffffff11,#00000022)"
+          paddingTop: "10px"
+
 
         }}>
-          <div className="fill"/>
+
       <chakra.div
         background={useColorModeValue("#ffffff", "#111111")}
-        margin="7px"
-        padding="20px"
-        borderRadius="16px"
+
+
         display="inline-block"
         height="fit-content"
         opacity="100%"
         width="calc(100% - 14px)"
         className="bdfilter"
-        backdropFilter=" blur(20px) saturate(125%) !important"
+
         verticalAlign="bottom"
       >
         <div className="post-details" >
           <div className="type-category">
             <chakra.div
-              color={useColorModeValue("#276152", "#50b197")}
+              color={useColorModeValue("#ffffff", "#000000")}
               className="category"
-              
+
+              backgroundColor={useColorModeValue("#000000", "#ffffff")}
+
             >
               {" "}
               {post.frontmatter.category}{" "}
@@ -91,7 +91,7 @@ const PostLink = ({ post }) => (
               fontSize="1.4rem"
               color={useColorModeValue("#000000", "#ffffff")}
               lineHeight="1.2"
-            >
+              fontFamily="Open Sans"            >
               {post.frontmatter.title}
             </Text>
           </Link>
