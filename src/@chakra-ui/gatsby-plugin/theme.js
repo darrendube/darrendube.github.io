@@ -4,7 +4,7 @@ import { extendTheme, useColorModeValue } from "@chakra-ui/react"
 const theme = extendTheme({
   fonts: {
     heading: "Open Sans",
-    body: "Open Sans",
+    body: "Montserrat",
   },
   initialColorMode: "system",
   useSystemColorMode: true,
@@ -21,7 +21,8 @@ const theme = extendTheme({
       "a.normal": {
         textDecoration: "underline",
         textDecorationColor: "blue.500"
-      }
+      },
+
 
     }),
   },

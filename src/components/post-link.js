@@ -48,13 +48,13 @@ const PostLink = ({ post }) => (
           position: "relative",
           // This centers the other elements inside the hero component
           placeItems: "center",
-          paddingTop: "10px"
+          paddingTop: "13px"
 
 
         }}>
 
       <chakra.div
-        background={useColorModeValue("#ffffff", "#111111")}
+        background={useColorModeValue("#ffffff", "#000000")}
 
 
         display="inline-block"
@@ -70,7 +70,7 @@ const PostLink = ({ post }) => (
             <chakra.div
               color={useColorModeValue("#ffffff", "#000000")}
               className="category"
-
+              mr="5px"
               backgroundColor={useColorModeValue("#000000", "#ffffff")}
 
             >
@@ -78,7 +78,7 @@ const PostLink = ({ post }) => (
               {post.frontmatter.category}{" "}
             </chakra.div>
             <Text as="p" ms="0px !important">
-              &nbsp;&nbsp;{post.frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;
+              {post.frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;
             </Text>
           </div>
 

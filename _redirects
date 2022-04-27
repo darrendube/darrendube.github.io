@@ -1,13 +1,2 @@
 #OLD URL                                                     NEW URL
-
-/blog/macroeconomics                                         /macroeconomics                  
-/blog/welfare                                                /welfare-economics               
-/blog/miscellaneous                                          /miscellaneous                   
-       
-/blog/macroeconomics/inflation-conspiracy-theories           /macroeconomics/inflation-conspiracy-theories                301!
-/blog/welfare/covid-and-ubi                                  /welfare-economics/covid-and-ubi                             301!
-/blog/macroeconomics/natural-disasters-broken-window-fallacy /macroeconomics/natural-disasters-broken-window-fallacy      301!
-/blog/miscellaneous/welcome                                  /miscellaneous/welcome                                       301!
-/blog/macroeconomics/*                                       /macroeconomics/:splat           
-/blog/welfare/*                                              /welfare-economics/:splat        
-/blog/miscellaneous/*                                        /miscellaneous/:splat     
+/blog                                                        /

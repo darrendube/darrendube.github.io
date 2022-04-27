@@ -71,7 +71,8 @@ const components = {
       ml="32px"
       lineHeight="1.6"
       {...props}
-      fontFamily="Ubuntu, Arial"
+      fontFamily="Montserrat, Arial"
+      fontWeight="450"
       color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
@@ -84,7 +85,7 @@ const components = {
       ml="32px"
       lineHeight="1.6"
       {...props}
-      fontFamily="Ubuntu"
+      fontFamily="Montserrat"
       color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
@@ -97,12 +98,12 @@ const components = {
       ml="32px"
       lineHeight="1.6"
       {...props}
-      fontFamily="Inter"
+      fontFamily="Montserrat"
       color={() => useColorModeValue("#242729","#ffffff")}
     />
   ),
   li: (props) => (
-    <chakra.li size="20px !important" {...props} pb={1} fontFamily="Inter" color={() => useColorModeValue("#242729","#ffffff")} />
+    <chakra.li size="20px !important" {...props} pb={1} fontFamily="Montserrat" color={() => useColorModeValue("#242729","#ffffff")} />
   ),
   pre: (props) => <chakra.pre borderRadius="lg" {...props} />,
   img: (props) => (
@@ -113,7 +114,7 @@ const components = {
       maxH={500}
       borderColor="gray.200"
       {...props}
-      borderRadius="10px"
+
     />
     <chakra.figcaption color="gray.400" fontFamily="Inter" fontSize="xs" mt="-10px">{props.title}</chakra.figcaption>
     </chakra.figure>

@@ -28,8 +28,8 @@ const ContactPage = ({
         <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
 
       </Helmet>
-
-      <Box className="two-grids">
+        <Box  maxWidth="100%" paddingTop="100px" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text fontWeight="bold" color="white" className="category-title">Contact</Text></div></Box>
+      <Box className="two-grids" paddingTop="30px">
         
         <Box className="contact-page-text">
           <Heading mb="1.5rem" className="contact-heading">Get in Touch</Heading>

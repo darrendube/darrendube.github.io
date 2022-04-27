@@ -27,7 +27,7 @@ const PrivacyPolicyPage = () => {
 
 
             </Helmet>
-            <Box className="category-header " color={useColorModeValue("#2e3748","#ffffff !important")} bg={useColorModeValue("linear-gradient(to bottom, #f5f9fb 0%, #e9f1ff 100%)","linear-gradient(to bottom, #14223d 0%, #1c2e53 100%)")}><Box color={useColorModeValue("#2e3748","#ffffff !important")} className="cat-header-wrapper items-wrapper"><Text as="strong" >HOME / </Text><Heading mb="1rem" >Privacy Policy</Heading></Box></Box>
+            <Box  maxWidth="100%" paddingTop="100px" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" color="white">BLOG / </Text><Text fontWeight="bold" color="white" className="category-title">Privacy Policy</Text></div></Box>
             <div className="posts-section">
 
                 <div className="items-wrapper blog-post-content">

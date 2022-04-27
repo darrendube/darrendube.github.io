@@ -14,7 +14,7 @@ import {
 
 
 const SubscribeSection = () => (
-  <Box bg={useColorModeValue("#ff3853","#080808")} mt="40px" color="white">
+  <Box bg={useColorModeValue("#12358f","#080808")} mt="40px" color="white">
   <Box p="43px" m="0px auto" className="subscribe-section-wrapper">
   <div>
     <Heading fontSize="1.5em" fontWeight="800" mb="20px" className="subscribe-heading">Enjoyed the article? Get the newsletter and get notified about new content!</Heading>

@@ -37,8 +37,8 @@ const Tags = ({ pageContext, data }) => {
         <meta name="twitter:creator" content="@darrendube" />
         <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
       </Helmet>
-      <Box  maxWidth="100%" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" color="white">BLOG / </Text><Text fontWeight="bold" color="white" className="category-title">{Category}</Text></div></Box>
-      <Box className="posts-section" bg={useColorModeValue("#f3f3f3","#000000")}>
+      <Box  maxWidth="100%" paddingTop="100px" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" color="white">BLOG / </Text><Text fontWeight="bold" color="white" className="category-title">{Category}</Text></div></Box>
+      <Box className="posts-section" bg={useColorModeValue("#ffffff","#000000")}>
 
       <div className="items-wrapper">
 

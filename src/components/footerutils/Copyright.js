@@ -4,6 +4,6 @@ import { Link } from '@chakra-ui/react'
 
 export const Copyright = (props) => (
   <Text fontSize="sm" {...props}>
-    Copyright &copy; {new Date().getFullYear()} <Link href="https://neocapitalist.darrendube.com">NeoCapitalist</Link>. All rights reserved.
+    Copyright &copy; {new Date().getFullYear()} <Link href="https://darrendube.com">Darren Dube</Link>. All rights reserved.
   </Text>
 )

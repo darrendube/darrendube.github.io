@@ -23,10 +23,10 @@ export default () => (
       }
     `}
     render={data => (
-      <Box bg={useColorModeValue("#12358f", "#000000")} className="hero-header" paddingTop="70px">
+      <Box bg={useColorModeValue("#12358f", "#000000")} className="hero-header" paddingTop="100px">
         <div className="items-wrapper hero-grid">
         <div className="hero-text">
-        <Text className="headline" fontFamily="Open Sans" fontWeight="800" color={useColorModeValue("#ffffff","#ffffff")}><chakra.span color={useColorModeValue("#ff3954","#a0aec0")}>Data Science,</chakra.span> <br/>Math, and<br/>Economics.</Text>
+        <Text className="headline" fontFamily="Open Sans" fontWeight="800" color={useColorModeValue("#ffffff","#ffffff")}><chakra.span color={useColorModeValue("green.300","#a0aec0")}>Data Science,</chakra.span> <br/>Math, and<br/>Economics.</Text>
         <chakra.div color={useColorModeValue("#ffffff","#ffffff")}
           className="primary-content" >All in one place. Subscribe Now: </chakra.div><SubscribeForm /></div>
         <div className="hero-image">

@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@460;500;600;700;800&display=swap');
 
 html,
 body {
@@ -133,7 +133,7 @@ body.dark {
 
 /* System Fonts as used by Medium and WordPress */
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   
   background-color: var(--background);
   color: var(--text-color);
@@ -191,7 +191,7 @@ a:hover {
 .site-wrapper {
   padding: 0 0 0 0;
   max-width: 6000px;
-  margin: -70px auto 0 auto;
+  margin: -100px auto 0 auto;
 
   min-height: 70vh;
   img {
@@ -809,16 +809,23 @@ and (max-width: 767px) {
 
   padding: 40px;
 
+  @media only screen and (max-width: 480px) {
+    padding: unset;
+  }
   
   
   
 }
 .inner-post-info {
-  margin: 100px 32px 32px 32px;
+  margin: 150px 32px 32px 32px;
 
   max-width: 900px;
   height: 60vh;
   max-height: 500px;
+  @media only screen and (max-width: 768px) {
+    height: unset;
+    max-height: unset;
+  }
 }
 
 .fill .card-image {
@@ -1211,7 +1218,7 @@ nav {
 
 
 .nav-bar {
-  height: 70px;
+  height: 100px;
 
   
  /* background: var(--navbar-bg); */

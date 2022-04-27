@@ -19,14 +19,14 @@ export default function CustomLink({ children, href }) {
     // See: https://www.gatsbyjs.org/docs/gatsby-link/
     return (
       <chakra.a
-        _hover={{ color: "inherit", textDecorationThickness:"0.2rem", textDecorationColor: "#ff3853" }}
-        boxDecorationBreak="clone"
+        //_hover={{ color: "inherit", textDecorationThickness:"0.2rem", textDecorationColor: "#ff3853" }}
+      //  boxDecorationBreak="clone"
         
         href={href}
-        textDecoration="underline"
-        textDecorationThickness="0.17rem"
-        textDecorationColor="#ff3853"
-        style={{textUnderlinePosition: "under"}}
+       // textDecoration="underline"
+        //textDecorationThickness="0.17rem"
+        textDecorationColor="blue.300"
+      //  style={{textUnderlinePosition: "under"}}
       >
         {children}
       </chakra.a>
@@ -41,15 +41,15 @@ export default function CustomLink({ children, href }) {
       boxDecorationBreak="clone"
       
       textDecoration="underline"
-      textDecorationThickness="0.17rem"
-      textDecorationColor="#ff3853"
+      //textDecorationThickness="0.17rem"
+      textDecorationColor="#000088"
       style={{textUnderlinePosition: "under"}}
       href={href}
       // Open the link in a new page
       target={onPage ? null : "_blank"}
       // Add noopener and noreferrer for security reasons
       rel={onPage ? null : "noopener noreferrer"}
-      _hover={{ color: "inherit", textDecorationThickness:"0.2rem", textDecorationColor: "#ff3853" }}
+      _hover={{ color: "inherit", textDecorationThickness:"0.2rem", textDecorationColor: "#00009a" }}
     >
       {children}
     </chakra.a>

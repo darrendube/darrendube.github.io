@@ -36,16 +36,17 @@ const SubscribeForm = (props) => {
             maxWidth="600px"
           >
             <Input
-              bg={useColorModeValue('gray.100', 'inherit')}
+              bg={useColorModeValue('inherit', 'inherit')}
               placeholder="Enter your email"
               type="email"
               name="email"
-              borderRadius="10px"
+              borderRadius="0px"
               required
-              focusBorderColor={useColorModeValue('#282828', 'blue.300')}
+              focusBorderColor={useColorModeValue('blue.300', 'blue.300')}
+              borderColor={useColorModeValue('blue.400', 'inherit')}
               _placeholder={{
                 opacity: 1,
-                color: useColorModeValue('gray.500', 'whiteAlpha.700'),
+                color: useColorModeValue('whiteAlpha.700', 'whiteAlpha.700'),
               }}
               color={useColorModeValue('#000000','#ffffff')}
             />
@@ -60,8 +61,8 @@ const SubscribeForm = (props) => {
                 md: 'auto',
               }}
               value={props.downloadable ? "DOWNLOAD" : "SUBSCRIBE >"}
-              bg="#1f1f2e"
-              borderRadius="10px"
+              bg={useColorModeValue('blue.600','#1f1f2e')}
+              borderRadius="0px"
               _hover={{background:"black"}}
               color="white"
             >
