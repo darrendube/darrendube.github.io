@@ -810,7 +810,9 @@ and (max-width: 767px) {
   padding: 40px;
 
   @media only screen and (max-width: 480px) {
-    padding: unset;
+    padding: 1px 0px 0px 0px;
+
+
   }
   
   

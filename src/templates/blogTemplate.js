@@ -173,7 +173,7 @@ export default function Template({
 
       <div className="blog-post-container">
         <chakra.article className="post" bg={useColorModeValue("#ffffff","#000000")} color={useColorModeValue("#000000","#ffffff !important")}>
-          <Box className="post-header " background={useColorModeValue("linear-gradient(to top, #ffffff00 0px, #ffffff00 278px, "+frontmatter.color+" 278px)")}>
+          <Box className="post-header " background={{base:useColorModeValue(frontmatter.color,),md:useColorModeValue("linear-gradient(to top, #ffffff00 0px, #ffffff00 278px, "+frontmatter.color+" 278px)"), }}>
             <div className="header-wrapper post-grid">
               
 
