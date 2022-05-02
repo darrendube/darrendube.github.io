@@ -11,8 +11,8 @@ export default function CustomLink({ children, href }) {
   const background = useColorModeValue("linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffebaa 10%, #a7ffebaa 41%, rgba(255,0,255,0) 41%)","linear-gradient(0deg, rgba(255,0,255,0) 0%, rgba(255,0,255,0) 10%, #a7ffeb77 10%, #a7ffeb77 41%, rgba(255,0,255,0) 41%)")
   if (
     href.startsWith("/") ||
-    href.startsWith("https://neocapitalist.darrendube.com") ||
-    href.startsWith("neocapitalist.darrendube.com")
+    href.startsWith("https://darrendube.com") ||
+    href.startsWith("darrendube.com")
   ) {
     // Use Gatsby's Link component for internal site navigation
     // to benefi t from the preloading features

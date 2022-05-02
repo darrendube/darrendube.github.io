@@ -40,7 +40,7 @@ export const SubscribeForm = (props) => {
           >
             Subscribe
           </Button>
-          <Input type="hidden" value="NeoCapitalist" name="tag"/>
+          <Input type="hidden" value="Darren Dube" name="tag"/>
         </Stack>
       </Stack>
     </chakra.form>

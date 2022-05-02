@@ -109,11 +109,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `NeoCapitalist - Economics, Business, Finance`,
-        short_name: `NeoCapitalist`,
+        name: `Darren Dube`,
+        short_name: `Darren Dube`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#C90056`,
+        theme_color: `#12358f`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },
@@ -197,8 +197,8 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "NeoCapitalist - Economics, Business, Finance",
-            link: "https://feeds.feedburner.com/neocapitalist",
+            title: "Darren Dube",
+            link: "https://feeds.feedburner.com/darrendube",
           },
         ],
       },

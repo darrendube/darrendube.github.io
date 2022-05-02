@@ -29,13 +29,13 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{Category} Category - NeoCapitalist</title>
-        <meta property="og:title" content={Category + " Category - NeoCapitalist"}/>
-        <meta name="description" content="Read articles under the" />
+        <title>{Category} Category - Darren Dube</title>
+        <meta property="og:title" content={Category + " Category - Darren Dube"}/>
+        <meta name="description" content={"Read articles under the "+ Category + " category"} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
-        <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
+        <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
       </Helmet>
       <Box  maxWidth="100%" paddingTop="100px" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" color="white">BLOG / </Text><Text fontWeight="bold" color="white" className="category-title">{Category}</Text></div></Box>
       <Box className="posts-section" bg={useColorModeValue("#ffffff","#000000")}>

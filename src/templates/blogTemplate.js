@@ -163,11 +163,11 @@ export default function Template({
         />
         <meta
           property="og:image"
-          content={"https://neocapitalist.darrendube.com/assets/" + frontmatter.ogimage}
+          content={"https://darrendube.com/assets/" + frontmatter.ogimage}
         />
         <meta
           property="og:url"
-          content={"https://neocapitalist.darrendube.com" + frontmatter.path}
+          content={"https://darrendube.com" + frontmatter.path}
         />
       </Helmet>
 

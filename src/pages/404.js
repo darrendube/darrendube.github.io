@@ -1,8 +1,8 @@
-import React from "react"
-import Helmet from 'react-helmet';
-import Layout from "../components/layout"
+import React from "react";
+import Helmet from "react-helmet";
+import Layout from "../components/layout";
 import { Link } from "gatsby";
-import { Text, Box , chakra } from "@chakra-ui/react";
+import { Text, Box, chakra, useColorModeValue } from "@chakra-ui/react";
 
 const notFound = () => {
   return (
@@ -10,9 +10,20 @@ const notFound = () => {
       <Helmet>
         <title>Page not found</title>
       </Helmet>
-      <Box  style={{textAlign: "center", padding:"5vh 0", lineHeight: "1.5"}}>
+      <Box
+        maxWidth="100%"
+        paddingTop="100px"
+        bg="#091224"
+      >
+        <div className="cat-header-wrapper items-wrapper">
+          <Text fontWeight="bold" color="white" className="category-title">
+            Oops
+          </Text>
+        </div>
+      </Box>
+      <Box style={{ textAlign: "center", padding: "5vh 0", lineHeight: "1.5" }}>
         <chakra.svg
-        display="inline-block"
+          display="inline-block"
           width="256"
           height="256"
           viewBox="0 0 24 24"
@@ -39,10 +50,13 @@ const notFound = () => {
             fill="currentColor"
           />
         </chakra.svg>
-        <Text>Either you're in a wrong page or you're lost. Lets go back <Link to="/">home</Link> safely</Text>
+        <Text>
+          Either you're in a wrong page or you're lost. Lets go back{" "}
+          <Link to="/">home</Link> safely
+        </Text>
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default notFound
+export default notFound;

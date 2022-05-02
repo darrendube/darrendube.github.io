@@ -14,27 +14,27 @@ const PrivacyPolicyPage = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Privacy Policy - NeoCapitalist</title>
-                <meta name="description" content="On our website, accessible from neocapitalist.darrendube.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how we use it." />
+                <title>Privacy Policy - Darren Dube</title>
+                <meta name="description" content="On my website, accessible from darrendube.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how we use it." />
                 
-        <meta property="og:title" content="Privacy Policy - NeoCapitalist"/>
-        <meta property="og:description" content="On our website, accessible from neocapitalist.darrendube.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how we use it."/>
-        <meta property="og:url" content="https://neocapitalist.darrendube.com/privacy-policy"/>
+        <meta property="og:title" content="Privacy Policy - Darren Dube"/>
+        <meta property="og:description" content="On our website, accessible from darrendube.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains the types of information collected and recorded by this website and how we use it."/>
+        <meta property="og:url" content="https://darrendube.com/privacy-policy"/>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@darrendube" />
         <meta name="twitter:creator" content="@darrendube" />
-        <meta property="og:image" content={"https://neocapitalist.darrendube.com/icon.png"}/>
+        <meta property="og:image" content={"https://darrendube.com/icon.png"}/>
 
 
             </Helmet>
-            <Box  maxWidth="100%" paddingTop="100px" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text as="strong" color="white">BLOG / </Text><Text fontWeight="bold" color="white" className="category-title">Privacy Policy</Text></div></Box>
+            <Box  maxWidth="100%" paddingTop="100px" bg={useColorModeValue("#0033a0","#091224")}><div className="cat-header-wrapper items-wrapper"><Text fontWeight="bold" color="white" className="category-title">Privacy Policy</Text></div></Box>
             <div className="posts-section">
 
                 <div className="items-wrapper blog-post-content">
 
                     <Heading mb="1rem">Introduction</Heading>
 
-                    <Text mb="1.5rem">On our website, accessible from <Link className="normal" href="https://neocapitalist.darrendube.com">neocapitalist.darrendube.com</Link>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by this website and how we use it.</Text>
+                    <Text mb="1.5rem">On our website, accessible from <Link className="normal" href="https://darrendube.com">darrendube.com</Link>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by this website and how we use it.</Text>
 
                     <Text mb="1.5rem">If you have additional questions or require more information about this Privacy Policy, do not hesitate to <Link className="normal" to="/contact">contact us</Link>.</Text>
 
