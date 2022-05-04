@@ -75,7 +75,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     
 
     createPage({
-      path: `/${category.fieldValue.replace(" ","-")}/`,
+      path: `/blog/${category.fieldValue.replace(" ","-")}/`,
       component: categoryTemplate,
       context: {
         tag: category.fieldValue,
