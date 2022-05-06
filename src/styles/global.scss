@@ -822,8 +822,8 @@ and (max-width: 767px) {
   margin: 150px 32px 32px 32px;
 
   max-width: 900px;
-  height: 60vh;
-  max-height: 500px;
+  min-height: 60vh;
+
   @media only screen and (max-width: 768px) {
     height: unset;
     max-height: unset;
