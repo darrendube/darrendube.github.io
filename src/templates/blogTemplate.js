@@ -13,8 +13,10 @@ import { Heading, Text, HStack, chakra, Code, Box, useColorModeValue } from "@ch
 import CustomLink from "../components/link";
 
 
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
-deckDeckGoHighlightElement();
+require("prismjs/themes/prism-tomorrow.css")
+
+
+
 
 const components = {
   h1: (props) => (

@@ -1,0 +1,130 @@
+---
+
+
+template: BlogPost
+path: /blog/data-science/normal-distribution-in-python/
+date: 2022-05-07T15:16:23.531Z
+title: The Normal and Binomial distributions, explained with Python
+metaDescription: Meta description for blog post
+thumbnail: /assets/normal-distr-python.png
+ogimage: normal-distr-python.png
+category: data science
+type: article
+color: "#170550"
+intro: The Binomial and Normal distributions are some of the most common distributions in Statistics
+---
+
+import InTextSubscription from "/src/components/in-text-subscription.js";
+
+The Binomial and Normal (or Gaussian) distributions are some of the most common distributions in Statistics. They are used anywhere from predicting movements in stock prices, to grading SAT tests. As an introduction to data visualisation in python (and to Data Science in general), we will be plotting a binomial distribution, then plotting a normal estimation to the binomial.
+
+(If you've only come for the visualisation part, skip to this point)
+
+## What are the Normal and Binomial Distributions
+
+Even if you didn’t take a high school statistics class, you’ve probably still encountered the Gaussian (or normal) distribution in a math or science class.
+
+If you created a histogram to represent the heights of people in a class, it would likely create a bell curve, with the more common heights in the middle, and the less common ones on the sides.
+
+![Histogram of heights of people in a class](https://d1hj4to4g9ba46.cloudfront.net/questions/460828.PNG "Source: toppr.com")
+
+If you increased the number of subjects in your sample, the graph would more and more closely resemble the shape of a normal distribution:
+
+![Graph of 14 year olds' heights](https://i0.wp.com/statisticsbyjim.com/wp-content/uploads/2018/04/probability_distribution_heights.png?w=576&ssl=1 "Source: statisticsbyjim.com")
+
+The probability distribution function of a normal distribution is :
+
+$$
+f(x) = \frac{1}{\sigma\sqrt{2\pi}}
+e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{\!2}\,}
+$$
+
+The shape of the graph is determined by its [mean](https://en.wikipedia.org/wiki/Mean) and [standard deviation](https://en.wikipedia.org/wiki/Standard_deviation). The graph is **centred** around the mean, and the standard deviation determines how **stretched** it is in the x direction.
+
+Beside the heights of people in a class, many other random variables follow the normal distributions, including measurement error, SAT scores, and shoe sizes. The area under two points on the graph, divided by the area of the whole graph, gives the probability of a value between those two points.
+
+Closely related is the **binomial distribution**. Even if you haven’t heard of it, it is intuitive to understand.
+
+Consider a coin toss: the probability of hitting either heads or tails is 0.5. If there is a fixed number of trials, the binomial distribution is used to calculate the probability of, e.g., getting 2 heads in 10 tries. It is represented by the probability density function:
+
+$$
+P_{x}=\left(\begin{array}{l}n\\x\end{array}\right) p^{x} (1-p)^{n-x}
+$$
+
+meaning, in $n$ trials, each with a probability $p$ of success, the probability of getting $x$ successes is $P_{x}$. In the coin toss example, $n=10$, $p=0.5$, and success means getting heads. While it is possible that there will be no heads in all 10 trials, it is unlikely, hence $P_{0}$ will be extremely low. Likewise, it is unlikely all 10 tosses will be heads, hence $P_{10}$ will also be low. The more likely number of successes would be in the middle, with the most likely being $n\times p (=10)$.
+
+If you increase the number of trials, the shape of the graph start to look very familiar...
+
+![image of binomial distribution](https://www.inchcalculator.com/wp-content/uploads/2021/11/binomial-distribution.png "Source: inchcalculator.com")
+
+If the number of attempts is large enough, the binomial distribution resembles a normal distribution. Therefore, a normal distribution can be used to estimate the binomial by using $\mu=np$ and $\sigma=np(1-p)$. This is very useful when, for instance, you're trying to find the probability it takes more than 30 tries when $n=100$ (which would normally require you to find $P_{x}$ for **every** number from 31-100).
+
+However, there's a catch: the binomial distribution deals with [discrete](https://www.g2.com/articles/discrete-vs-continuous-data) variables (i.e. there is no $P_{8.443}$ or $P_{3.142}$, only whole numbers), whereas the normal distribution deals with continuous variables. This means the normal distribution is only an approximation to the binomial.
+
+## Plotting the binomial distribution
+
+We can plot a graph of the probabilities associated with each number of tries. In this example, I’ll be using Python and matplotlib.
+
+If you do not have `matplotlib` installed on Python yet, install it by typing `pip install matplotlib`.
+
+Begin by importing `matplotlib` and `math`. We'll need math to get the value of $e$, and the $n \choose x$ function.
+
+```python
+import math
+import matplotlib.pyplot as pyplot
+```
+
+Firstly, we need to define the probability density function of the binomial distribution. To recall:
+
+$$
+P_{x}=\left(\begin{array}{l}n\\x\end{array}\right) p^{x} (1-p)^{n-x}
+$$
+
+In python:
+
+```python
+def binomial(x, n, p):
+    return math.comb(n, x) * (p ** x) * ((1 - p) ** (n - x))
+```
+
+In this case, to make the binomial distribution more clearly resemble a normal distribution, I will make $n$ equal to $50$. $p$ will be 0.5. We also need to initialise a list to store the 50 values we get from the binomial p.d.f for each value of $x$, and another list to store keys (that basically number each value of $x$ in the previous list).
+
+```python
+n = 50
+p = 0.5
+binomial_list = []
+keys = []
+```
+
+Now that we have initialised all the variables we need, we can now iterate over each number from $1$ to $50$ to get values of $P_{x}$ for each, and we need to fill the `keys[]` list with numbers from $1$ to $50$:
+
+```python
+for x in range(50):
+    binomial_list.append(binomial(x, n, p))
+
+for y in range(50):
+    keys.append(y)
+```
+
+All that's left is to plot the graph!
+
+```python
+pyplot.bar(x=keys, height=binomial_list)
+pyplot.show()
+
+```
+
+And voila!
+
+![normal distribution](https://i.ibb.co/BThQyS1/Figure-1.png)
+
+As you can see, it clearly resembles a normal distribution. To see if it actually has the shape of a normal distribution, we can superimpose the normal curve by inserting this code (before the `pyplot.show()` expression:
+
+```python
+def normal_distribution(x, mu, sigma):
+    return (math.exp(-0.5 * ((x - mu) / sigma) ** 2)) / (sigma * math.sqrt(2 * math.pi))
+
+pyplot.plot(keys, [normal_distribution(y, n*p, math.sqrt(n*p*(1-p))) for y in range(50)])
+```
+
+![binomial and normal](https://i.ibb.co/RDyzWsB/Figure-1.png)
