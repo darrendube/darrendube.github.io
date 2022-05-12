@@ -16,7 +16,7 @@ intro: The Binomial and Normal distributions are some of the most common distrib
 
 import InTextSubscription from "/src/components/in-text-subscription.js";
 
-The Binomial and Normal (or Gaussian) distributions are some of the most common distributions in Statistics. They are used anywhere from predicting movements in stock prices, to grading SAT tests. As an introduction to data visualisation in python (and to Data Science in general), we will be plotting a binomial distribution, then plotting a normal estimation to the binomial.
+The Binomial and Normal (or Gaussian) distributions are some of the most common distributions in Statistics. They are used anywhere from predicting movements in stock prices, to grading SAT tests. As an introduction to data visualisation in python, we will be plotting a binomial distribution, then plotting a normal estimation to the binomial.
 
 (If you've only come for the visualisation part, skip to [this point](#plotting-the-binomial-distribution))
 
@@ -57,17 +57,19 @@ If you increase the number of trials, the shape of the graph starts to look very
 
 ![image of binomial distribution](https://www.inchcalculator.com/wp-content/uploads/2021/11/binomial-distribution.png "Source: inchcalculator.com")
 
-If the number of attempts is large enough, the binomial distribution resembles a normal distribution. Therefore, a normal distribution can be used to estimate the binomial by using $\mu=np$ and $\sigma=np(1-p)$. This is very useful when, for instance, you're trying to find the probability it takes more than 30 tries when $n=100$ (which would normally require you to find $P_{x}$ for **every** number from 31-100).
+If the number of attempts is large enough, the binomial distribution resembles a normal distribution. **This means a normal distribution can be used to estimate the binomial by using $\mu=np$ and $\sigma=np(1-p)$.** This is very useful when, for instance, you're trying to find the probability it takes more than 30 tries when $n=100$ (which would normally require you to find $P_{x}$ for **every** number from 31-100).
 
 However, there's a catch: the binomial distribution deals with [discrete](https://www.g2.com/articles/discrete-vs-continuous-data) variables (i.e. there is no $P_{8.443}$ or $P_{3.142}$, only whole numbers), whereas the normal distribution deals with continuous variables. This means the normal distribution is only an approximation to the binomial.
 
+I realise this is by no means an exhaustive introduction. If you're still *confused*, [this](https://www.mathsisfun.com/data/standard-normal-distribution.html) and [this](https://www.mathsisfun.com/data/standard-normal-distribution.html) are more in-depth explanations.
+
 ## Plotting the binomial distribution
 
-We can plot a graph of the probabilities associated with each number of tries. In this example, I’ll be using Python and matplotlib.
+We can plot a graph of the probabilities associated with each number of tries. In this example, I’ll be using Python and [matplotlib](https://matplotlib.org/).
 
 If you do not have `matplotlib` installed on Python yet, install it by typing `pip install matplotlib`.
 
-Begin by importing `matplotlib` and `math`. We'll need math to get the value of $e$, and the $n \choose x$ function.
+Begin by importing `matplotlib` and `math`. We'll need `math` to get the value of $e$, and the $n \choose x$ function.
 
 ```python
 import math
