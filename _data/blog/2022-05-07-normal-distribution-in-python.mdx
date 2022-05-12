@@ -18,7 +18,7 @@ import InTextSubscription from "/src/components/in-text-subscription.js";
 
 The Binomial and Normal (or Gaussian) distributions are some of the most common distributions in Statistics. They are used anywhere from predicting movements in stock prices, to grading SAT tests. As an introduction to data visualisation in python (and to Data Science in general), we will be plotting a binomial distribution, then plotting a normal estimation to the binomial.
 
-(If you've only come for the visualisation part, skip to this point)
+(If you've only come for the visualisation part, skip to [this point](#plotting-the-binomial-distribution))
 
 ## What are the Normal and Binomial Distributions
 
@@ -39,21 +39,21 @@ f(x) = \frac{1}{\sigma\sqrt{2\pi}}
 e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{\!2}\,}
 $$
 
-The shape of the graph is determined by its [mean](https://en.wikipedia.org/wiki/Mean) and [standard deviation](https://en.wikipedia.org/wiki/Standard_deviation). The graph is **centred** around the mean, and the standard deviation determines how **stretched** it is in the x direction.
+The shape of the graph is determined by its [mean](https://en.wikipedia.org/wiki/Mean) and [standard deviation](https://en.wikipedia.org/wiki/Standard_deviation). The graph is **centred** around the mean, and the standard deviation determines how **stretched** it is in the x-direction.
 
-Beside the heights of people in a class, many other random variables follow the normal distributions, including measurement error, SAT scores, and shoe sizes. The area under two points on the graph, divided by the area of the whole graph, gives the probability of a value between those two points.
+Besides the heights of people in a class, many other random variables follow the normal distributions, including measurement error, SAT scores, and shoe sizes. The area under two points on the graph, divided by the area of the whole graph, gives the probability of a value between those two points.
 
-Closely related is the **binomial distribution**. Even if you haven’t heard of it, it is intuitive to understand.
+Closely related is the **binomial distribution**. Even if you haven’t heard of it, it is very intuitive to understand.
 
-Consider a coin toss: the probability of hitting either heads or tails is 0.5. If there is a fixed number of trials, the binomial distribution is used to calculate the probability of, e.g., getting 2 heads in 10 tries. It is represented by the probability density function:
+Consider a coin toss: the probability of hitting either heads or tails is $0.5$. If there is a fixed number of trials, the binomial distribution is used to calculate the probability of, e.g., getting $2$ heads in $10$ tries. It is represented by the probability density function:
 
 $$
 P_{x}=\left(\begin{array}{l}n\\x\end{array}\right) p^{x} (1-p)^{n-x}
 $$
 
-meaning, in $n$ trials, each with a probability $p$ of success, the probability of getting $x$ successes is $P_{x}$. In the coin toss example, $n=10$, $p=0.5$, and success means getting heads. While it is possible that there will be no heads in all 10 trials, it is unlikely, hence $P_{0}$ will be extremely low. Likewise, it is unlikely all 10 tosses will be heads, hence $P_{10}$ will also be low. The more likely number of successes would be in the middle, with the most likely being $n\times p (=10)$.
+meaning, in $n$ trials, each with a probability $p$ of success, the probability of getting $x$ successes is $P_{x}$. In the coin toss example, $n=10$, $p=0.5$, and success means getting heads. While it is possible that there will be no heads in all 10 trials, it is unlikely, hence $P_{0}$ will be extremely low. Likewise, it is unlikely all 10 tosses will be heads, hence $P_{10}$ will likely be low too. The more likely number of successes would be in the middle, with the most likely being $n\times p (=10)$.
 
-If you increase the number of trials, the shape of the graph start to look very familiar...
+If you increase the number of trials, the shape of the graph starts to look very familiar...
 
 ![image of binomial distribution](https://www.inchcalculator.com/wp-content/uploads/2021/11/binomial-distribution.png "Source: inchcalculator.com")
 
