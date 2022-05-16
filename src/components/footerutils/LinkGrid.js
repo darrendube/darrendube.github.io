@@ -9,8 +9,8 @@ export const LinkGrid = (props) => (
       <FooterHeading mb="4">Categories</FooterHeading>
       <Stack>
         
-        <Link to="/data-science">Data Science</Link>
-        <Link to="/economics">Economics</Link>
+        <Link to="/blog/data-science">Data Science</Link>
+        <Link to="/blog/economics">Economics</Link>
 
       </Stack>
     </Box>
