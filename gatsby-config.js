@@ -9,6 +9,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+
   /* Your site config here */
   siteMetadata: require("./site-meta-data.json"),
   plugins: [

@@ -167,7 +167,19 @@ const Navbar = () => {
                     </Button>
           </Link>
 
-          
+            <Link to="/projects" >
+                <Button
+                    as="a"
+                    variant="ghost"
+                    aria-label="Home"
+                    my={5}
+                    w="100%"
+                    fontSize="xl"
+                    color={useColorModeValue("#ffffff","#a0aec0")}
+                >
+                    Projects
+                </Button>
+            </Link>
 
           <Link to="/contact" >
             <Button
@@ -249,7 +261,18 @@ const Navbar = () => {
                     </Button>
           </Link>
 
-          
+            <Link to="/projects" >
+                <Button
+                    as="a"
+                    variant="ghost"
+                    aria-label="Home"
+                    my={5}
+                    w="100%"
+                    color={useColorModeValue("#ffffff !important","#a0aec0")}
+                >
+                    Projects
+                </Button>
+            </Link>
 
           <Link to="/contact" >
             <Button

@@ -1,0 +1,259 @@
+import React from "react";
+import Project from "../../components/project";
+import {
+  Heading,
+  Text,
+  Stack,
+  chakra,
+  Code,
+  Box,
+  useColorModeValue,
+  Input,
+  FormLabel,
+  Select,
+  FormHelperText,
+  FormControl,
+  Button,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  useToast
+} from "@chakra-ui/react";
+import { useFormik, Formik } from "formik";
+import { stringify } from "query-string";
+
+var data = "this is the data";
+
+function predict(values, toast) {
+  console.log(values);
+  fetch(`https://darrendube.pythonanywhere.com/?${stringify(values)}`)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data == 1) {
+        toast({
+          title: "You WOULD have survived the Titanic.",
+          description: "dsdfa",
+          variant: "top-accent",
+          position: "top"
+        });
+      } else {
+        toast({
+          title: "You WOULD NOT have survived the Titanic.",
+          description: "fdsf",
+          variant: "top-accent",
+          position: "top"
+        });
+      }
+    });
+}
+
+const TitanicDatasetProject = () => {
+  var formData;
+  const toast = useToast();
+
+  return (
+    <Project
+      date="November 5, 2022"
+      title="Would you have survived the titanic?"
+      intro="A Decision Tree Classifier that predicts whether you would have survived the Titanic, based on age, sex, gender, and number of family members on board."
+      tags={["python", "machine learning"]}
+      themecolor={"#26304f"}
+    >
+      <chakra.div mx="32px">
+        <p>This machine learning algorithm was training on the Titanic Dataset, and attained a 77% score on Kaggle. </p>
+          <p><br/><b>Fill in the form below to test it out: </b></p>
+
+        <Formik
+          initialValues={{
+            age: 0,
+            fare: 0,
+            parents: 0,
+            siblings: 0,
+            spouse: 0,
+            children: 0,
+            sex: "male",
+            title: "Mr"
+          }}
+          onSubmit={values => predict(values, toast)}
+        >
+          {({ handleSubmit, values, handleChange }) => (
+            <form onSubmit={handleSubmit}>
+              <Stack mt={"20px"}>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">How old are you?</FormLabel>
+                  <NumberInput
+                    name="age"
+                    id="age"
+                    max={140}
+                    mb="20px !important"
+                    onChange={handleChange}
+                  >
+                    <NumberInputField onChange={handleChange} />
+                    <NumberInputStepper>
+                      <NumberIncrementStepper />
+                      <NumberDecrementStepper />
+                    </NumberInputStepper>
+                  </NumberInput>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    What fare would you be prepared to pay? (in
+                    2022 US Dollars)
+                    <FormHelperText>
+                      First Class passengers were more likely to survive than
+                      third class passengers
+                    </FormHelperText>
+                  </FormLabel>
+
+                  <Select
+                    name="fare"
+                    id="fare"
+                    placeholder="Select"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    
+                  >
+                    <option value="83">First Class: $8,300</option>
+                    <option value="20">Second Class: $2,000</option>
+                    <option value="13">Third Class: $1,300</option>
+                  </Select>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    How many siblings would accompany you on the Titanic?
+                  </FormLabel>
+                  <Select
+                    name="siblings"
+                    id="siblings"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    placeholder={"Select"}
+                  >
+                    <option value="0">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7 or more</option>
+                  </Select>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    Would your spouse have accompanied you?
+                  </FormLabel>
+                  <Select
+                    name="spouse"
+                    id="spouse"
+                    placeholder="Select"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    placeholder={"Select"}
+                  >
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </Select>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    How many children would have accompanied you?
+                  </FormLabel>
+                  <Select
+                    name="children"
+                    id="children"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    placeholder={"Select"}
+                  >
+                    <option value="0">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7 or more</option>
+                  </Select>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    How many parents would accompany you on board?
+                  </FormLabel>
+                  <Select
+                    name="parents"
+                    id="parents"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    placeholder={"Select"}
+                  >
+                    <option value="0">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </Select>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    What is your sex?
+                    <FormHelperText>
+                      Female passengers were more likely to survive than male
+                      passengers
+                    </FormHelperText>
+                  </FormLabel>
+                  <Select
+                    name="sex"
+                    id="sex"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    placeholder="Select"
+                  >
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option
+                      value={["female", "male"][Math.floor(Math.random() * 2)]}
+                    >
+                      Other
+                    </option>
+                  </Select>
+                </FormControl>
+                <FormControl isRequired>
+                  <FormLabel mb="10px !important">
+                    What is your title?
+                  </FormLabel>
+                  <Select
+                    name="title"
+                    id="title"
+                    mb="20px !important"
+                    onChange={handleChange}
+                    placeholder={"Select"}
+                  >
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Master">Master (if you're under 18)</option>
+                  </Select>
+                </FormControl>
+                <Button
+                  loadingText="Predicting"
+                  colorScheme="teal"
+                  id="submitbutton"
+                  borderRadius="0px"
+                  type="submit"
+                >
+                  Predict
+                </Button>
+                // retry this without changing anything. had made a typo in
+                "pys-onclick" but this has been changed
+              </Stack>
+            </form>
+          )}
+        </Formik>
+      </chakra.div>
+    </Project>
+  );
+};
+
+export default TitanicDatasetProject;

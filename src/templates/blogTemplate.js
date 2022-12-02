@@ -184,7 +184,7 @@ export default function Template({
                   <Box height="15px"></Box>
                 <chakra.div className="type-category" >
                   
-                  <Link to={"/" + frontmatter.category.replace(" ", "-")}>
+                  <Link to={"/blog/" + frontmatter.category.replace(" ", "-")}>
                     <chakra.div color={useColorModeValue("#ffffff","#50b197")} className="category" fontSize="1.5em"> {frontmatter.category} </chakra.div>
                   </Link> <Text  ms="0px !important" color="#ffffff">&nbsp;&nbsp;{frontmatter.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
                 </chakra.div>
