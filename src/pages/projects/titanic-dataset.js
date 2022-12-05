@@ -1,51 +1,53 @@
 import React from "react";
 import Project from "../../components/project";
 import {
-  Heading,
-  Text,
-  Stack,
-  chakra,
-  Code,
-  Box,
-  useColorModeValue,
-  Input,
-  FormLabel,
-  Select,
-  FormHelperText,
-  FormControl,
-  Button,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-  useToast
+    Heading,
+    Text,
+    Stack,
+    chakra,
+    Code,
+    Box,
+    useColorModeValue,
+    Input,
+    FormLabel,
+    Select,
+    FormHelperText,
+    FormControl,
+    Button,
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+    useToast, useDisclosure
 } from "@chakra-ui/react";
 import { useFormik, Formik } from "formik";
 import { stringify } from "query-string";
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+} from '@chakra-ui/react'
 
 var data = "this is the data";
 
-function predict(values, toast) {
+function predict(values, toast, onOpen0, onOpen1) {
   console.log(values);
+
   fetch(`https://darrendube.pythonanywhere.com/?${stringify(values)}`)
     .then(response => response.json())
     .then(data => {
       console.log(data);
+
       if (data == 1) {
-        toast({
-          title: "You WOULD have survived the Titanic.",
-          description: "dsdfa",
-          variant: "top-accent",
-          position: "top"
-        });
+        onOpen1();
       } else {
-        toast({
-          title: "You WOULD NOT have survived the Titanic.",
-          description: "fdsf",
-          variant: "top-accent",
-          position: "top"
-        });
+        onOpen0();
+
       }
     });
 }
@@ -53,6 +55,8 @@ function predict(values, toast) {
 const TitanicDatasetProject = () => {
   var formData;
   const toast = useToast();
+  const { isOpen:isOpen0, onOpen:onOpen0, onClose:onClose0 } = useDisclosure(); /*FALSE modal*/
+  const { isOpen:isOpen1, onOpen:onOpen1, onClose:onClose1 } = useDisclosure() /*TRUE modal*/
 
   return (
     <Project
@@ -77,7 +81,7 @@ const TitanicDatasetProject = () => {
             sex: "male",
             title: "Mr"
           }}
-          onSubmit={values => predict(values, toast)}
+          onSubmit={values => predict(values, toast, onOpen0, onOpen1)}
         >
           {({ handleSubmit, values, handleChange }) => (
             <form onSubmit={handleSubmit}>
@@ -114,7 +118,7 @@ const TitanicDatasetProject = () => {
                     placeholder="Select"
                     mb="20px !important"
                     onChange={handleChange}
-                    
+
                   >
                     <option value="83">First Class: $8,300</option>
                     <option value="20">Second Class: $2,000</option>
@@ -252,6 +256,42 @@ const TitanicDatasetProject = () => {
           )}
         </Formik>
       </chakra.div>
+
+        <Modal isOpen={isOpen0} onClose={onClose0}>
+            <ModalOverlay />
+            <ModalContent>
+                <ModalHeader>Result:</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                    <p> Unfortunately, you would <b>NOT</b> have <b> SURVIVED</b> the Titanic.</p>
+                </ModalBody>
+
+                <ModalFooter>
+                    <Button colorScheme='blue' mr={3} onClick={onClose0}>
+                        Close
+                    </Button>
+
+                </ModalFooter>
+            </ModalContent>
+        </Modal>
+
+        <Modal isOpen={isOpen1} onClose={onClose1}>
+            <ModalOverlay />
+            <ModalContent>
+                <ModalHeader>Result:</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                    <p> Fortunately, you would have <b>SURVIVED</b> the Titanic</p>
+                </ModalBody>
+
+                <ModalFooter>
+                    <Button colorScheme='blue' mr={3} onClick={onClose1}>
+                        Close
+                    </Button>
+                    
+                </ModalFooter>
+            </ModalContent>
+        </Modal>
     </Project>
   );
 };

@@ -4,6 +4,7 @@ import {Box, chakra, Heading, Text, useColorModeValue, UnorderedList, ListItem, 
 import {Link} from "gatsby";
 import React from "react";
 
+
 const Projects = () => {
     return (
         <Layout>
@@ -25,8 +26,12 @@ const Projects = () => {
             <div className="posts-section">
 
                 <div className="items-wrapper blog-post-content">
-                    <Link to='/projects/titanic-dataset'>Titanic dataset project</Link>
+                    <p> A collection of small, interactive Data Science projects. Click on an item to explore.</p><br/>
+                    <p> (If any of them are broken or outdated, please <chakra.a color="#3182CE !important"><Link to={"/contact"}>notify me</Link></chakra.a>.)</p><br/>
 
+                    <UnorderedList>
+                        <ListItem><chakra.a color="#3182CE !important"><Link to='/projects/titanic-dataset'>Titanic dataset project</Link></chakra.a></ListItem>
+                    </UnorderedList>
 
 
                 </div></div></Layout>
