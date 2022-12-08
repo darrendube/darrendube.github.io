@@ -64,10 +64,11 @@ const TitanicDatasetProject = () => {
       title="Would you have survived the titanic?"
       intro="A Decision Tree Classifier that predicts whether you would have survived the Titanic, based on age, sex, gender, and number of family members on board."
       tags={["python", "machine learning"]}
+      slug="titanic-dataset"
       themecolor={"#26304f"}
     >
       <chakra.div mx="32px">
-        <p>This machine learning algorithm was training on the Titanic Dataset, and attained a 77% score on Kaggle. </p>
+          <p>This machine learning algorithm was trained on the <chakra.a href="https://www.kaggle.com/c/titanic" color="#3182CE !important">Titanic Dataset</chakra.a>, and attained a 77% score on Kaggle. </p>
           <p><br/><b>Fill in the form below to test it out: </b></p>
 
         <Formik
@@ -105,7 +106,7 @@ const TitanicDatasetProject = () => {
                 <FormControl isRequired>
                   <FormLabel mb="10px !important">
                     What fare would you be prepared to pay? (in
-                    2022 US Dollars)
+                    Nov 2022 US Dollars)
                     <FormHelperText>
                       First Class passengers were more likely to survive than
                       third class passengers
@@ -288,7 +289,7 @@ const TitanicDatasetProject = () => {
                     <Button colorScheme='blue' mr={3} onClick={onClose1}>
                         Close
                     </Button>
-                    
+
                 </ModalFooter>
             </ModalContent>
         </Modal>
