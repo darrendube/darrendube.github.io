@@ -3,8 +3,10 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
-import HeroHeader from "../components/heroHeader"
-import {Heading, Box, useColorModeValue} from "@chakra-ui/react"
+
+import {Heading, Box, useColorModeValue, Text, chakra} from "@chakra-ui/react"
+import SubscribeForm from "../components/subscribe-form";
+import {StaticImage} from "gatsby-plugin-image";
 
 const IndexPage = ({
   data: {
@@ -33,7 +35,30 @@ const IndexPage = ({
       </Helmet>
 
 
-      <HeroHeader/>
+
+
+        <Box bg={useColorModeValue("#12358f", "#000000")} className="hero-header" paddingTop="100px">
+            <div className="items-wrapper hero-grid">
+                <div className="hero-text">
+                    <Text className="headline" fontFamily="Open Sans" fontWeight="800" color={useColorModeValue("#ffffff","#ffffff")}><chakra.span color={useColorModeValue("#68D391","#a0aec0")}>Data Science,</chakra.span> <br/>Math, and<br/>Economics.</Text>
+                    <chakra.div color={useColorModeValue("#ffffff","#ffffff")}
+                                className="primary-content" >All in one place. Subscribe Now: </chakra.div><SubscribeForm /></div>
+                <div className="hero-image">
+
+                    <StaticImage
+                        src="../images/data-image.png"
+                        alt="data-image"
+
+                    />
+
+
+
+                </div>
+
+
+            </div>
+        </Box>
+
       <Box className="posts-section" bg={useColorModeValue("#ffffff","#000000")}>
       <Box className="blog-posts-wrapper">
 

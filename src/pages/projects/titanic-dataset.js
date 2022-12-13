@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "../../components/project";
+import ProjectTemplate from "../../templates/projectTemplate";
 import {
     Heading,
     Text,
@@ -59,7 +59,7 @@ const TitanicDatasetProject = () => {
   const { isOpen:isOpen1, onOpen:onOpen1, onClose:onClose1 } = useDisclosure() /*TRUE modal*/
 
   return (
-    <Project
+    <ProjectTemplate
       date="November 5, 2022"
       title="Would you have survived the titanic?"
       intro="A Decision Tree Classifier that predicts whether you would have survived the Titanic, based on age, sex, gender, and number of family members on board."
@@ -293,7 +293,7 @@ const TitanicDatasetProject = () => {
                 </ModalFooter>
             </ModalContent>
         </Modal>
-    </Project>
+    </ProjectTemplate>
   );
 };
 

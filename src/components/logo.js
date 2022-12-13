@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import ThemeChanger from "./themeChanger";
-import logoimg from "../images/logo.png";
+
 import logoimgplain from "../images/logo-plain.png";
 import { useColorModeValue } from "@chakra-ui/react";
 

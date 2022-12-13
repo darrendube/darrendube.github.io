@@ -1,15 +1,15 @@
 import {Box, chakra, Code, Heading, Text, useColorModeValue} from "@chakra-ui/react";
-import CustomLink from "./link";
-import Layout from "./layout";
+import CustomLink from "../components/link";
+import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import {Link} from "gatsby";
 import {GatsbyImage} from "gatsby-plugin-image";
 import {MDXProvider} from "@mdx-js/react";
 import {MDXRenderer} from "gatsby-plugin-mdx";
-import SubscribeSection from "./subscribe-section";
+
 import React from "react";
 
-const Project = (props) => {
+const ProjectTemplate = (props) => {
 
     return (
         <Layout>
@@ -36,7 +36,7 @@ const Project = (props) => {
                 />
             </Helmet>
 
-            <div className="blog-post-container">
+            <chakra.div className="blog-post-container">
                 <chakra.article className="post" bg={useColorModeValue("#ffffff","#000000")} color={useColorModeValue("#000000","#ffffff !important")}>
                     <Box className="post-header " background={useColorModeValue(props.themecolor,"#000000")}>
                         <div className="header-wrapper post-grid">
@@ -47,7 +47,7 @@ const Project = (props) => {
                                     <Box height="15px"></Box>
                                     <chakra.div className="type-category" >
 
-                                        <Link to={"/blog/projects"}>
+                                        <Link to={"/projects"}>
                                             <chakra.div color={useColorModeValue("#ffffff","#50b197")} className="category" fontSize="1.5em"> Project </chakra.div>
                                         </Link> <Text  ms="0px !important" color="#ffffff">&nbsp;&nbsp;{props.date}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
                                     </chakra.div>
@@ -73,11 +73,11 @@ const Project = (props) => {
                         {props.children}
                     </chakra.div>
 
-                    <SubscribeSection />
+
                 </chakra.article>
-            </div>
+            </chakra.div>
         </Layout>
     );
 }
 
-export default Project
+export default ProjectTemplate

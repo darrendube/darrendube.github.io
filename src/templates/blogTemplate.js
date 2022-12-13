@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef } from "react";
 import Helmet from "react-helmet";
 import { graphql, Link, GatsbyLink } from "gatsby";
 import Layout from "../components/layout";
-import SubscribeSection from "../components/subscribe-section";
+
 import { FaCalendar, FaClock } from "react-icons/fa";
 import ShareButtons from "../components/share";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -220,7 +220,7 @@ export default function Template({
             </MDXProvider>
           </div>
 
-          <SubscribeSection />
+
         </chakra.article>
       </div>
     </Layout>
