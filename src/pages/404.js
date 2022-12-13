@@ -1,8 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/layout";
-import { Link } from "gatsby";
-import { Text, Box, chakra, useColorModeValue } from "@chakra-ui/react";
+import {Link} from "gatsby";
+import {Box, chakra, Text} from "@chakra-ui/react";
 
 const notFound = () => {
   return (

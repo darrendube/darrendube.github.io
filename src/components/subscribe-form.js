@@ -1,11 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import { Button, chakra, Input, Stack, Text, useColorModeValue, Heading, useToast } from '@chakra-ui/react'
-
-
-
-
+import {Button, chakra, Input, Stack, useColorModeValue, useToast} from '@chakra-ui/react'
 
 
 const SubscribeForm = (props) => {

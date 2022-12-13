@@ -1,10 +1,9 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from "../components/layout"
-import { FaInstagram , FaTwitter , FaYoutube , FaRegEnvelope} from "react-icons/fa"
-import { Text, Radio, RadioGroup , Stack, HStack, Heading, Textarea, Button, Input, useColorModeValue, chakra, Box} from "@chakra-ui/react"
-
+import {FaInstagram, FaTwitter, FaYoutube} from "react-icons/fa"
+import {Box, Button, chakra, Heading, HStack, Input, Text, Textarea, useColorModeValue} from "@chakra-ui/react"
 
 
 const ContactPage = ({

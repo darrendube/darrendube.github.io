@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import {graphql, useStaticQuery} from "gatsby";
 import Navbar from "../components/navigation";
 
-import { WebsiteFooter } from "./footer";
+import {WebsiteFooter} from "./footer";
 
 export default ({ children }) => {
   const data = useStaticQuery(

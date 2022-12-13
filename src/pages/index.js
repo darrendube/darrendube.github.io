@@ -1,10 +1,10 @@
 import React from "react"
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 
-import {Heading, Box, useColorModeValue, Text, chakra} from "@chakra-ui/react"
+import {Box, chakra, Text, useColorModeValue} from "@chakra-ui/react"
 import SubscribeForm from "../components/subscribe-form";
 import {StaticImage} from "gatsby-plugin-image";
 

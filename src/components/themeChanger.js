@@ -1,21 +1,7 @@
 import React from 'react';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
-import { FaMoon, FaSun, FaYoutube } from "react-icons/fa"
+import {FaMoon, FaSun} from "react-icons/fa"
 
-import {
-  chakra,
-  Flex,
-  Box,
-  HStack,
-  Icon,
-  IconButton,
-  Link,
-  useColorMode,
-  useColorModeValue,
-  useDisclosure,
-  useUpdateEffect,
-  HTMLChakraProps,
-} from "@chakra-ui/react"
+import {IconButton, useColorMode,} from "@chakra-ui/react"
 
 export default function Toggle() {
   const { colorMode, toggleColorMode } = useColorMode();

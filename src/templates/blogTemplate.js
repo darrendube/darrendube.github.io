@@ -1,16 +1,12 @@
-import React, { useState, useEffect, createRef } from "react";
+import React from "react";
 import Helmet from "react-helmet";
-import { graphql, Link, GatsbyLink } from "gatsby";
+import {graphql, Link} from "gatsby";
 import Layout from "../components/layout";
-
-import { FaCalendar, FaClock } from "react-icons/fa";
-import ShareButtons from "../components/share";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { MDXProvider } from "@mdx-js/react";
-import ExternalLink from "../components/link";
-import { Heading, Text, HStack, chakra, Code, Box, useColorModeValue } from "@chakra-ui/react";
+import {GatsbyImage} from "gatsby-plugin-image";
+import {MDXRenderer} from "gatsby-plugin-mdx";
+import {MDXProvider} from "@mdx-js/react";
 import CustomLink from "../components/link";
+import {Box, chakra, Code, Heading, Text, useColorModeValue} from "@chakra-ui/react";
 
 
 require("prismjs/themes/prism-tomorrow.css")

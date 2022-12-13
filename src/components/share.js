@@ -1,7 +1,7 @@
 import React from "react"
-import { FacebookShareButton , FacebookIcon , EmailShareButton , TwitterShareButton , WhatsappShareButton , PocketShareButton} from "react-share"
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaWhatsapp , FaEnvelope, FaLinkedinIn , FaLinkedin, FaEnvelopeSquare, FaRegEnvelope , FaGetPocket} from "react-icons/fa"
-import { Heading, Text, HStack, Box, useColorModeValue } from "@chakra-ui/react"
+import {FacebookShareButton, PocketShareButton, TwitterShareButton, WhatsappShareButton} from "react-share"
+import {FaFacebook, FaGetPocket, FaTwitter, FaWhatsapp} from "react-icons/fa"
+import {Box, useColorModeValue} from "@chakra-ui/react"
 
 
 function objToString(obj, ndeep) {

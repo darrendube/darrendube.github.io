@@ -1,24 +1,13 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
 
 import Logo from "./logo"
-import { FaMoon, FaSun, FaYoutube } from "react-icons/fa"
 import ThemeChanger from "./themeChanger"
 
 
-import {
-  useColorMode,
-  Switch,
-  Flex,
-  Button,
-  IconButton,
-  Box, useColorModeValue
-} from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import { Link } from "gatsby"
-
-
-
+import {Box, Button, Flex, IconButton, useColorModeValue} from '@chakra-ui/react'
+import {CloseIcon, HamburgerIcon} from '@chakra-ui/icons'
+import {Link} from "gatsby"
 
 
 const Navigation = styled.nav`

@@ -1,11 +1,7 @@
-import {Box, chakra, Code, Heading, Text, useColorModeValue} from "@chakra-ui/react";
-import CustomLink from "../components/link";
+import {Box, chakra, Heading, Text, useColorModeValue} from "@chakra-ui/react";
 import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import {Link} from "gatsby";
-import {GatsbyImage} from "gatsby-plugin-image";
-import {MDXProvider} from "@mdx-js/react";
-import {MDXRenderer} from "gatsby-plugin-mdx";
 
 import React from "react";
 

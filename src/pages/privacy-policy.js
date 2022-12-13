@@ -1,14 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
-
-import PostLink from "../components/post-link"
 import Helmet from 'react-helmet';
 
 import Layout from "../components/layout"
-
-import { FaCalendar, FaClock } from "react-icons/fa"
-import { Link } from "gatsby"
-import { Heading, Text, chakra, Box, useColorModeValue } from "@chakra-ui/react";
+import {Link} from "gatsby"
+import {Box, chakra, Heading, Text, useColorModeValue} from "@chakra-ui/react";
 
 const PrivacyPolicyPage = () => {
     return (

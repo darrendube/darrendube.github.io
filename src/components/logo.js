@@ -1,11 +1,9 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import {Link} from "gatsby";
 import styled from "styled-components";
-import ThemeChanger from "./themeChanger";
 
 import logoimgplain from "../images/logo-plain.png";
-import { useColorModeValue } from "@chakra-ui/react";
+import {useColorModeValue} from "@chakra-ui/react";
 
 const LogoWrap = styled.div`
   margin: auto 0;

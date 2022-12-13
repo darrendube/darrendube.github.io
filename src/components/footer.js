@@ -1,21 +1,18 @@
 import {
     Box,
     Button,
+    ButtonGroup,
     chakra,
     Heading,
+    IconButton,
     Input,
     SimpleGrid,
     Stack,
     StackDivider,
-    useColorModeValue,
-    VStack
+    useColorModeValue
 } from '@chakra-ui/react'
-
-
-
-import { ButtonGroup, IconButton } from '@chakra-ui/react'
 import React from "react"
-import { FaTwitter, FaInstagram, FaRss } from 'react-icons/fa'
+import {FaInstagram, FaRss, FaTwitter} from 'react-icons/fa'
 
 
 import {Link} from "gatsby";

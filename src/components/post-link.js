@@ -1,20 +1,7 @@
 import React from "react";
-import { Link, navigate } from "gatsby";
-import { useStaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
-import { FaCalendar, FaClock } from "react-icons/fa";
-import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import {
-  HStack,
-  VStack,
-  Text,
-  Box,
-  useColorModeValue,
-  Heading,
-  chakra,
-} from "@chakra-ui/react";
-import BackgroundImage from "gatsby-background-image";
-import { convertToBgImage } from "gbimage-bridge";
+import {Link, navigate} from "gatsby";
+import {GatsbyImage} from "gatsby-plugin-image";
+import {chakra, Text, useColorModeValue,} from "@chakra-ui/react";
 
 const PostLink = ({ post }) => (
   <>

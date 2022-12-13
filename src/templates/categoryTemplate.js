@@ -6,13 +6,10 @@ import Helmet from 'react-helmet';
 
 import Layout from "../components/layout"
 
-import { FaCalendar , FaClock} from "react-icons/fa"
-
-
 
 // Components
-import { Link, graphql } from "gatsby"
-import { chakra, Text, Box, useColorModeValue } from "@chakra-ui/react";
+import {graphql} from "gatsby"
+import {Box, Text, useColorModeValue} from "@chakra-ui/react";
 
 /*
 const Posts = edges

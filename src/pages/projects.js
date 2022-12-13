@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 import Helmet from "react-helmet";
-import {Box, chakra, Heading, Text, useColorModeValue, UnorderedList, ListItem, } from "@chakra-ui/react";
+import {Box, chakra, ListItem, Text, UnorderedList, useColorModeValue,} from "@chakra-ui/react";
 import {Link} from "gatsby";
 import React from "react";
 

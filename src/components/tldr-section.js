@@ -1,6 +1,4 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react"
 
 const TLDR = (props) => {
     return (<div className="tldr">

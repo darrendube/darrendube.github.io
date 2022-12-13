@@ -1,9 +1,6 @@
 import React from "react";
 
-import { chakra, Link, useColorModeValue } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { FaExternalLink } from "react-icons/fa";
-import { faChalkboard } from "@fortawesome/free-solid-svg-icons";
+import {chakra, useColorModeValue} from "@chakra-ui/react";
 
 export default function CustomLink({ children, href }) {
   const color = useColorModeValue("black !important","white !important")

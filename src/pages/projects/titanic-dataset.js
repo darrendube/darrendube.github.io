@@ -1,37 +1,30 @@
 import React from "react";
 import ProjectTemplate from "../../templates/projectTemplate";
 import {
-    Heading,
-    Text,
-    Stack,
-    chakra,
-    Code,
-    Box,
-    useColorModeValue,
-    Input,
-    FormLabel,
-    Select,
-    FormHelperText,
-    FormControl,
     Button,
+    chakra,
+    FormControl,
+    FormHelperText,
+    FormLabel,
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    ModalOverlay,
+    NumberDecrementStepper,
+    NumberIncrementStepper,
     NumberInput,
     NumberInputField,
     NumberInputStepper,
-    NumberIncrementStepper,
-    NumberDecrementStepper,
-    useToast, useDisclosure
+    Select,
+    Stack,
+    useDisclosure,
+    useToast
 } from "@chakra-ui/react";
-import { useFormik, Formik } from "formik";
-import { stringify } from "query-string";
-import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-} from '@chakra-ui/react'
+import {Formik} from "formik";
+import {stringify} from "query-string";
 
 var data = "this is the data";
 
