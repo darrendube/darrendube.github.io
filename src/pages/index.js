@@ -37,12 +37,12 @@ const IndexPage = ({
 
 
 
-        <Box bg={useColorModeValue("#12358f", "#000000")} className="hero-header" paddingTop="100px">
+        <Box bg={useColorModeValue("#ffffff", "#000000")} className="hero-header" paddingTop="100px">
             <div className="items-wrapper hero-grid">
                 <div className="hero-text">
-                    <Text className="headline" fontFamily="Open Sans" fontWeight="800" color={useColorModeValue("#ffffff","#ffffff")}><chakra.span color={useColorModeValue("#68D391","#a0aec0")}>Data Science,</chakra.span> <br/>Math, and<br/>Economics.</Text>
-                    <chakra.div color={useColorModeValue("#ffffff","#ffffff")}
-                                className="primary-content" >All in one place. Subscribe Now: </chakra.div><SubscribeForm /></div>
+                    <Text className="headline" fontFamily="Open Sans" fontWeight="800" color={useColorModeValue("#000000","#ffffff")}>Hi!<br/> I'm <chakra.span color={useColorModeValue("#68D391","#a0aec0")}>Darren</chakra.span></Text>
+                    <chakra.div color={useColorModeValue("#000000","#ffffff")}
+                                className="primary-content" >Data Scientist and blogger. Subscribe Now: </chakra.div><SubscribeForm /></div>
                 <div className="hero-image">
 
                     <StaticImage

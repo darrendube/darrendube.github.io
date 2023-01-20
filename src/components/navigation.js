@@ -51,20 +51,6 @@ const Navbox = styled.div`
 
 
 
-const NavbarLinks = () => {
-  return (
-    <>
-    
-      <Link className="nav-item" href="/">Home</Link>
-      
-      <Link className="nav-item" href="/contact">Contact</Link>
-
-      
-      
-    </>
-  )
-}
-
 
 
 const Navbar = () => {
@@ -150,7 +136,7 @@ const Navbar = () => {
               my={5}
               w="100%"
               fontSize="xl"
-              color={useColorModeValue("#ffffff","#a0aec0")}
+              color={useColorModeValue("#000000","#ffffff")}
             >
               Home
                     </Button>
@@ -164,7 +150,7 @@ const Navbar = () => {
                     my={5}
                     w="100%"
                     fontSize="xl"
-                    color={useColorModeValue("#ffffff","#a0aec0")}
+                    color={useColorModeValue("#000000","#ffffff")}
                 >
                     Projects
                 </Button>
@@ -178,7 +164,7 @@ const Navbar = () => {
               my={5}
               w="100%"
               fontSize="xl"
-              color={useColorModeValue("#ffffff","#a0aec0")}
+              color={useColorModeValue("#000000","#ffffff")}
             >
               Contact
                     </Button>
@@ -195,7 +181,7 @@ const Navbar = () => {
           icon={
             <HamburgerIcon />
           }
-          color={useColorModeValue("#ffffff","#a0aec0")}
+          color={useColorModeValue("#000000","#a0aec0")}
           onClick={() => changeDisplay('flex')}
           display={['flex', 'flex', 'none', 'none']}
         />
@@ -229,7 +215,7 @@ const Navbar = () => {
               <CloseIcon />
             }
             onClick={() => changeDisplay('none')}
-            color={useColorModeValue("#0000000","#a0aec0")}
+            color={useColorModeValue("#000000","#a0aec0")}
           />
         </Flex>
 

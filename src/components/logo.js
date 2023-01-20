@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import logoimgplain from "../images/logo-plain.png";
 import {useColorModeValue} from "@chakra-ui/react";
+import logoimg from "../images/logo.png"
 
 const LogoWrap = styled.div`
   margin: auto 0;
@@ -17,7 +18,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
   return (
     <LogoWrap className="logo-link" as={Link} to="/">
-      <img src={useColorModeValue(logoimgplain, logoimgplain)} className="logoimg" />
+      <img src={useColorModeValue(logoimg, logoimgplain)} className="logoimg" />
       {/*<p className="logo-text"> DARREN&nbsp;<span className="dube">DUBE</span></p>*/}
     </LogoWrap>
   );

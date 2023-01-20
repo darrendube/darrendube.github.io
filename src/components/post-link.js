@@ -19,7 +19,7 @@ const PostLink = ({ post }) => (
         image={post.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
         alt={"testimage"}
         style={{
-
+borderRadius:"15px"
           // You can set a maximum height for the image, if you wish.
           // maxHeight: 600,
         }}
@@ -59,6 +59,7 @@ const PostLink = ({ post }) => (
               className="category"
               mr="5px"
               backgroundColor={useColorModeValue("#000000", "#ffffff")}
+                borderRadius="7px"
 
             >
               {" "}

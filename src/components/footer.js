@@ -136,7 +136,7 @@ export const WebsiteFooter = () => (
                                 opacity: 1,
                                 color: useColorModeValue('gray.500', 'whiteAlpha.700'),
                             }}
-                            borderRadius="0"
+
                             color={useColorModeValue('#000000','#ffffff')}
                         />
                         <Button
@@ -147,7 +147,7 @@ export const WebsiteFooter = () => (
                                 base: 'full',
                                 md: 'auto',
                             }}
-                            borderRadius="0"
+                            
                         >
                             Subscribe
                         </Button>
