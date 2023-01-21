@@ -1,4 +1,4 @@
-# Darren
+# darrendube.com
 
 My personal website, built with Gatsby.js
 
