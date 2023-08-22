@@ -8,14 +8,14 @@ const config: GatsbyConfig = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteTitle: `Darren Dube - Data Science student`,
+    siteTitleAlt: `Darren Dube`,
+    siteHeadline: `Darren Dube - Data Science student`,
+    siteUrl: `https://darrendube.github.io`,
+    siteDescription: `Hey! I'm Darren Dube, a Data Science student, and this is my personal website.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `@darrendube`,
   },
   trailingSlash: `never`,
   plugins: [
@@ -35,12 +35,12 @@ const config: GatsbyConfig = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `GitHub`,
+            url: `https://github.com/darrendube`,
           },
           {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: `LinkedIn`,
+            url: `https://linkedin.com/in/darrendube`,
           },
         ],
       },
@@ -54,9 +54,9 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Darren Dube - Data Science student`,
+        short_name: `Darren Dube`,
+        description: `Hey, I'm Darren, a Data Science student, and this is my personal website.`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
@@ -123,7 +123,7 @@ const config: GatsbyConfig = {
   }
 }`,
             output: `rss.xml`,
-            title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+            title: `Darren Dube`,
           },
         ],
       },
