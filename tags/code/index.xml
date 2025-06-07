@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Darren Dube</title>
+    <link>//localhost:1313/tags/code/</link>
+    <description>Recent content in Code on Darren Dube</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The gold standard is a terrible idea. Here&#39;s why.</title>
+      <link>//localhost:1313/blog/post-2/</link>
+      <pubDate>Thu, 19 Aug 2021 00:00:00 +0200</pubDate>
+      <guid>//localhost:1313/blog/post-2/</guid>
+      <description>&lt;p&gt;In the late 70s and early 80s, inflation ravaged the US economy. The US had just been taken off the gold standard &lt;em&gt;temporarily&lt;/em&gt; by Richard Nixon in 1971, and in the years that followed prices rose up to 14% annually. Proponents of the gold standard saw this as proof that the government could not be trusted to regulate the money supply. In their view, vote-seeking politicians might print money, inducing short term economic growth, but causing inflation in the long term.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
