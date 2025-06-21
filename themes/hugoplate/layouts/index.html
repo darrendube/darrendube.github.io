@@ -4,7 +4,7 @@
 {{ $image := resources.Get (printf "%s" .image) }}
 {{ if $image }}
   {{ $img := $image.Resize "1920x" }}
-  <section class="section pt-14 relative" style="background-image: url('{{ $img.RelPermalink }}'); background-size: cover; background-position: bottom;">
+  <section class="section pt-14 relative" style="background-image: url('{{ $img.RelPermalink }}'); background-size: cover; background-position: top;">
 {{ else }}
   <section class="section pt-14">
 {{ end }}
@@ -44,20 +44,18 @@
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
-    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
-      <div class="container">
-        <div class="row items-center justify-between">
-          <!--<div
-            class="mb:md-0 {{ if not (modBool $i 2) }}
-              md:order-2
-            {{ end }} md:col-5 mb-6">
-            {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
-          </div>-->
+  {{ $image := resources.Get (printf "%s" .image) }}
+{{ if $image }}
+  {{ $img2 := $image.Resize "1920x" }}
+
+    <section class="section-sm p-0 m-0 {{ if (modBool $i 2) }}bg-gradient{{ end }}" style="background-image: url('{{ $img2.RelPermalink }}'); background-size: cover; background-position: top;"  >
+      <div class="container  px-0 mx-0">
+        <div class="row items-center justify-between mx-0 px-0">
           <div
-            class="{{ if not (modBool $i 2) }}
+            class="section-sm {{ if not (modBool $i 2) }}
               md:order-1
-            {{ end }} md:col-7 lg:col-6">
-            <h2 class="mb-4">
+            {{ end }} md:col-7 lg:col-6 bg-blue-900 text-white p-20">
+            <h2 class="mb-4 text-white">
               {{ .title | markdownify }}
             </h2>
             <p class="mb-8 text-lg">
@@ -73,13 +71,21 @@
             </ul>
             {{ with .button }}
               {{ if .enable }}
-                <a class="btn btn-primary mt-6 rounded-none" href="{{ .link | absURL }}">
+                <a class="btn  mt-6 rounded-none border border-white bg-transparent" href="{{ .link | absURL }}">
                   {{ .label }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}
             {{ end }}
           </div>
+        <section
+            class="mb:md-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5" style="background-image: url('{{ $img2.RelPermalink }}'); background-size: cover; background-position: top;" >
+            <!--{{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}-->
+          <span class="sr-only">background image</span>
+          </section>
+        {{end}}
         </div>
       </div>
     </section>

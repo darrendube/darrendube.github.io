@@ -2,7 +2,7 @@
 banner:
     title: "Hey, I'm Darren!"
     content: "Welcome to my personal corner of the web: This is where I share my projects, experiments, and thoughts in data, stats, and everything in-between"
-    image: "/images/capetown.jpg"
+    image: "/images/ny.jpg"
     button:
       enable: true
       label: "INSIGHTS"
@@ -10,11 +10,11 @@ banner:
 
 features:
   - title: "Research & Analysis"
-    content: "I'm currently working on a few data-driven projects - check back soon!"
-
+    content: "This section contains my research and analysis projects - using statistical modelling and data analysis to explore real-world problems."
+    image: "/images/buildings.jpg"
     button:
       enable: true
-      label: "RESEARCH (work in progress)"
+      label: "RESEARCH"
       link: ""
 
 
