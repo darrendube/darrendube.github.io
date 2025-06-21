@@ -1,20 +1,28 @@
 {{ define "main" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-    <section class="section pt-14">
-      <div class="container">
-        <div class="row justify-center">
-          <div class="lg:col-7 md:col-9 mb-8 text-center">
-            <h1 class="mb-4 text-h3 lg:text-h1">
+{{ $image := resources.Get (printf "%s" .image) }}
+{{ if $image }}
+  {{ $img := $image.Resize "1920x" }}
+  <section class="section pt-14 relative" style="background-image: url('{{ $img.RelPermalink }}'); background-size: cover; background-position: bottom;">
+{{ else }}
+  <section class="section pt-14">
+{{ end }}
+
+<div class="absolute inset-0 bg-black/20 dark:bg-black/40 z-0"></div>
+      <div class="container relative z-10">
+        <div class="row justify-center items-center">
+          <div class="lg:col-7 md:col-9 text-center">
+            <h1 class="mb-4 text-h3 text-white lg:text-h1">
               {{ .title | markdownify }}
             </h1>
-            <p class="mb-8">
+            <p class="mb-8 text-white">
               {{ .content | markdownify }}
             </p>
             {{ with .button }}
               {{ if .enable }}
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-primary rounded-none bg-white text-black border-white"
                   href="{{ .link | absURL }}"
                   {{ if strings.HasPrefix .link `http` }}
                     target="_blank" rel="noopener"
@@ -65,7 +73,7 @@
             </ul>
             {{ with .button }}
               {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                <a class="btn btn-primary mt-6 rounded-none" href="{{ .link | absURL }}">
                   {{ .label }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>

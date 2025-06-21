@@ -2,28 +2,28 @@
 
 # main menu
 [[main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[main]]
-name = "Blog"
+name = "INSIGHTS"
 url = "/blog"
 weight = 2
 
 [[main]]
-name = "About"
-url = "/about"
+name = "RESEARCH"
+url = "/research_and_insights"
 weight = 3
+
+[[main]]
+name = "ABOUT"
+url = "/about"
+weight = 4
 
 # footer menu
 [[footer]]
-name = "Blog"
+name = "INSIGHTS"
 url = "/blog"
 weight = 1
 
 [[footer]]
-name = "About"
+name = "ABOUT"
 url = "/about"
 weight = 2
 

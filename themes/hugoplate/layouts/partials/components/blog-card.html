@@ -1,12 +1,16 @@
-<div class="bg-body dark:bg-darkmode-body">
+<a href="{{ .RelPermalink }}" class="block max-w-md bg-white shadow dark:bg-darkmode-body rounded overflow-hidden transition-shadow hover_shadow-lg">
   {{ $image:= .Params.image }}
   {{ if $image }}
-    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mb-6 w-full rounded") }}
+    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mb-2 w-full") }}
   {{ end }}
+  <div class="p-6">
+  <p class="text-sm text-gray-500 mb-2">
+    {{ .Date.Format "JANUARY 2, 2006"}}
+  </p>
   <h4 class="mb-3">
-    <a href="{{ .RelPermalink }}">
+    <!--<a href="{{ .RelPermalink }}">-->
       {{ .Title }}
-    </a>
+    <!--</a>-->
   </h4>
   {{ $categories:= .Params.categories }}
   {{ if $categories }}
@@ -30,8 +34,9 @@
       </li>
     </ul>
   {{ end }}
-  <p class="mb-6">{{ .Summary | plainify }}</p>
-  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+  <!--<p class="mb-6">{{ .Summary | plainify }}</p>-->
+  <!--<a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
     {{ T "read_more" }}
-  </a>
-</div>
+  </a>-->
+  </div>
+</a>
