@@ -8,7 +8,7 @@ weight = 2
 
 [[main]]
 name = "RESEARCH"
-url = "/research_and_insights"
+url = "/research"
 weight = 3
 
 [[main]]
@@ -23,7 +23,12 @@ url = "/blog"
 weight = 1
 
 [[footer]]
+name = "RESEARCH"
+url = "/research"
+weight = 2
+
+[[footer]]
 name = "ABOUT"
 url = "/about"
-weight = 2
+weight = 3
 

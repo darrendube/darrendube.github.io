@@ -15,7 +15,7 @@ features:
     button:
       enable: true
       label: "RESEARCH"
-      link: ""
+      link: "/research"
 
 
 ---
