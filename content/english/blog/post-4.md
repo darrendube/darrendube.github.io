@@ -3,7 +3,7 @@ title: Making decisions from dirty data can have disastrous outcomes
 date: 2022-06-18
 tags: ["Data Science"]
 image: "images/data-clean.png"
-draft: False
+draft: true
 ---
 
 

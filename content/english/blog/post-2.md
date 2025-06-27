@@ -4,7 +4,7 @@ date: 2021-08-19
 tags: ["Economics"]
 image: "/images/gold-standard-thumbnail.png"
 author: "Darren Dube"
-draft: false
+draft: true
 ---
 
 In the late 70s and early 80s, inflation ravaged the US economy. The US had just been taken off the gold standard *temporarily* by Richard Nixon in 1971, and in the years that followed prices rose up to 14% annually. Proponents of the gold standard saw this as proof that the government could not be trusted to regulate the money supply. In their view, vote-seeking politicians might print money, inducing short term economic growth, but causing inflation in the long term.

@@ -6,6 +6,7 @@ author: "Darren Dube"
 description: "Is the economic cost of fixing climate change really higher than the cost of doing nothing?"
 tags: ["Economics","Climate change"]
 image: "/images/fixing-climate-change.png"
+draft: true
 ---
 
 ## *Is the economic cost of fixing climate change really higher than the cost of doing nothing?*
