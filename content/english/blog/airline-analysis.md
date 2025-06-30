@@ -1,5 +1,5 @@
 ---
-title: "Airline Recovery Post-COVID: Who Bounced Back and Why"
+title: "Airline Recovery Post-COVID: What the Data Say"
 date: 2025-06-29
 tags: ["Data Insights"]
 image: "images/airport.jpg"
