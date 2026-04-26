@@ -1,6 +1,7 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
-
+  {{ if not .Params.noHeader }}
+    {{ partial "page-header" . }}
+  {{ end }}
 
   <section class="section-sm">
     <div class="container">
