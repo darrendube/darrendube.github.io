@@ -27,20 +27,58 @@ noHeader: true
   .dashboard-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 20px 40px 40px;
   }
   
   .portfolio-header {
-    text-align: center;
-    margin-bottom: 80px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-header {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  .portfolio-left {
+    flex: 0 0 40%;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-left {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  }
+
+  .portfolio-label {
+    font-size: 12px;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .dark .portfolio-label,
+  html.dark .portfolio-label,
+  body.dark .portfolio-label,
+  [data-theme="dark"] .portfolio-label,
+  .theme-dark .portfolio-label {
+    color: #a0aec0;
   }
   
   .portfolio-value {
-    font-size: 72px;
-    font-weight: 300;
+    font-size: 56px;
+    font-weight: 400;
     letter-spacing: -2px;
     color: #1a202c;
-    margin: 0;
+    margin: 0 0 12px 0;
     line-height: 1;
     transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -54,10 +92,20 @@ noHeader: true
   }
   
   .portfolio-change {
-    font-size: 20px;
+    font-size: 15px;
     color: #718096;
-    margin-top: 16px;
+    margin: 0;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .arrow-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-weight: bold;
   }
 
   .dark .portfolio-change,
@@ -83,6 +131,14 @@ noHeader: true
     padding: 40px;
     margin-bottom: 80px;
     backdrop-filter: blur(10px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-header .equity-chart-container {
+    margin-bottom: 0;
+    flex: 1;
   }
 
   .dark .equity-chart-container,
@@ -141,6 +197,145 @@ noHeader: true
   #equity-chart {
     width: 100%;
     height: 340px;
+    max-height: 340px;
+    display: block;
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+  }
+
+  .dashboard-branding {
+    flex: 1;
+  }
+
+  .dashboard-logo-text {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .dashboard-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+
+  .dark .dashboard-title,
+  html.dark .dashboard-title,
+  body.dark .dashboard-title,
+  [data-theme="dark"] .dashboard-title,
+  .theme-dark .dashboard-title {
+    color: #ffffff;
+  }
+
+  .dashboard-subtitle {
+    font-size: 13px;
+    color: #1a202c;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .dark .dashboard-subtitle,
+  html.dark .dashboard-subtitle,
+  body.dark .dashboard-subtitle,
+  [data-theme="dark"] .dashboard-subtitle,
+  .theme-dark .dashboard-subtitle {
+    color: #ffffff;
+  }
+
+  .dashboard-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 12px;
+    color: #4a5568;
+    font-weight: 500;
+  }
+
+  .dark .status-indicator,
+  html.dark .status-indicator,
+  body.dark .status-indicator,
+  [data-theme="dark"] .status-indicator,
+  .theme-dark .status-indicator {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #cbd5e0;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f56565;
+    animation: pulse 2s infinite;
+  }
+
+  .status-dot.healthy {
+    background: #48bb78;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: #4a5568;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 200ms ease;
+    cursor: pointer;
+  }
+
+  .github-button:hover {
+    background: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .dark .github-button,
+  html.dark .github-button,
+  body.dark .github-button,
+  [data-theme="dark"] .github-button,
+  .theme-dark .github-button {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #cbd5e0;
+  }
+
+  .dark .github-button:hover,
+  html.dark .github-button:hover,
+  body.dark .github-button:hover,
+  [data-theme="dark"] .github-button:hover,
+  .theme-dark .github-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
   }
 
   .metrics-grid {
@@ -263,11 +458,14 @@ noHeader: true
   }
   
   .info-section {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 40px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 40px;
     color: #718096;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.8;
+    backdrop-filter: blur(10px);
   }
 
   .dark .info-section,
@@ -275,16 +473,18 @@ noHeader: true
   body.dark .info-section,
   [data-theme="dark"] .info-section,
   .theme-dark .info-section {
-    border-top-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.1);
     color: #a0aec0;
   }
   
   .info-section h3 {
-    color: #4a5568;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
+    color: #1a202c;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 20px;
     margin-top: 0;
   }
 
@@ -293,18 +493,43 @@ noHeader: true
   body.dark .info-section h3,
   [data-theme="dark"] .info-section h3,
   .theme-dark .info-section h3 {
-    color: #cbd5e0;
+    color: #ffffff;
   }
 </style>
 
 <div class="dashboard-container">
-  <!-- Main Portfolio Value -->
-  <div class="portfolio-header">
-    <h1 class="portfolio-value" id="portfolio-value">$0</h1>
-    <div class="portfolio-change" id="portfolio-change">
-      <span id="change-value">+$0</span> (<span id="change-percent">0%</span>)
+  <!-- Header with Branding & Controls -->
+  <div class="dashboard-header">
+    <div class="dashboard-branding">
+      <div class="dashboard-logo-text">
+        <h1 class="dashboard-title">ByteQuant</h1>
+      </div>
+      <p class="dashboard-subtitle">by Darren Dube</p>
+    </div>
+    <div class="dashboard-controls">
+      <div class="status-indicator">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Connecting...</span>
+      </div>
+      <a href="https://github.com/darrendube/bytequant.git" class="github-button" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+        Repository
+      </a>
     </div>
   </div>
+
+  <!-- Main Portfolio Value -->
+  <div class="portfolio-header">
+    <div class="portfolio-left">
+      <div class="portfolio-label">Portfolio Value</div>
+      <h1 class="portfolio-value" id="portfolio-value">$0</h1>
+      <div class="portfolio-change" id="portfolio-change">
+        <span class="arrow-icon" id="change-arrow">▲</span>
+        <span id="change-value">+$0</span> (<span id="change-percent">0%</span>)
+      </div>
+    </div>
 
   <!-- Equity Curve Chart -->
   <div class="equity-chart-container">
@@ -342,6 +567,7 @@ noHeader: true
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 
 <script>
 // ==========================================
@@ -352,7 +578,7 @@ noHeader: true
 //   - Local development: 'http://localhost:5000'
 //   - Production with domain: 'https://api.yourdomain.com'
 //   - Production with IP over HTTPS: 'https://13.49.158.182'
-const rawApiBase = 'https://cellular-groundwater-orientation-grateful.trycloudflare.com'; // CHANGE THIS TO YOUR API URL
+const rawApiBase = 'https://item-estimated-accepted-collapse.trycloudflare.com'; // CHANGE THIS TO YOUR API URL
 const API_BASE = window.location.protocol === 'https:' && rawApiBase.startsWith('http:')
   ? rawApiBase.replace(/^http:/, 'https:')
   : rawApiBase;
@@ -363,6 +589,7 @@ const API_BASE = window.location.protocol === 'https:' && rawApiBase.startsWith(
 let equityChart = null;
 let lastPortfolioValue = 0;
 let selectedRange = '30d';
+let apiHealthy = false;
 const rangeOptions = [
   { label: '1D', value: '1d', days: 1 },
   { label: '1W', value: '7d', days: 7 },
@@ -370,6 +597,29 @@ const rangeOptions = [
   { label: 'YTD', value: 'ytd', days: null },
   { label: 'ALL', value: 'all', days: null }
 ];
+
+async function checkApiHealth() {
+  try {
+    const response = await fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(5000) });
+    apiHealthy = response.ok;
+  } catch (error) {
+    apiHealthy = false;
+  }
+  updateStatusIndicator();
+}
+
+function updateStatusIndicator() {
+  const statusDot = document.getElementById('status-dot');
+  const statusText = document.getElementById('status-text');
+  
+  if (apiHealthy) {
+    statusDot.classList.add('healthy');
+    statusText.textContent = 'API Connected';
+  } else {
+    statusDot.classList.remove('healthy');
+    statusText.textContent = 'API Disconnected';
+  }
+}
 
 function formatCurrency(value) {
   return new Intl.NumberFormat('en-US', {
@@ -443,7 +693,10 @@ async function fetchPortfolioData() {
       const change = data.total_value - lastPortfolioValue;
       const changePercent = (change / lastPortfolioValue) * 100;
       
-      changeElement.textContent = formatCurrency(change);
+      const arrowElement = document.getElementById('change-arrow');
+      arrowElement.textContent = change >= 0 ? '▲' : '▼';
+      
+      changeElement.textContent = (change >= 0 ? '+' : '') + formatCurrency(Math.abs(change));
       percentElement.textContent = changePercent.toFixed(2) + '%';
       
       changeContainer.classList.remove('positive', 'negative');
@@ -478,15 +731,57 @@ async function fetchEquityCurve() {
     if (!response.ok) throw new Error('Failed to fetch equity curve');
     const data = await response.json();
     
-    const timestamps = data.data.map(point => formatLabel(point.timestamp));
-    const values = data.data.map(point => point.total_value);
+    // Sort data by timestamp
+    data.data.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    
+    // Determine date range
+    const endDate = new Date();
+    let startDate;
+    if (option.value === '1d') {
+      startDate = new Date(endDate);
+      startDate.setHours(0, 0, 0, 0);
+    } else if (option.days) {
+      startDate = new Date(endDate);
+      startDate.setDate(endDate.getDate() - option.days);
+    } else if (option.value === 'ytd') {
+      startDate = new Date(endDate.getFullYear(), 0, 1);
+    } else {
+      // 'all' - find earliest date
+      startDate = new Date(Math.min(...data.data.map(p => new Date(p.timestamp))));
+    }
+    
+    // Generate all dates in range
+    const dates = [];
+    const currentDate = new Date(startDate);
+    while (currentDate <= endDate) {
+      dates.push(new Date(currentDate));
+      if (option.value === '1d') {
+        currentDate.setHours(currentDate.getHours() + 1); // hourly for 1d
+      } else {
+        currentDate.setDate(currentDate.getDate() + 1); // daily otherwise
+      }
+    }
+    
+    // Fill values: for each date, use the last known value
+    const values = [];
+    let lastValue = data.data.length > 0 ? data.data[0].total_value : 0;
+    let dataIndex = 0;
+    
+    for (const date of dates) {
+      // Find the most recent data point before or on this date
+      while (dataIndex < data.data.length && new Date(data.data[dataIndex].timestamp) <= date) {
+        lastValue = data.data[dataIndex].total_value;
+        dataIndex++;
+      }
+      values.push(lastValue);
+    }
     
     if (equityChart) {
-      equityChart.data.labels = timestamps;
+      equityChart.data.labels = dates;
       equityChart.data.datasets[0].data = values;
       equityChart.update('none');
     } else {
-      createEquityChart(timestamps, values);
+      createEquityChart(dates, values);
     }
     
   } catch (error) {
@@ -508,7 +803,7 @@ function createEquityChart(timestamps, values) {
         backgroundColor: 'rgba(72, 187, 120, 0.05)',
         borderWidth: 2,
         fill: true,
-        tension: 0.4,
+        tension: 0,
         pointRadius: 0,
         pointHoverRadius: 4,
         pointBackgroundColor: '#48bb78'
@@ -542,7 +837,14 @@ function createEquityChart(timestamps, values) {
       },
       scales: {
         x: {
-          display: false,
+          type: 'time',
+          time: {
+            unit: selectedRange === '1d' ? 'hour' : 'day',
+            displayFormats: {
+              hour: 'HH:mm',
+              day: 'MMM dd'
+            }
+          },
           grid: {
             display: false
           }
@@ -585,6 +887,7 @@ async function fetchStrategies() {
 
 async function updateAllData() {
   await Promise.all([
+    checkApiHealth(),
     fetchPortfolioData(),
     fetchEquityCurve(),
     fetchStrategies()
@@ -592,6 +895,8 @@ async function updateAllData() {
 }
 
 renderRangeButtons();
+checkApiHealth();
 updateAllData();
 setInterval(updateAllData, 30000);
+setInterval(checkApiHealth, 10000);
 </script>
