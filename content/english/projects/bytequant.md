@@ -10,20 +10,20 @@ noHeader: true
 <style>
   /* Override theme styles for sleek dashboard */
   main {
-    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
     min-height: 100vh;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  html.dark main {
+  .dark main,
+  html.dark main,
+  body.dark main,
+  [data-theme="dark"] main,
+  .theme-dark main {
     background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
   }
 
-  html.light main {
-    background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
-  }
-  
   .dashboard-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,25 +39,33 @@ noHeader: true
     font-size: 72px;
     font-weight: 300;
     letter-spacing: -2px;
-    color: #ffffff;
+    color: #1a202c;
     margin: 0;
     line-height: 1;
     transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  html.light .portfolio-value {
-    color: #1a202c;
+  .dark .portfolio-value,
+  html.dark .portfolio-value,
+  body.dark .portfolio-value,
+  [data-theme="dark"] .portfolio-value,
+  .theme-dark .portfolio-value {
+    color: #ffffff;
   }
   
   .portfolio-change {
     font-size: 20px;
-    color: #a0aec0;
+    color: #718096;
     margin-top: 16px;
     font-weight: 400;
   }
 
-  html.light .portfolio-change {
-    color: #718096;
+  .dark .portfolio-change,
+  html.dark .portfolio-change,
+  body.dark .portfolio-change,
+  [data-theme="dark"] .portfolio-change,
+  .theme-dark .portfolio-change {
+    color: #a0aec0;
   }
   
   .portfolio-change.positive {
@@ -69,24 +77,72 @@ noHeader: true
   }
   
   .equity-chart-container {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 40px;
     margin-bottom: 80px;
     backdrop-filter: blur(10px);
   }
 
-  html.light .equity-chart-container {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  .dark .equity-chart-container,
+  html.dark .equity-chart-container,
+  body.dark .equity-chart-container,
+  [data-theme="dark"] .equity-chart-container,
+  .theme-dark .equity-chart-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
+  .range-controls {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .range-controls button {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.04);
+    color: #4a5568;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 200ms ease;
+  }
+
+  .range-controls button.active {
+    background: rgba(72, 187, 120, 0.14);
+    border-color: rgba(72, 187, 120, 0.35);
+    color: #1a202c;
+  }
+
+  .dark .range-controls button,
+  html.dark .range-controls button,
+  body.dark .range-controls button,
+  [data-theme="dark"] .range-controls button,
+  .theme-dark .range-controls button {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: #cbd5e0;
+  }
+
+  .dark .range-controls button.active,
+  html.dark .range-controls button.active,
+  body.dark .range-controls button.active,
+  [data-theme="dark"] .range-controls button.active,
+  .theme-dark .range-controls button.active {
+    background: rgba(72, 187, 120, 0.14);
+    border-color: rgba(72, 187, 120, 0.35);
+    color: #ffffff;
+  }
+
   #equity-chart {
     width: 100%;
-    height: 300px;
+    height: 340px;
   }
-  
+
   .metrics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -95,40 +151,52 @@ noHeader: true
   }
   
   .metric-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 24px;
     backdrop-filter: blur(10px);
   }
 
-  html.light .metric-card {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  .dark .metric-card,
+  html.dark .metric-card,
+  body.dark .metric-card,
+  [data-theme="dark"] .metric-card,
+  .theme-dark .metric-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .metric-label {
     font-size: 12px;
-    color: #cbd5e0;
+    color: #4a5568;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 12px;
     font-weight: 500;
   }
 
-  html.light .metric-label {
-    color: #4a5568;
+  .dark .metric-label,
+  html.dark .metric-label,
+  body.dark .metric-label,
+  [data-theme="dark"] .metric-label,
+  .theme-dark .metric-label {
+    color: #cbd5e0;
   }
   
   .metric-value {
     font-size: 28px;
-    color: #ffffff;
+    color: #1a202c;
     font-weight: 400;
     letter-spacing: -1px;
   }
 
-  html.light .metric-value {
-    color: #1a202c;
+  .dark .metric-value,
+  html.dark .metric-value,
+  body.dark .metric-value,
+  [data-theme="dark"] .metric-value,
+  .theme-dark .metric-value {
+    color: #ffffff;
   }
   
   .strategies-container {
@@ -137,20 +205,24 @@ noHeader: true
   
   .section-title {
     font-size: 14px;
-    color: #cbd5e0;
+    color: #4a5568;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
     font-weight: 500;
   }
 
-  html.light .section-title {
-    color: #4a5568;
+  .dark .section-title,
+  html.dark .section-title,
+  body.dark .section-title,
+  [data-theme="dark"] .section-title,
+  .theme-dark .section-title {
+    color: #cbd5e0;
   }
   
   .strategy-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 12px;
@@ -161,18 +233,26 @@ noHeader: true
     backdrop-filter: blur(10px);
   }
 
-  html.light .strategy-item {
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  .dark .strategy-item,
+  html.dark .strategy-item,
+  body.dark .strategy-item,
+  [data-theme="dark"] .strategy-item,
+  .theme-dark .strategy-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .strategy-name {
-    color: #ffffff;
+    color: #1a202c;
     font-weight: 500;
   }
 
-  html.light .strategy-name {
-    color: #1a202c;
+  .dark .strategy-name,
+  html.dark .strategy-name,
+  body.dark .strategy-name,
+  [data-theme="dark"] .strategy-name,
+  .theme-dark .strategy-name {
+    color: #ffffff;
   }
   
   .strategy-status {
@@ -183,20 +263,24 @@ noHeader: true
   }
   
   .info-section {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 40px;
-    color: #a0aec0;
+    color: #718096;
     font-size: 13px;
     line-height: 1.6;
   }
 
-  html.light .info-section {
-    border-top-color: rgba(0, 0, 0, 0.1);
-    color: #718096;
+  .dark .info-section,
+  html.dark .info-section,
+  body.dark .info-section,
+  [data-theme="dark"] .info-section,
+  .theme-dark .info-section {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    color: #a0aec0;
   }
   
   .info-section h3 {
-    color: #cbd5e0;
+    color: #4a5568;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -204,8 +288,12 @@ noHeader: true
     margin-top: 0;
   }
 
-  html.light .info-section h3 {
-    color: #4a5568;
+  .dark .info-section h3,
+  html.dark .info-section h3,
+  body.dark .info-section h3,
+  [data-theme="dark"] .info-section h3,
+  .theme-dark .info-section h3 {
+    color: #cbd5e0;
   }
 </style>
 
@@ -220,6 +308,7 @@ noHeader: true
 
   <!-- Equity Curve Chart -->
   <div class="equity-chart-container">
+    <div class="range-controls" id="range-controls"></div>
     <canvas id="equity-chart"></canvas>
   </div>
 
@@ -261,15 +350,26 @@ noHeader: true
 // Update this to point to your ByteQuant API server
 // Examples:
 //   - Local development: 'http://localhost:5000'
-//   - Production with IP: 'http://your-ec2-ip'
 //   - Production with domain: 'https://api.yourdomain.com'
-const API_BASE = 'http://13.49.158.182'; // CHANGE THIS TO YOUR API URL
+//   - Production with IP over HTTPS: 'https://13.49.158.182'
+const rawApiBase = 'https://cellular-groundwater-orientation-grateful.trycloudflare.com'; // CHANGE THIS TO YOUR API URL
+const API_BASE = window.location.protocol === 'https:' && rawApiBase.startsWith('http:')
+  ? rawApiBase.replace(/^http:/, 'https:')
+  : rawApiBase;
 
 // ==========================================
 // Dashboard Script
 // ==========================================
 let equityChart = null;
 let lastPortfolioValue = 0;
+let selectedRange = '30d';
+const rangeOptions = [
+  { label: '1D', value: '1d', days: 1 },
+  { label: '1W', value: '7d', days: 7 },
+  { label: '1M', value: '30d', days: 30 },
+  { label: 'YTD', value: 'ytd', days: null },
+  { label: 'ALL', value: 'all', days: null }
+];
 
 function formatCurrency(value) {
   return new Intl.NumberFormat('en-US', {
@@ -278,6 +378,34 @@ function formatCurrency(value) {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0
   }).format(value);
+}
+
+function formatLabel(timestamp) {
+  const date = new Date(timestamp);
+  if (selectedRange === '1d') {
+    return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  }
+  if (selectedRange === '7d' || selectedRange === '30d') {
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function renderRangeButtons() {
+  const rangeControls = document.getElementById('range-controls');
+  rangeControls.innerHTML = rangeOptions.map(option => `
+    <button type="button" class="range-button${option.value === selectedRange ? ' active' : ''}" data-range="${option.value}">
+      ${option.label}
+    </button>
+  `).join('');
+
+  rangeControls.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      selectedRange = button.dataset.range;
+      renderRangeButtons();
+      fetchEquityCurve();
+    });
+  });
 }
 
 function animateCounter(element, endValue, duration = 600) {
@@ -335,14 +463,22 @@ async function fetchPortfolioData() {
 
 async function fetchEquityCurve() {
   try {
-    const response = await fetch(`${API_BASE}/api/bytequant/equity-curve`);
+    const option = rangeOptions.find(option => option.value === selectedRange) || rangeOptions[2];
+    let url = `${API_BASE}/api/bytequant/equity-curve`;
+    if (option.value === 'ytd') {
+      const now = new Date();
+      const startOfYear = new Date(now.getFullYear(), 0, 1);
+      const days = Math.ceil((now - startOfYear) / (1000 * 60 * 60 * 24));
+      url += `?days=${days}`;
+    } else if (option.value !== 'all') {
+      url += `?days=${option.days}`;
+    }
+
+    const response = await fetch(url);
     if (!response.ok) throw new Error('Failed to fetch equity curve');
     const data = await response.json();
     
-    const timestamps = data.data.map(point => {
-      const date = new Date(point.timestamp);
-      return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
-    });
+    const timestamps = data.data.map(point => formatLabel(point.timestamp));
     const values = data.data.map(point => point.total_value);
     
     if (equityChart) {
@@ -455,6 +591,7 @@ async function updateAllData() {
   ]);
 }
 
+renderRangeButtons();
 updateAllData();
 setInterval(updateAllData, 30000);
 </script>
